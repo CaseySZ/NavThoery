@@ -16,6 +16,11 @@
 		C993F20F21E88E0800FC3FA1 /* AnimationNavigationCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C993F20E21E88E0800FC3FA1 /* AnimationNavigationCtr.swift */; };
 		C993F21221E88E3700FC3FA1 /* NavAdvanceAnimaViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C993F21121E88E3700FC3FA1 /* NavAdvanceAnimaViewCtr.swift */; };
 		C993F21421E88E4B00FC3FA1 /* SecondViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C993F21321E88E4B00FC3FA1 /* SecondViewCtr.swift */; };
+		C993F21721EC21F400FC3FA1 /* AllTransulateViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C993F21621EC21F400FC3FA1 /* AllTransulateViewCtr.swift */; };
+		C993F21921EC227B00FC3FA1 /* 111@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C993F21821EC227B00FC3FA1 /* 111@2x.png */; };
+		C993F21B21EC2A5C00FC3FA1 /* HiddenNavViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C993F21A21EC2A5C00FC3FA1 /* HiddenNavViewCtr.swift */; };
+		C993F21D21EC2A7F00FC3FA1 /* ThreeViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C993F21C21EC2A7F00FC3FA1 /* ThreeViewCtr.swift */; };
+		C993F21F21EC2D9100FC3FA1 /* LeftButtonViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C993F21E21EC2D9100FC3FA1 /* LeftButtonViewCtr.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		C993F20E21E88E0800FC3FA1 /* AnimationNavigationCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationNavigationCtr.swift; sourceTree = "<group>"; };
 		C993F21121E88E3700FC3FA1 /* NavAdvanceAnimaViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavAdvanceAnimaViewCtr.swift; sourceTree = "<group>"; };
 		C993F21321E88E4B00FC3FA1 /* SecondViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewCtr.swift; sourceTree = "<group>"; };
+		C993F21621EC21F400FC3FA1 /* AllTransulateViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransulateViewCtr.swift; sourceTree = "<group>"; };
+		C993F21821EC227B00FC3FA1 /* 111@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "111@2x.png"; sourceTree = "<group>"; };
+		C993F21A21EC2A5C00FC3FA1 /* HiddenNavViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenNavViewCtr.swift; sourceTree = "<group>"; };
+		C993F21C21EC2A7F00FC3FA1 /* ThreeViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeViewCtr.swift; sourceTree = "<group>"; };
+		C993F21E21EC2D9100FC3FA1 /* LeftButtonViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftButtonViewCtr.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +77,11 @@
 				C993F1FE21E88D1F00FC3FA1 /* Main.storyboard */,
 				C993F20C21E88DC400FC3FA1 /* NavAnimation.swift */,
 				C993F20E21E88E0800FC3FA1 /* AnimationNavigationCtr.swift */,
+				C993F21521EC218A00FC3FA1 /* Apply */,
 				C993F21021E88E1C00FC3FA1 /* Animation */,
 				C993F20121E88D2100FC3FA1 /* Assets.xcassets */,
 				C993F20321E88D2100FC3FA1 /* LaunchScreen.storyboard */,
+				C993F21821EC227B00FC3FA1 /* 111@2x.png */,
 				C993F20621E88D2100FC3FA1 /* Info.plist */,
 			);
 			path = NavAnimation;
@@ -82,6 +94,17 @@
 				C993F21321E88E4B00FC3FA1 /* SecondViewCtr.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		C993F21521EC218A00FC3FA1 /* Apply */ = {
+			isa = PBXGroup;
+			children = (
+				C993F21621EC21F400FC3FA1 /* AllTransulateViewCtr.swift */,
+				C993F21A21EC2A5C00FC3FA1 /* HiddenNavViewCtr.swift */,
+				C993F21C21EC2A7F00FC3FA1 /* ThreeViewCtr.swift */,
+				C993F21E21EC2D9100FC3FA1 /* LeftButtonViewCtr.swift */,
+			);
+			path = Apply;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +167,7 @@
 			files = (
 				C993F20521E88D2100FC3FA1 /* LaunchScreen.storyboard in Resources */,
 				C993F20221E88D2100FC3FA1 /* Assets.xcassets in Resources */,
+				C993F21921EC227B00FC3FA1 /* 111@2x.png in Resources */,
 				C993F20021E88D1F00FC3FA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,8 +183,12 @@
 				C993F1FD21E88D1F00FC3FA1 /* ViewController.swift in Sources */,
 				C993F21421E88E4B00FC3FA1 /* SecondViewCtr.swift in Sources */,
 				C993F21221E88E3700FC3FA1 /* NavAdvanceAnimaViewCtr.swift in Sources */,
+				C993F21D21EC2A7F00FC3FA1 /* ThreeViewCtr.swift in Sources */,
 				C993F20D21E88DC400FC3FA1 /* NavAnimation.swift in Sources */,
 				C993F1FB21E88D1F00FC3FA1 /* AppDelegate.swift in Sources */,
+				C993F21F21EC2D9100FC3FA1 /* LeftButtonViewCtr.swift in Sources */,
+				C993F21B21EC2A5C00FC3FA1 /* HiddenNavViewCtr.swift in Sources */,
+				C993F21721EC21F400FC3FA1 /* AllTransulateViewCtr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

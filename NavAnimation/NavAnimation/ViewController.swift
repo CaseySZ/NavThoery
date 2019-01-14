@@ -19,6 +19,11 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
+        
+        self.navigationController?.pushViewController(LeftButtonViewCtr(), animated: true)
+        
+        return
+        
         let nav = AnimationNavigationCtr.init(rootViewController: NavAdvanceAnimaViewCtr())
         
         self.present(nav, animated: true, completion: nil)
