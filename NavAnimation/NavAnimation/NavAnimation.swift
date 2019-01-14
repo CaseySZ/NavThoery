@@ -69,54 +69,39 @@ class NavAnimation: NSObject, UIViewControllerAnimatedTransitioning {
         let fromView = transitionContext.view(forKey: .from)!
         
         toView.frame = transitionContext.finalFrame(for: _toViewCtr!)
-        
+
         let dir:Double = -1.0
         
         let generalContentView = transitionContext.containerView
         
-        
-        var viewFromTransform = CATransform3DMakeRotation(CGFloat(dir*Double.pi/2), 0, 1.0, 0)
-        var viewToTransform = CATransform3DMakeRotation(CGFloat(-dir*Double.pi/2), 0, 1.0, 0)
-        
-        
-        toView.layer.anchorPoint = CGPoint.init(x: (dir==1 ? 0.0: 1.0), y: 0.5)
-        fromView.layer.anchorPoint = CGPoint.init(x: (dir==1 ? 1.0: 0.0), y: 0.5)
+        generalContentView.addSubview(toView)
         
         
         
-        generalContentView.transform = CGAffineTransform.init(translationX: CGFloat(CGFloat(dir)*generalContentView.frame.width), y: 0)
-    
-        viewFromTransform.m34 = -1.0 / 200.0
+        var viewFromTransform = CATransform3DMakeRotation(CGFloat(dir*Double.pi)/2.0, 0.0, 1.0, 0.0)
+        var viewToTransform = CATransform3DMakeRotation(CGFloat(-dir*Double.pi)/2.0, 0.0, 1.0, 0.0)
+        
+        toView.layer.anchorPoint = CGPoint.init(x: 1.0, y: 0.5)
+        fromView.layer.anchorPoint = CGPoint.init(x: 0.0, y: 0.5)
+        
+
+        generalContentView.transform = CGAffineTransform.init(translationX: CGFloat(CGFloat(dir)*generalContentView.frame.width)/2, y: 0)
+        
+        viewFromTransform.m34 = 1.0 / 200.0
         viewToTransform.m34 = 1.0 / 200.0
         
         
         toView.layer.transform = viewToTransform
         
         
-        // shadow
         
-        let fromShowView = addAlphaToView(view: fromView, color: .black)
-        let toShowView = addAlphaToView(view: toView, color: .black)
-        
-        fromShowView.alpha = 0.0
-        toShowView.alpha = 1.0
-        
-        
-        generalContentView.addSubview(toView)
-
-        
-        
+       
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
             
-            generalContentView.transform = CGAffineTransform.init(translationX: CGFloat(-dir*Double(generalContentView.frame.width/2.0)), y: 0)
-            
+            generalContentView.transform = CGAffineTransform.init(translationX: -CGFloat(dir*Double(generalContentView.frame.width))/2.0, y: 0)
             
             fromView.layer.transform = viewToTransform
-            toShowView.layer.transform = CATransform3DIdentity
-            
-            fromShowView.alpha = 1.0
-            toShowView.alpha = 0.0
-            
+            toView.layer.transform = CATransform3DIdentity
             
         }) { (finish) in
             
@@ -129,8 +114,6 @@ class NavAnimation: NSObject, UIViewControllerAnimatedTransitioning {
             fromView.layer.anchorPoint = CGPoint.init(x: 0.5, y: 0.5)
             toView.layer.anchorPoint = CGPoint.init(x: 0.5, y: 0.5)
             
-            fromShowView.removeFromSuperview()
-            toShowView.removeFromSuperview()
             
             if transitionContext.transitionWasCancelled {
                 
@@ -144,15 +127,6 @@ class NavAnimation: NSObject, UIViewControllerAnimatedTransitioning {
 
     }
     
-    
-    func addAlphaToView(view:UIView, color:UIColor) -> UIView {
-        
-        let shadowView = UIView.init(frame: view.bounds)
-        shadowView.backgroundColor = color.withAlphaComponent(0.8)
-        view.addSubview(shadowView)
-        
-        return shadowView
-        
-    }
+
     
 }
