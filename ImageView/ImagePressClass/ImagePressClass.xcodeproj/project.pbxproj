@@ -26,6 +26,8 @@
 		C993F29421EED52300FC3FA1 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C993F28B21EED52300FC3FA1 /* 2.png */; };
 		C993F29521EED52300FC3FA1 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = C993F28C21EED52300FC3FA1 /* 4.png */; };
 		C993F29821EEE10400FC3FA1 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C993F29721EEE10400FC3FA1 /* CoreServices.framework */; };
+		C9CA230721F1D73E002F0204 /* ImageCompressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CA230521F1D73E002F0204 /* ImageCompressVC.m */; };
+		C9CA230821F1D73E002F0204 /* ImageCompressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9CA230621F1D73E002F0204 /* ImageCompressVC.xib */; };
 		C9FD82BB21F060BE00225BA8 /* ImageIOBaseVCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD82B921F060BE00225BA8 /* ImageIOBaseVCtr.m */; };
 		C9FD82BC21F060BE00225BA8 /* ImageIOBaseVCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82BA21F060BE00225BA8 /* ImageIOBaseVCtr.xib */; };
 		C9FD82BE21F062D100225BA8 /* bigImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82BD21F062D100225BA8 /* bigImage.jpg */; };
@@ -35,8 +37,8 @@
 		CD8C35FF1EA33300006D5D0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8C35FD1EA33300006D5D0B /* Main.storyboard */; };
 		CD8C36011EA33300006D5D0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8C36001EA33300006D5D0B /* Assets.xcassets */; };
 		CD8C36041EA33300006D5D0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8C36021EA33300006D5D0B /* LaunchScreen.storyboard */; };
-		CD8C360E1EA33452006D5D0B /* ImageCompressInAlbumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C360C1EA33452006D5D0B /* ImageCompressInAlbumVC.m */; };
-		CD8C360F1EA33452006D5D0B /* ImageCompressInAlbumVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8C360D1EA33452006D5D0B /* ImageCompressInAlbumVC.xib */; };
+		CD8C360E1EA33452006D5D0B /* ImageFileCompressInAlbumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C360C1EA33452006D5D0B /* ImageFileCompressInAlbumVC.m */; };
+		CD8C360F1EA33452006D5D0B /* ImageFileCompressInAlbumVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8C360D1EA33452006D5D0B /* ImageFileCompressInAlbumVC.xib */; };
 		CD9378BA1EA368D000F17B47 /* ImageFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9378B81EA368D000F17B47 /* ImageFilterVC.m */; };
 		CD9378BB1EA368D000F17B47 /* ImageFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9378B91EA368D000F17B47 /* ImageFilterVC.xib */; };
 		CD9378C21EA36C3900F17B47 /* bigSize.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD9378C01EA36C3900F17B47 /* bigSize.jpg */; };
@@ -68,6 +70,9 @@
 		C993F28B21EED52300FC3FA1 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		C993F28C21EED52300FC3FA1 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		C993F29721EEE10400FC3FA1 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		C9CA230421F1D73E002F0204 /* ImageCompressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCompressVC.h; sourceTree = "<group>"; };
+		C9CA230521F1D73E002F0204 /* ImageCompressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCompressVC.m; sourceTree = "<group>"; };
+		C9CA230621F1D73E002F0204 /* ImageCompressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCompressVC.xib; sourceTree = "<group>"; };
 		C9FD82B821F060BE00225BA8 /* ImageIOBaseVCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageIOBaseVCtr.h; sourceTree = "<group>"; };
 		C9FD82B921F060BE00225BA8 /* ImageIOBaseVCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageIOBaseVCtr.m; sourceTree = "<group>"; };
 		C9FD82BA21F060BE00225BA8 /* ImageIOBaseVCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIOBaseVCtr.xib; sourceTree = "<group>"; };
@@ -82,9 +87,9 @@
 		CD8C36001EA33300006D5D0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD8C36031EA33300006D5D0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD8C36051EA33300006D5D0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD8C360B1EA33452006D5D0B /* ImageCompressInAlbumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCompressInAlbumVC.h; sourceTree = "<group>"; };
-		CD8C360C1EA33452006D5D0B /* ImageCompressInAlbumVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCompressInAlbumVC.m; sourceTree = "<group>"; };
-		CD8C360D1EA33452006D5D0B /* ImageCompressInAlbumVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCompressInAlbumVC.xib; sourceTree = "<group>"; };
+		CD8C360B1EA33452006D5D0B /* ImageFileCompressInAlbumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFileCompressInAlbumVC.h; sourceTree = "<group>"; };
+		CD8C360C1EA33452006D5D0B /* ImageFileCompressInAlbumVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFileCompressInAlbumVC.m; sourceTree = "<group>"; };
+		CD8C360D1EA33452006D5D0B /* ImageFileCompressInAlbumVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageFileCompressInAlbumVC.xib; sourceTree = "<group>"; };
 		CD9378B71EA368D000F17B47 /* ImageFilterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFilterVC.h; sourceTree = "<group>"; };
 		CD9378B81EA368D000F17B47 /* ImageFilterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFilterVC.m; sourceTree = "<group>"; };
 		CD9378B91EA368D000F17B47 /* ImageFilterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageFilterVC.xib; sourceTree = "<group>"; };
@@ -141,9 +146,12 @@
 				CD8C35F81EA33300006D5D0B /* AppDelegate.m */,
 				CD8C35FA1EA33300006D5D0B /* ViewController.h */,
 				CD8C35FB1EA33300006D5D0B /* ViewController.m */,
-				CD8C360B1EA33452006D5D0B /* ImageCompressInAlbumVC.h */,
-				CD8C360C1EA33452006D5D0B /* ImageCompressInAlbumVC.m */,
-				CD8C360D1EA33452006D5D0B /* ImageCompressInAlbumVC.xib */,
+				CD8C360B1EA33452006D5D0B /* ImageFileCompressInAlbumVC.h */,
+				CD8C360C1EA33452006D5D0B /* ImageFileCompressInAlbumVC.m */,
+				CD8C360D1EA33452006D5D0B /* ImageFileCompressInAlbumVC.xib */,
+				C9CA230421F1D73E002F0204 /* ImageCompressVC.h */,
+				C9CA230521F1D73E002F0204 /* ImageCompressVC.m */,
+				C9CA230621F1D73E002F0204 /* ImageCompressVC.xib */,
 				CD9378B71EA368D000F17B47 /* ImageFilterVC.h */,
 				CD9378B81EA368D000F17B47 /* ImageFilterVC.m */,
 				CD9378B91EA368D000F17B47 /* ImageFilterVC.xib */,
@@ -256,7 +264,7 @@
 			files = (
 				C993F29021EED52300FC3FA1 /* 6.png in Resources */,
 				C993F29521EED52300FC3FA1 /* 4.png in Resources */,
-				CD8C360F1EA33452006D5D0B /* ImageCompressInAlbumVC.xib in Resources */,
+				CD8C360F1EA33452006D5D0B /* ImageFileCompressInAlbumVC.xib in Resources */,
 				CD8C36041EA33300006D5D0B /* LaunchScreen.storyboard in Resources */,
 				CD8C36011EA33300006D5D0B /* Assets.xcassets in Resources */,
 				C993F28D21EED52300FC3FA1 /* 1.png in Resources */,
@@ -273,6 +281,7 @@
 				CD9378BB1EA368D000F17B47 /* ImageFilterVC.xib in Resources */,
 				CD9378C21EA36C3900F17B47 /* bigSize.jpg in Resources */,
 				C9FD82BE21F062D100225BA8 /* bigImage.jpg in Resources */,
+				C9CA230821F1D73E002F0204 /* ImageCompressVC.xib in Resources */,
 				C9FD82BC21F060BE00225BA8 /* ImageIOBaseVCtr.xib in Resources */,
 				C993F28F21EED52300FC3FA1 /* 5.png in Resources */,
 				C993F28321EECBCD00FC3FA1 /* ImageIOOutViewCtr.xib in Resources */,
@@ -290,11 +299,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8C360E1EA33452006D5D0B /* ImageCompressInAlbumVC.m in Sources */,
+				CD8C360E1EA33452006D5D0B /* ImageFileCompressInAlbumVC.m in Sources */,
 				CD8C35FC1EA33300006D5D0B /* ViewController.m in Sources */,
 				C993F26321EDB98200FC3FA1 /* ImageIOViewCtr.m in Sources */,
 				C9FD82BB21F060BE00225BA8 /* ImageIOBaseVCtr.m in Sources */,
 				CDB889391EA3C27500585840 /* ShotScreenImageVC.m in Sources */,
+				C9CA230721F1D73E002F0204 /* ImageCompressVC.m in Sources */,
 				CD9378BA1EA368D000F17B47 /* ImageFilterVC.m in Sources */,
 				CDB889341EA3B9AC00585840 /* ImageScaleViewCtr.m in Sources */,
 				C993F28121EECA1F00FC3FA1 /* ImageIOOutViewCtr.m in Sources */,

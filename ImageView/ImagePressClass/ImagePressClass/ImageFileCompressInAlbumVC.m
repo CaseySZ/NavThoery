@@ -6,16 +6,16 @@
 //  Copyright © 2017年   All rights reserved.
 //
 
-#import "ImageCompressInAlbumVC.h"
+#import "ImageFileCompressInAlbumVC.h"
 
-@interface ImageCompressInAlbumVC ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>{
+@interface ImageFileCompressInAlbumVC ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>{
     
     UIImage *_albumImage;
 }
 
 @end
 
-@implementation ImageCompressInAlbumVC
+@implementation ImageFileCompressInAlbumVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,30 +50,19 @@
         }
     }
     
+    
     NSLog(@"png:%@", [self sizeFormDataLenght:pngData.length]);
     NSLog(@"jpg:%@", [self sizeFormDataLenght:jpgData.length]);
+    
+    
     
     [_pngImageV setImage:[UIImage imageWithData:pngData]];
     [_jpgImageV setImage:[UIImage imageWithData:pngData]];
     
-    [self saveImageToLocal:@"JPG.jpg" fromData:jpgData];
-    [self saveImageToLocal:@"png.png" fromData:pngData];
     
-    UIImage *image = [UIImage imageWithData:pngData];
-    image = [self scaleImage:image size:CGSizeMake(100, 100)];
-    [self saveImageToLocal:@" png" fromData:UIImageJPEGRepresentation(image,1)];
 }
 
 
-// 保存图片数据到本地
-- (void)saveImageToLocal:(NSString*)fileName fromData:(NSData*)data{
-    
-    NSString *filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    filePath = [filePath stringByAppendingPathComponent:fileName];
-    if ([data writeToFile:filePath atomically:YES]) {
-        NSLog(@"sucess");
-    }
-}
 
 // 获取图片长度
 - (NSString *)sizeFormDataLenght:(long)length{
@@ -88,15 +77,7 @@
     return backStr;
 }
 
-// 通过上下文对图片压缩处理
-- (UIImage*)scaleImage:(UIImage*)image size:(CGSize)imageSize{
-    
-    UIGraphicsBeginImageContext(imageSize);
-    [image drawInRect:CGRectMake(0, 0, imageSize.width, imageSize.height)];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return newImage;
-}
+
 
 - (IBAction)openAlbum:(id)sender{
     

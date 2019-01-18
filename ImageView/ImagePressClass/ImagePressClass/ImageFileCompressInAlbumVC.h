@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageCompressInAlbumVC : UIViewController{
+@interface ImageFileCompressInAlbumVC : UIViewController{
     IBOutlet UIImageView *_pngImageV;
     IBOutlet UIImageView *_jpgImageV;
 }

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ImageCompressInAlbumVC.h"
+#import "ImageFileCompressInAlbumVC.h"
 #import "ImageFilterVC.h"
 #import "ImageScaleViewCtr.h"
 #import "ShotScreenImageVC.h"
@@ -73,7 +73,7 @@
     
     UIViewController *viewCtr = nil;
     if (indexPath.row == 0) {
-        viewCtr = [ImageCompressInAlbumVC new];
+        viewCtr = [ImageFileCompressInAlbumVC new];
     }else if (indexPath.row == 1){
         viewCtr = [ImageFilterVC new];
     }else if (indexPath.row == 2){
