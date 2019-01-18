@@ -13,6 +13,7 @@
 #import "ShotScreenImageVC.h"
 #import "ImageIOViewCtr.h"
 #import "ImageIOOutViewCtr.h"
+#import "ImageIOBaseVCtr.h"
 
 /*
  https://www.cnblogs.com/fengmin/p/5702240.html
@@ -53,10 +54,16 @@
     else if (indexPath.row == 1) {
         cell.textLabel.text = @"图片处理";
     }
-    else if (indexPath.row == 3) {
-        cell.textLabel.text = @"截图";
-    }else if (indexPath.row == 2) {
+    else if (indexPath.row == 2) {
         cell.textLabel.text = @"图片缩放功能";
+    }else if (indexPath.row == 3) {
+        cell.textLabel.text = @"截图";
+    }else if (indexPath.row == 4) {
+        cell.textLabel.text = @"IO";
+    }else if (indexPath.row == 5) {
+        cell.textLabel.text = @"decode";
+    }else if (indexPath.row == 6) {
+        cell.textLabel.text = @"code";
     }
     
     return cell;
@@ -74,8 +81,10 @@
     }else if (indexPath.row == 3){
         viewCtr = [ImageScaleViewCtr new];
     }else if (indexPath.row == 4){
-        viewCtr = [ImageIOViewCtr new];
+        viewCtr = [ImageIOBaseVCtr new];
     }else if (indexPath.row == 5){
+        viewCtr = [ImageIOViewCtr new];
+    }else if (indexPath.row == 6){
         viewCtr = [ImageIOOutViewCtr new];
     }
     [self.navigationController pushViewController:viewCtr animated:YES];

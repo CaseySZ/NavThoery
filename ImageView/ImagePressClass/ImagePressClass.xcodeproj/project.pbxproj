@@ -13,7 +13,6 @@
 		C993F27A21EEBA4A00FC3FA1 /* mew_interlaced.png in Resources */ = {isa = PBXBuildFile; fileRef = C993F27421EEBA4A00FC3FA1 /* mew_interlaced.png */; };
 		C993F27B21EEBA4A00FC3FA1 /* mew_progressive.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C993F27521EEBA4A00FC3FA1 /* mew_progressive.jpg */; };
 		C993F27C21EEBA4A00FC3FA1 /* mew_baseline.png in Resources */ = {isa = PBXBuildFile; fileRef = C993F27621EEBA4A00FC3FA1 /* mew_baseline.png */; };
-		C993F27D21EEBA4A00FC3FA1 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C993F27721EEBA4A00FC3FA1 /* 11.jpg */; };
 		C993F27E21EEBA4A00FC3FA1 /* mew_baseline.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C993F27821EEBA4A00FC3FA1 /* mew_baseline.jpg */; };
 		C993F28121EECA1F00FC3FA1 /* ImageIOOutViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C993F28021EECA1F00FC3FA1 /* ImageIOOutViewCtr.m */; };
 		C993F28321EECBCD00FC3FA1 /* ImageIOOutViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C993F28221EECBCD00FC3FA1 /* ImageIOOutViewCtr.xib */; };
@@ -27,6 +26,9 @@
 		C993F29421EED52300FC3FA1 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C993F28B21EED52300FC3FA1 /* 2.png */; };
 		C993F29521EED52300FC3FA1 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = C993F28C21EED52300FC3FA1 /* 4.png */; };
 		C993F29821EEE10400FC3FA1 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C993F29721EEE10400FC3FA1 /* CoreServices.framework */; };
+		C9FD82BB21F060BE00225BA8 /* ImageIOBaseVCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD82B921F060BE00225BA8 /* ImageIOBaseVCtr.m */; };
+		C9FD82BC21F060BE00225BA8 /* ImageIOBaseVCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82BA21F060BE00225BA8 /* ImageIOBaseVCtr.xib */; };
+		C9FD82BE21F062D100225BA8 /* bigImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82BD21F062D100225BA8 /* bigImage.jpg */; };
 		CD8C35F61EA33300006D5D0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C35F51EA33300006D5D0B /* main.m */; };
 		CD8C35F91EA33300006D5D0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C35F81EA33300006D5D0B /* AppDelegate.m */; };
 		CD8C35FC1EA33300006D5D0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C35FB1EA33300006D5D0B /* ViewController.m */; };
@@ -52,7 +54,6 @@
 		C993F27421EEBA4A00FC3FA1 /* mew_interlaced.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mew_interlaced.png; sourceTree = "<group>"; };
 		C993F27521EEBA4A00FC3FA1 /* mew_progressive.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mew_progressive.jpg; sourceTree = "<group>"; };
 		C993F27621EEBA4A00FC3FA1 /* mew_baseline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mew_baseline.png; sourceTree = "<group>"; };
-		C993F27721EEBA4A00FC3FA1 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
 		C993F27821EEBA4A00FC3FA1 /* mew_baseline.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mew_baseline.jpg; sourceTree = "<group>"; };
 		C993F27F21EECA1F00FC3FA1 /* ImageIOOutViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageIOOutViewCtr.h; sourceTree = "<group>"; };
 		C993F28021EECA1F00FC3FA1 /* ImageIOOutViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageIOOutViewCtr.m; sourceTree = "<group>"; };
@@ -67,6 +68,10 @@
 		C993F28B21EED52300FC3FA1 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		C993F28C21EED52300FC3FA1 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		C993F29721EEE10400FC3FA1 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		C9FD82B821F060BE00225BA8 /* ImageIOBaseVCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageIOBaseVCtr.h; sourceTree = "<group>"; };
+		C9FD82B921F060BE00225BA8 /* ImageIOBaseVCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageIOBaseVCtr.m; sourceTree = "<group>"; };
+		C9FD82BA21F060BE00225BA8 /* ImageIOBaseVCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIOBaseVCtr.xib; sourceTree = "<group>"; };
+		C9FD82BD21F062D100225BA8 /* bigImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bigImage.jpg; sourceTree = "<group>"; };
 		CD8C35F11EA33300006D5D0B /* ImagePressClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagePressClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8C35F51EA33300006D5D0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD8C35F71EA33300006D5D0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +153,9 @@
 				CDB889311EA3B9AC00585840 /* ImageScaleViewCtr.h */,
 				CDB889321EA3B9AC00585840 /* ImageScaleViewCtr.m */,
 				CDB889331EA3B9AC00585840 /* ImageScaleViewCtr.xib */,
+				C9FD82B821F060BE00225BA8 /* ImageIOBaseVCtr.h */,
+				C9FD82B921F060BE00225BA8 /* ImageIOBaseVCtr.m */,
+				C9FD82BA21F060BE00225BA8 /* ImageIOBaseVCtr.xib */,
 				C993F26021EDB98200FC3FA1 /* ImageIOViewCtr.h */,
 				C993F26121EDB98200FC3FA1 /* ImageIOViewCtr.m */,
 				C993F26221EDB98200FC3FA1 /* ImageIOViewCtr.xib */,
@@ -175,7 +183,7 @@
 				C993F28921EED52200FC3FA1 /* 7.png */,
 				C993F28A21EED52200FC3FA1 /* 8.png */,
 				C993F28821EED52100FC3FA1 /* 9.png */,
-				C993F27721EEBA4A00FC3FA1 /* 11.jpg */,
+				C9FD82BD21F062D100225BA8 /* bigImage.jpg */,
 				C993F27321EEBA4A00FC3FA1 /* gif.gif */,
 				C993F27821EEBA4A00FC3FA1 /* mew_baseline.jpg */,
 				C993F27621EEBA4A00FC3FA1 /* mew_baseline.png */,
@@ -254,7 +262,6 @@
 				C993F28D21EED52300FC3FA1 /* 1.png in Resources */,
 				C993F26421EDB98200FC3FA1 /* ImageIOViewCtr.xib in Resources */,
 				CDB8893A1EA3C27500585840 /* ShotScreenImageVC.xib in Resources */,
-				C993F27D21EEBA4A00FC3FA1 /* 11.jpg in Resources */,
 				CD8C35FF1EA33300006D5D0B /* Main.storyboard in Resources */,
 				C993F27A21EEBA4A00FC3FA1 /* mew_interlaced.png in Resources */,
 				C993F27C21EEBA4A00FC3FA1 /* mew_baseline.png in Resources */,
@@ -265,6 +272,8 @@
 				C993F29321EED52300FC3FA1 /* 8.png in Resources */,
 				CD9378BB1EA368D000F17B47 /* ImageFilterVC.xib in Resources */,
 				CD9378C21EA36C3900F17B47 /* bigSize.jpg in Resources */,
+				C9FD82BE21F062D100225BA8 /* bigImage.jpg in Resources */,
+				C9FD82BC21F060BE00225BA8 /* ImageIOBaseVCtr.xib in Resources */,
 				C993F28F21EED52300FC3FA1 /* 5.png in Resources */,
 				C993F28321EECBCD00FC3FA1 /* ImageIOOutViewCtr.xib in Resources */,
 				C993F28E21EED52300FC3FA1 /* 3.png in Resources */,
@@ -284,6 +293,7 @@
 				CD8C360E1EA33452006D5D0B /* ImageCompressInAlbumVC.m in Sources */,
 				CD8C35FC1EA33300006D5D0B /* ViewController.m in Sources */,
 				C993F26321EDB98200FC3FA1 /* ImageIOViewCtr.m in Sources */,
+				C9FD82BB21F060BE00225BA8 /* ImageIOBaseVCtr.m in Sources */,
 				CDB889391EA3C27500585840 /* ShotScreenImageVC.m in Sources */,
 				CD9378BA1EA368D000F17B47 /* ImageFilterVC.m in Sources */,
 				CDB889341EA3B9AC00585840 /* ImageScaleViewCtr.m in Sources */,

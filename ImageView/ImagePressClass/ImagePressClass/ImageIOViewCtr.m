@@ -13,6 +13,7 @@
     
     
     IBOutlet UIImageView *_imageView;
+    IBOutlet UIImageView *_twoImageView;
     CGImageSourceRef _source;
     CGImageSourceRef _incrementalSource;
     NSMutableData *_imageData;
@@ -89,11 +90,15 @@
     //CGImageRef imageRef = CGImageSourceCreateImageAtIndex(thumbnailSourceRef, 0, nil);
     UIImage *image = [[UIImage alloc] initWithCGImage:imageRef];
     
+    
+    
     _imageView.image = image;
     
     if (imageRef) {
         CFRelease(imageRef); // 读文件属性的时候， imageRef是nil
     }
+    
+    
 }
 
 // 解码属性
@@ -101,6 +106,7 @@
     
     
     NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys: @(YES), kCGImageSourceShouldCacheImmediately, @(YES), kCGImageSourceShouldCache, nil];
+   
   //  NSString *filePath = [[NSBundle mainBundle] pathForResource:@"bigSize" ofType:@"jpg"];
  //   NSString *filePath = [[NSBundle mainBundle] pathForResource:@"mew_baseline" ofType:@"jpg"];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"11" ofType:@"jpg"];
@@ -109,6 +115,7 @@
     _source = CGImageSourceCreateWithData((__bridge CFDataRef)fileData, (__bridge CFDictionaryRef)infoDict);
     CGImageRef imageRef = CGImageSourceCreateImageAtIndex(_source, 0, nil);
     UIImage *image = [[UIImage alloc] initWithCGImage:imageRef];
+    
     
     _imageView.image = image;
     
@@ -122,6 +129,8 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     
+   
+
     NSData *readData = [self readFileData:_imageData.length];
     [_imageData appendData:readData];
     
@@ -135,7 +144,7 @@
     
     CGImageRef imageRef = CGImageSourceCreateImageAtIndex(_incrementalSource, 0, nil);
     UIImage *image = [[UIImage alloc] initWithCGImage:imageRef];
-    
+        
     _imageView.image = image;
     
     if (imageRef) {
