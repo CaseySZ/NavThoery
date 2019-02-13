@@ -180,6 +180,7 @@ class ImageTextLabel: UILabel {
                     targetPosY = self.frame.size.height - startY
                     
                     break
+                    
                 }
                 
                 startPosX += CGFloat(runWidth)
