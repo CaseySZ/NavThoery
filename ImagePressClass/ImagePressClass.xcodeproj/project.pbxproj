@@ -23,6 +23,7 @@
 		C993F25721EC892500FC3FA1 /* ShotScreenImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C993F25521EC892500FC3FA1 /* ShotScreenImageVC.xib */; };
 		C993F25B21EC9B2D00FC3FA1 /* ImageScaleViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C993F25921EC9B2D00FC3FA1 /* ImageScaleViewCtr.swift */; };
 		C993F25C21EC9B2D00FC3FA1 /* ImageScaleViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C993F25A21EC9B2D00FC3FA1 /* ImageScaleViewCtr.xib */; };
+		C9F7A3042216BFAC007E09C0 /* ImageQRCodeViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F7A3032216BFAC007E09C0 /* ImageQRCodeViewCtr.swift */; };
 		C9FD82B421F0328300225BA8 /* ImageIODecodeViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD82B221F0328300225BA8 /* ImageIODecodeViewCtr.swift */; };
 		C9FD82B521F0328300225BA8 /* ImageIODecodeViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82B321F0328300225BA8 /* ImageIODecodeViewCtr.xib */; };
 		C9FD82C221F0631C00225BA8 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82C121F0631C00225BA8 /* test.png */; };
@@ -30,8 +31,6 @@
 		C9FD82CE21F08F5800225BA8 /* mew_progressive.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82CD21F08F5800225BA8 /* mew_progressive.jpg */; };
 		C9FD82D221F0901300225BA8 /* ImageIOBaseViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD82D021F0901300225BA8 /* ImageIOBaseViewCtr.swift */; };
 		C9FD82D321F0901300225BA8 /* ImageIOBaseViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82D121F0901300225BA8 /* ImageIOBaseViewCtr.xib */; };
-		C9FD82DB21F092BC00225BA8 /* ImageIOEncodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD82D921F092BC00225BA8 /* ImageIOEncodeVC.swift */; };
-		C9FD82DC21F092BC00225BA8 /* ImageIOEncodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82DA21F092BC00225BA8 /* ImageIOEncodeVC.xib */; };
 		C9FD82DE21F0943900225BA8 /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82DD21F0943900225BA8 /* gif.gif */; };
 		C9FD82EB21F0947B00225BA8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82E221F0947B00225BA8 /* 1.png */; };
 		C9FD82EC21F0947B00225BA8 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82E321F0947B00225BA8 /* 2.png */; };
@@ -63,6 +62,7 @@
 		C993F25521EC892500FC3FA1 /* ShotScreenImageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShotScreenImageVC.xib; sourceTree = "<group>"; };
 		C993F25921EC9B2D00FC3FA1 /* ImageScaleViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScaleViewCtr.swift; sourceTree = "<group>"; };
 		C993F25A21EC9B2D00FC3FA1 /* ImageScaleViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageScaleViewCtr.xib; sourceTree = "<group>"; };
+		C9F7A3032216BFAC007E09C0 /* ImageQRCodeViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQRCodeViewCtr.swift; sourceTree = "<group>"; };
 		C9FD82B221F0328300225BA8 /* ImageIODecodeViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIODecodeViewCtr.swift; sourceTree = "<group>"; };
 		C9FD82B321F0328300225BA8 /* ImageIODecodeViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIODecodeViewCtr.xib; sourceTree = "<group>"; };
 		C9FD82C121F0631C00225BA8 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
@@ -70,8 +70,6 @@
 		C9FD82CD21F08F5800225BA8 /* mew_progressive.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mew_progressive.jpg; sourceTree = "<group>"; };
 		C9FD82D021F0901300225BA8 /* ImageIOBaseViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIOBaseViewCtr.swift; sourceTree = "<group>"; };
 		C9FD82D121F0901300225BA8 /* ImageIOBaseViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIOBaseViewCtr.xib; sourceTree = "<group>"; };
-		C9FD82D921F092BC00225BA8 /* ImageIOEncodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIOEncodeVC.swift; sourceTree = "<group>"; };
-		C9FD82DA21F092BC00225BA8 /* ImageIOEncodeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIOEncodeVC.xib; sourceTree = "<group>"; };
 		C9FD82DD21F0943900225BA8 /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
 		C9FD82E221F0947B00225BA8 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		C9FD82E321F0947B00225BA8 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -125,6 +123,7 @@
 				C993F24521EC66F500FC3FA1 /* ImageCompress */,
 				C993F23E21EC59D700FC3FA1 /* ImageFileCompress */,
 				C993F23021EC587800FC3FA1 /* Main.storyboard */,
+				C9F7A3022216BF7D007E09C0 /* QRCode */,
 				C993F23321EC587900FC3FA1 /* Assets.xcassets */,
 				C993F23521EC587900FC3FA1 /* LaunchScreen.storyboard */,
 				C993F23821EC587900FC3FA1 /* Info.plist */,
@@ -183,6 +182,14 @@
 			path = Scale;
 			sourceTree = "<group>";
 		};
+		C9F7A3022216BF7D007E09C0 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				C9F7A3032216BFAC007E09C0 /* ImageQRCodeViewCtr.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		C9FD82B121F0324D00225BA8 /* ImageIO decode */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,8 +211,6 @@
 		C9FD82D421F0927400225BA8 /* ImageIO encode  */ = {
 			isa = PBXGroup;
 			children = (
-				C9FD82D921F092BC00225BA8 /* ImageIOEncodeVC.swift */,
-				C9FD82DA21F092BC00225BA8 /* ImageIOEncodeVC.xib */,
 			);
 			path = "ImageIO encode ";
 			sourceTree = "<group>";
@@ -300,7 +305,6 @@
 				C9FD82CE21F08F5800225BA8 /* mew_progressive.jpg in Resources */,
 				C993F23421EC587900FC3FA1 /* Assets.xcassets in Resources */,
 				C993F25C21EC9B2D00FC3FA1 /* ImageScaleViewCtr.xib in Resources */,
-				C9FD82DC21F092BC00225BA8 /* ImageIOEncodeVC.xib in Resources */,
 				C9FD82F121F0947B00225BA8 /* 7.png in Resources */,
 				C9FD82F321F0947B00225BA8 /* 9.png in Resources */,
 				C993F24921EC671F00FC3FA1 /* ImageCompressVC.xib in Resources */,
@@ -321,10 +325,10 @@
 			files = (
 				C9FD82B421F0328300225BA8 /* ImageIODecodeViewCtr.swift in Sources */,
 				C993F24821EC671F00FC3FA1 /* ImageCompressVC.swift in Sources */,
-				C9FD82DB21F092BC00225BA8 /* ImageIOEncodeVC.swift in Sources */,
 				C993F22F21EC587800FC3FA1 /* ViewController.swift in Sources */,
 				C993F25621EC892500FC3FA1 /* ShotScreenImageVC.swift in Sources */,
 				C993F22D21EC587800FC3FA1 /* AppDelegate.swift in Sources */,
+				C9F7A3042216BFAC007E09C0 /* ImageQRCodeViewCtr.swift in Sources */,
 				C993F24121EC5C6500FC3FA1 /* ImageFileCompressViewCtr.swift in Sources */,
 				C9FD82D221F0901300225BA8 /* ImageIOBaseViewCtr.swift in Sources */,
 				C993F25B21EC9B2D00FC3FA1 /* ImageScaleViewCtr.swift in Sources */,
@@ -476,6 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ImagePressClass/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,6 +498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ImagePressClass/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

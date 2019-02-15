@@ -110,27 +110,27 @@ class ImageIOEncodeVC: UIViewController {
     @objc func compress() {
         
         
-        let imageData = NSMutableData() // 注意这里要用NSMutableData，不能用Data，分析为什么
-        
-        let dataCFRef = imageData as CFMutableData
-        
-        let bigImage = UIImage.init(named: "bigImage.jpg")
-        
-        
-        let infoDict = [ kCGImageDestinationImageMaxPixelSize : 200 ] as CFDictionary
-        
-        destinationSource = CGImageDestinationCreateWithData(dataCFRef, kUTTypeJPEG , 1, infoDict)
-        
-        
-        let imageInfo = [kCGImageDestinationLossyCompressionQuality : 0.2] as CFDictionary
-        
-        if let cgImage = bigImage?.cgImage {
-            CGImageDestinationAddImage(destinationSource!, cgImage, imageInfo)
-        }
-        CGImageDestinationFinalize(destinationSource!)
-        
-        
-        _imageView?.image = UIImage.init(data: imageData as Data)
+//        let imageData = NSMutableData() // 注意这里要用NSMutableData，不能用Data，分析为什么
+//        
+//        let dataCFRef = imageData as CFMutableData
+//        
+//        let bigImage = UIImage.init(named: "bigImage.jpg")
+//        
+//        
+//        let infoDict = [ kCGImageDestinationImageMaxPixelSize : 200 ] as CFDictionary
+//        
+//        destinationSource = CGImageDestinationCreateWithData(dataCFRef, kUTTypeJPEG , 1, infoDict) 
+//        
+//        
+//        let imageInfo = [kCGImageDestinationLossyCompressionQuality : 0.2] as CFDictionary
+//        
+//        if let cgImage = bigImage?.cgImage {
+//            CGImageDestinationAddImage(destinationSource!, cgImage, imageInfo)
+//        }
+//        CGImageDestinationFinalize(destinationSource!)
+//        
+//        
+//        _imageView?.image = UIImage.init(data: imageData as Data)
         
     }
 

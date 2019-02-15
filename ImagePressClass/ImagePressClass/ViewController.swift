@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //MARK: tableview delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return 9
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -82,7 +82,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         if indexPath.row == 7{
             
-            self.navigationController?.pushViewController(ImageIOEncodeVC(), animated: true)
+           // self.navigationController?.pushViewController(ImageIOEncodeVC(), animated: true)
+            
+        }
+        if indexPath.row == 8{
+            
+            self.navigationController?.pushViewController(ImageQRCodeViewCtr(), animated: true)
             
         }
         

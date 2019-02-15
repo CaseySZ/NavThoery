@@ -29,10 +29,13 @@
 }
 
 - (void)originalImage{
+    
 }
 
 - (void)filterImage{
+    
     _filterImageV.image = [self eocFilter];
+    
 }
 
 - (UIImage *)eocFilter{

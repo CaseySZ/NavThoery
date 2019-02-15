@@ -28,6 +28,7 @@
 		C993F29821EEE10400FC3FA1 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C993F29721EEE10400FC3FA1 /* CoreServices.framework */; };
 		C9CA230721F1D73E002F0204 /* ImageCompressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CA230521F1D73E002F0204 /* ImageCompressVC.m */; };
 		C9CA230821F1D73E002F0204 /* ImageCompressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9CA230621F1D73E002F0204 /* ImageCompressVC.xib */; };
+		C9F7A3012216B813007E09C0 /* QRCodeCIImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F7A3002216B813007E09C0 /* QRCodeCIImageVC.m */; };
 		C9FD82BB21F060BE00225BA8 /* ImageIOBaseVCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD82B921F060BE00225BA8 /* ImageIOBaseVCtr.m */; };
 		C9FD82BC21F060BE00225BA8 /* ImageIOBaseVCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82BA21F060BE00225BA8 /* ImageIOBaseVCtr.xib */; };
 		C9FD82BE21F062D100225BA8 /* bigImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9FD82BD21F062D100225BA8 /* bigImage.jpg */; };
@@ -73,6 +74,8 @@
 		C9CA230421F1D73E002F0204 /* ImageCompressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCompressVC.h; sourceTree = "<group>"; };
 		C9CA230521F1D73E002F0204 /* ImageCompressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCompressVC.m; sourceTree = "<group>"; };
 		C9CA230621F1D73E002F0204 /* ImageCompressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCompressVC.xib; sourceTree = "<group>"; };
+		C9F7A2FF2216B813007E09C0 /* QRCodeCIImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeCIImageVC.h; sourceTree = "<group>"; };
+		C9F7A3002216B813007E09C0 /* QRCodeCIImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeCIImageVC.m; sourceTree = "<group>"; };
 		C9FD82B821F060BE00225BA8 /* ImageIOBaseVCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageIOBaseVCtr.h; sourceTree = "<group>"; };
 		C9FD82B921F060BE00225BA8 /* ImageIOBaseVCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageIOBaseVCtr.m; sourceTree = "<group>"; };
 		C9FD82BA21F060BE00225BA8 /* ImageIOBaseVCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIOBaseVCtr.xib; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 				C993F27F21EECA1F00FC3FA1 /* ImageIOOutViewCtr.h */,
 				C993F28021EECA1F00FC3FA1 /* ImageIOOutViewCtr.m */,
 				C993F28221EECBCD00FC3FA1 /* ImageIOOutViewCtr.xib */,
+				C9F7A2FF2216B813007E09C0 /* QRCodeCIImageVC.h */,
+				C9F7A3002216B813007E09C0 /* QRCodeCIImageVC.m */,
 				CD8C35FD1EA33300006D5D0B /* Main.storyboard */,
 				CD8C36001EA33300006D5D0B /* Assets.xcassets */,
 				CD8C36021EA33300006D5D0B /* LaunchScreen.storyboard */,
@@ -301,6 +306,7 @@
 			files = (
 				CD8C360E1EA33452006D5D0B /* ImageFileCompressInAlbumVC.m in Sources */,
 				CD8C35FC1EA33300006D5D0B /* ViewController.m in Sources */,
+				C9F7A3012216B813007E09C0 /* QRCodeCIImageVC.m in Sources */,
 				C993F26321EDB98200FC3FA1 /* ImageIOViewCtr.m in Sources */,
 				C9FD82BB21F060BE00225BA8 /* ImageIOBaseVCtr.m in Sources */,
 				CDB889391EA3C27500585840 /* ShotScreenImageVC.m in Sources */,

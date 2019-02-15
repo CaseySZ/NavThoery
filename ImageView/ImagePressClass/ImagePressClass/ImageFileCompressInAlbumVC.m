@@ -35,6 +35,7 @@
     
 }
 
+// ⚠️ 这个不是真正意义上的压缩，只是文件的压缩，这个操作一般可用于上传
 - (void)imageDataLoad{
     
     NSData *pngData = UIImagePNGRepresentation(_albumImage);
@@ -49,12 +50,9 @@
             break;
         }
     }
-    
-    
+
     NSLog(@"png:%@", [self sizeFormDataLenght:pngData.length]);
     NSLog(@"jpg:%@", [self sizeFormDataLenght:jpgData.length]);
-    
-    
     
     [_pngImageV setImage:[UIImage imageWithData:pngData]];
     [_jpgImageV setImage:[UIImage imageWithData:pngData]];
@@ -91,21 +89,17 @@
 #pragma mark - UIImagePicker delegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo {
     
-    NSLog(@"%s", __func__);
+    
 }
 
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
-    NSLog(@"%s", __func__);
-    
+  
     _albumImage = [info valueForKey:UIImagePickerControllerOriginalImage];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
-    
-    NSLog(@"%s", __func__);
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

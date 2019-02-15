@@ -33,7 +33,7 @@ class ImageFilterVC: UIViewController {
         let provideRef = cgImage.dataProvider
         if let decodeImageData =  provideRef?.data  {
             
-             let lenght = CFDataGetLength(decodeImageData)
+            let lenght = CFDataGetLength(decodeImageData)
             
             let mutableData = CFDataCreateMutableCopy(kCFAllocatorSystemDefault, 0, decodeImageData)
             let pixelBuf =  CFDataGetMutableBytePtr(mutableData)

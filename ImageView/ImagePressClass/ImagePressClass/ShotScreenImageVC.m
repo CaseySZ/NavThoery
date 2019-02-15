@@ -21,27 +21,38 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     _scrollerView.contentSize = CGSizeMake(700, 700);
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"截图" style:UIBarButtonItemStylePlain target:self action:@selector(shotScreen:)];
-    
+    UIBarButtonItem *customItem = [[UIBarButtonItem alloc] initWithTitle:@"截图" style:UIBarButtonItemStylePlain target:self action:@selector(shotScreen)];
+    UIBarButtonItem *circleItem =[[UIBarButtonItem alloc] initWithTitle:@"circle" style:UIBarButtonItemStylePlain target:self action:@selector(circleAction)];
+    self.navigationItem.rightBarButtonItems = @[customItem, circleItem];
     
 }
 
-- (void)shotScreen:(id)sender{
+- (void)shotScreen{
     
-   // _eocImageV.image = [self imageFromView:_scrollerView];
     
-  //  _eocImageV.image = [self circleImage:[UIImage imageNamed:@"1.jpg"]];
+    // 1 创建上下文
+    UIGraphicsBeginImageContext(_scrollerView.frame.size);
+    // 2 获取上下文
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    // 3 把view 渲染到上下吻
+    [_scrollerView.layer renderInContext:context];
+    // 4 把上下文中生成图片
+    UIImage *image =  UIGraphicsGetImageFromCurrentImageContext();
+    image = [self getSubImage:CGRectMake(100, 100, _eocImageV.frame.size.width, _eocImageV.frame.size.height) image:image.CGImage];
+    UIGraphicsEndImageContext();
+    _eocImageV.image =  image;
     
-    _eocImageV.image = [self imageWithColor:nil];
+    //_eocImageV.image = [self imageWithColor:nil];
 }
 
-- (UIImage*)circleImage:(UIImage*)image{
+
+- (void)circleAction {
     
     // 1 创建上下文
     UIGraphicsBeginImageContext(CGSizeMake(200, 200));
     // 2 获取上下文
     CGContextRef context = UIGraphicsGetCurrentContext();
-
+    
     // 3 操作上下文
     CGContextSetLineWidth(context, 1);
     CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
@@ -51,34 +62,14 @@
     CGContextClip(context);
     
     // 4 把image 渲染到相应的上下文中
+    UIImage *image = [UIImage imageNamed:@"1.jpg"];
     [image drawInRect:CGRectMake(0, 0, 200, 200)];
-    
-    
     
     UIImage *backImage =  UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
     
-    return backImage;
-    
-}
-
-
-- (UIImage*)imageFromView:(UIView*)view{
-    
-    CGRect rect = view.frame;
-    // 1 创建上下文
-    UIGraphicsBeginImageContext(view.frame.size);
-    // 2 获取上下文
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    // 3 把view 渲染到上下吻
-    [view.layer renderInContext:context];
-    // 4 把上下文中生成图片
-    UIImage *image =  UIGraphicsGetImageFromCurrentImageContext();
-    image = [self getSubImage:CGRectMake(100, 100, _eocImageV.frame.size.width, _eocImageV.frame.size.height) image:image.CGImage];
-    UIGraphicsEndImageContext();
-    return image;
-   // UIGraphicsPopContext();
+    _eocImageV.image  =  backImage;
 }
 
 
