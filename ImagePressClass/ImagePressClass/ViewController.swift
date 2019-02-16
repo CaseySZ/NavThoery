@@ -29,14 +29,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return 64
     }
-    
+    let titleArr = ["图片文件压缩", "图片压缩", "Filter", "Shot", "Scale", "ImageIO", "ImageIODecode", "ImageIOEncode", "CIIMage", "", "", "", "", ""]
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         if cell == nil {
             cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
         }
-        cell?.textLabel?.text = String(indexPath.row)
+        cell?.textLabel?.text = titleArr[indexPath.row]
         return cell!
     }
     
@@ -82,7 +82,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         if indexPath.row == 7{
             
-           // self.navigationController?.pushViewController(ImageIOEncodeVC(), animated: true)
+            self.navigationController?.pushViewController(ImageIOEncodeVC(), animated: true)
             
         }
         if indexPath.row == 8{
