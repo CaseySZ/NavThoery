@@ -80,7 +80,7 @@
     
     NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys: @(YES), kCGImageSourceCreateThumbnailFromImageIfAbsent, @(YES), kCGImageSourceCreateThumbnailFromImageAlways, nil];
     //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"bigSize" ofType:@"jpg"];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"11" ofType:@"jpg"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"bigImage" ofType:@"jpg"];
  //   NSString *filePath = [[NSBundle mainBundle] pathForResource:@"gif" ofType:@"gif"];
   //  NSString *filePath = [[NSBundle mainBundle] pathForResource:@"mew_baseline" ofType:@"jpg"];
     NSData *fileData = [NSData dataWithContentsOfFile:filePath];

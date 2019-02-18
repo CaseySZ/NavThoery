@@ -22,6 +22,10 @@
     
     self.title = @"image compress";
     
+    UIBarButtonItem *origImageBt = [[UIBarButtonItem alloc] initWithTitle:@"scale" style:UIBarButtonItemStylePlain target:self action:@selector(scaleImage)];
+    UIBarButtonItem *filterImageBt = [[UIBarButtonItem alloc] initWithTitle:@"scaleT" style:UIBarButtonItemStylePlain target:self action:@selector(scaleImageThead)];
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:origImageBt, filterImageBt, nil];
+    
 }
 
 
@@ -34,7 +38,7 @@
    
     UIGraphicsBeginImageContext(imageSize);
     [image drawInRect:CGRectMake(0, 0, imageSize.width, imageSize.height)];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();  // IIOImageProviderInfo::copyImageBlockSetWithOptions
     UIGraphicsEndImageContext();
     
     [self saveImageToLocal:@"testTT png" fromData:UIImageJPEGRepresentation(newImage,1)];
@@ -78,8 +82,6 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     
-    [self scaleImage];
-    [self scaleImageThead];
     
 }
 

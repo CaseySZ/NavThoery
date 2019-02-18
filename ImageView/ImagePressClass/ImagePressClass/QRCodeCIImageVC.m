@@ -7,8 +7,16 @@
 //
 
 #import "QRCodeCIImageVC.h"
+#import <CoreImage/CoreImage.h>
 
-@interface QRCodeCIImageVC ()
+@interface QRCodeCIImageVC (){
+    
+    
+    UIImageView *_imageView;
+    
+    CIImage *_ciImage;
+    
+}
 
 @end
 
@@ -16,8 +24,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.title = @"QR";
+    self.view.backgroundColor = UIColor.whiteColor;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"imageLoad" style:UIBarButtonItemStylePlain target:self action:@selector(imageLoad)];
+    
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    [self.view addSubview:_imageView];
+    
 }
+
+
+- (void)imageLoad {
+    
+    _imageView.image = [UIImage imageWithCIImage:_ciImage];
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    
+    [self qrCodeProduct:nil content:@"http://www.xxxxx.com"];
+    
+}
+
 
 - (void)qrCodeProduct:(UIImageView*)targetImageView content:(NSString*)content{
     
@@ -44,7 +75,7 @@
         CIImage *ciimage = qrFilter.outputImage;
         // 放大图片的比例
         ciimage = [ciimage imageByApplyingTransform:CGAffineTransformMakeScale(9, 9)];
-        
+        _ciImage = ciimage;
         
         CGFloat scale =  UIScreen.mainScreen.scale;
         CGFloat width = ciimage.extent.size.width*scale;

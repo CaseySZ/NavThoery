@@ -17,6 +17,17 @@
  5 ImageIO   
  */
 
+
+/*
+ 关系：
+ UIImage    CGImage   ImageIO  (CoreGraphic 生成的图片，底层也是通过ImageIO来处理的，有一个中间量 CGImageProvider)
+ CGImage
+ ImageIO   
+ 
+ CIImage  默认在GPU上渲染 （instument上可以看到，加载只有用GL来处理）
+ 
+ */
+
 @interface ViewController : UIViewController
 
 

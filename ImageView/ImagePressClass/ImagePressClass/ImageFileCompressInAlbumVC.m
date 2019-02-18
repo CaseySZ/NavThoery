@@ -23,6 +23,7 @@
     self.title = @"压缩相册图片";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"相册" style:UIBarButtonItemStylePlain target:self action:@selector(openAlbum:)];
     
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -76,6 +77,16 @@
 }
 
 
+
+/*
+ 
+ */
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+    [_pngImageV setImage:[UIImage imageNamed:@"1.png"]];
+    
+}
 
 - (IBAction)openAlbum:(id)sender{
     

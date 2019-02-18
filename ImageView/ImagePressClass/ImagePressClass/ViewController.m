@@ -15,6 +15,7 @@
 #import "ImageIOOutViewCtr.h"
 #import "ImageIOBaseVCtr.h"
 #import "ImageCompressVC.h"
+#import "QRCodeCIImageVC.h"
 
 /*
  https://www.cnblogs.com/fengmin/p/5702240.html
@@ -48,7 +49,7 @@
 #pragma mark - tableView delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 7;
+    return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -81,6 +82,8 @@
         cell.textLabel.text = @"decode";
     }else if (indexPath.row == 7) {
         cell.textLabel.text = @"code";
+    }else if (indexPath.row == 8) {
+        cell.textLabel.text = @"QR";
     }
     
     return cell;
@@ -105,6 +108,8 @@
         viewCtr = [ImageIOViewCtr new];
     }else if (indexPath.row == 7){
         viewCtr = [ImageIOOutViewCtr new];
+    }else if (indexPath.row == 8){
+        viewCtr = [QRCodeCIImageVC new];
     }
     [self.navigationController pushViewController:viewCtr animated:YES];
 }
