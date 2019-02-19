@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9F7A369221BFEF7007E09C0 /* VerticalGlyphLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F7A368221BFEF7007E09C0 /* VerticalGlyphLabel.swift */; };
 		C9FD0E3422018DEF0067DA90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD0E3322018DEF0067DA90 /* AppDelegate.swift */; };
 		C9FD0E3622018DEF0067DA90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD0E3522018DEF0067DA90 /* ViewController.swift */; };
 		C9FD0E3922018DEF0067DA90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FD0E3722018DEF0067DA90 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C9F7A368221BFEF7007E09C0 /* VerticalGlyphLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGlyphLabel.swift; sourceTree = "<group>"; };
 		C9FD0E3022018DEF0067DA90 /* CoreTextClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreTextClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FD0E3322018DEF0067DA90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9FD0E3522018DEF0067DA90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				C9FD0E3322018DEF0067DA90 /* AppDelegate.swift */,
 				C9FD0E3522018DEF0067DA90 /* ViewController.swift */,
 				C9FD0E4522018E9C0067DA90 /* ImageTextLabel.swift */,
+				C9F7A368221BFEF7007E09C0 /* VerticalGlyphLabel.swift */,
 				C9FD0E3722018DEF0067DA90 /* Main.storyboard */,
 				C9FD0E3A22018DF00067DA90 /* Assets.xcassets */,
 				C9FD0E3C22018DF00067DA90 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9FD0E3622018DEF0067DA90 /* ViewController.swift in Sources */,
+				C9F7A369221BFEF7007E09C0 /* VerticalGlyphLabel.swift in Sources */,
 				C9FD0E3422018DEF0067DA90 /* AppDelegate.swift in Sources */,
 				C9FD0E4622018E9C0067DA90 /* ImageTextLabel.swift in Sources */,
 			);
