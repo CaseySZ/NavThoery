@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -20,6 +21,11 @@ class ViewController: UIViewController {
         self.view.addSubview(textLabel)
         
         textLabel.backgroundColor = .yellow
+        
+        
+        let textVLabel =  VerticalGlyphLabel.init(frame: CGRect.init(x: 10, y: 300, width: 200, height: 200))
+        self.view.addSubview(textVLabel)
+        textVLabel.backgroundColor = .red
         
     }
     

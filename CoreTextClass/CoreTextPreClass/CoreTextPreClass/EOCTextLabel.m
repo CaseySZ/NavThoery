@@ -41,13 +41,10 @@
     CTLineRef lineRef = (__bridge CTLineRef)lineRefAry[0];
     CFArrayRef runs = CTLineGetGlyphRuns(lineRef);
     
+    
     CGRect lineRect =  CTLineGetBoundsWithOptions(lineRef, 0);
    
     // 开始上下文
-    
-    
-    
-    
     for (NSUInteger r = 0, rMax = CFArrayGetCount(runs); r < rMax; r++) {
         CTRunRef run = CFArrayGetValueAtIndex(runs, r);
         NSRange runRange = NSMakeRange(CTRunGetStringRange(run).location, CTRunGetStringRange(run).length);
@@ -72,17 +69,12 @@
                 CGFloat glyplhX = 375 - glyphPositions[g].y - lineRect.size.height;//-300 + glyphPositions[g].x;
                 CGFloat glyplhY = 300 - (g+ 1)*lineRect.size.height;
             
-//            CGFloat glyplhX =  glyphPositions[g].y + lineRect.size.height;//-300 + glyphPositions[g].x;
-//            CGFloat glyplhY =  (g+ 1)*lineRect.size.height;
-            
+
                 NSLog(@"%d:::  %f,%f ====== %f,%f", g, glyphPositions[g].x, glyphPositions[g].y, glyplhX, glyplhY);
                 CGContextSetTextPosition(context,glyplhX, glyplhY); // CG 绘制的坐标系统是正常的，原点在右上角， CT的原点在右下角， ⚠️注意两个不通的坐标系统绘制
-                
-                CGFontRef cgFont = CTFontCopyGraphicsFont(runFont, NULL);
-                CGContextSetFont(context, cgFont);
-                CGContextSetFontSize(context, CTFontGetSize(runFont));
+            
                 CGContextShowGlyphsAtPositions(context, glyphs + g, &zeroPoint, 1); // zeroPoint 当前绘制的偏移位置
-                CGFontRelease(cgFont);
+                
                 
           //  }CGContextRestoreGState(context);
         
