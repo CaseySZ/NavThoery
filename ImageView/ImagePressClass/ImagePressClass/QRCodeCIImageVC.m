@@ -65,7 +65,7 @@
     CIFilter *filter = [CIFilter filterWithName:filterName];
     CIImage *inputImage = [[CIImage alloc] initWithImage:[UIImage imageNamed:@"bigImage.jpg"]];
     [filter setValue:inputImage forKey:kCIInputImageKey];
-    _imageView.image = [UIImage imageWithCIImage:filter.outputImage];
+    _imageView.image = [UIImage imageWithCIImage:filter.outputImage]; // 这个卡在GPU， 没卡CPU， 可以看输出
     
     NSLog(@"%@", filterName);
     __imageIndex++;
