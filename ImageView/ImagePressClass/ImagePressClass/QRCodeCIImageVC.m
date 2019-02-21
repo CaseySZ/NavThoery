@@ -22,6 +22,15 @@
 
 @implementation QRCodeCIImageVC
 
+
+- (void)loadView {
+    
+    UIScrollView *scrollerView = [[UIScrollView alloc] init];
+    scrollerView.backgroundColor = UIColor.whiteColor;
+    [scrollerView setContentSize:CGSizeMake(UIScreen.mainScreen.bounds.size.width + 100, UIScreen.mainScreen.bounds.size.height + 100)];
+    self.view = scrollerView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -30,7 +39,7 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"imageLoad" style:UIBarButtonItemStylePlain target:self action:@selector(imageLoad)];
     
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 200, 300)];
     [self.view addSubview:_imageView];
     
 }
@@ -38,14 +47,33 @@
 
 - (void)imageLoad {
     
+    [self filterFunction];
+    
+    return;
+    
+    [self qrCodeProduct:nil content:@"http://www.xxxxx.com"];
     _imageView.image = [UIImage imageWithCIImage:_ciImage];
+}
+
+
+- (void)filterFunction {
+    
+    static int __imageIndex = 0;
+    NSArray *filterNameArr = @[@"CIColorControls", @"CIPhotoEffectMono", @"CIPhotoEffectTonal", @"CIPhotoEffectNoir", @"CIPhotoEffectFade", @"CIPhotoEffectChrome", @"CIPhotoEffectProcess"];
+    
+    NSString *filterName = filterNameArr[__imageIndex%filterNameArr.count];
+    CIFilter *filter = [CIFilter filterWithName:filterName];
+    CIImage *inputImage = [[CIImage alloc] initWithImage:[UIImage imageNamed:@"bigImage.jpg"]];
+    [filter setValue:inputImage forKey:kCIInputImageKey];
+    _imageView.image = [UIImage imageWithCIImage:filter.outputImage];
+    
+    NSLog(@"%@", filterName);
+    __imageIndex++;
 }
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    
-    [self qrCodeProduct:nil content:@"http://www.xxxxx.com"];
     
 }
 
@@ -60,16 +88,25 @@
         UIImage *cacheImage = [UIImage imageWithContentsOfFile:filePath];
         
         if (cacheImage) {
-            
+
             dispatch_async(dispatch_get_main_queue(), ^{
-                
+
                 targetImageView.image = cacheImage;
-                
+
             });
             return ;
         }
+        // 查看所有的滤镜名字列表 [CIFilter filterNamesInCategory:kCICategoryBuiltIn];
+        
+        /*
+         滤镜提供什么样的输入和输出参数
+         qrFilter.inputKeys  和 qrFilter.outputKeys
+         参数描述： qrFilter.attributes
+         
+         */
         
         CIFilter *qrFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+        
         [qrFilter setDefaults];
         [qrFilter setValue:[content dataUsingEncoding:NSUTF8StringEncoding] forKey:@"inputMessage"];
         CIImage *ciimage = qrFilter.outputImage;
