@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+//https://reactnative.cn/docs/state/
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
