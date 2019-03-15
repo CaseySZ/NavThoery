@@ -73,7 +73,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }else if indexPath.row == 3{
             
             self.navigationController?.pushViewController(GCDViewCtr(), animated: true)
+            
+        }else if indexPath.row == 4{
+            
+            self.navigationController?.pushViewController(LockViewCtr(), animated: true)
         }
+        
         
         
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C979EF58223A371800DD1335 /* LockViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C979EF57223A371800DD1335 /* LockViewCtr.swift */; };
 		C98EA891222F5EA00092A988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EA890222F5EA00092A988 /* AppDelegate.swift */; };
 		C98EA893222F5EA00092A988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EA892222F5EA00092A988 /* ViewController.swift */; };
 		C98EA896222F5EA00092A988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98EA894222F5EA00092A988 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C979EF57223A371800DD1335 /* LockViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewCtr.swift; sourceTree = "<group>"; };
 		C98EA88D222F5EA00092A988 /* ThreadClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98EA890222F5EA00092A988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C98EA892222F5EA00092A988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C979EF56223A36FB00DD1335 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				C979EF57223A371800DD1335 /* LockViewCtr.swift */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
 		C98EA884222F5EA00092A988 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 			children = (
 				C98EA890222F5EA00092A988 /* AppDelegate.swift */,
 				C98EA892222F5EA00092A988 /* ViewController.swift */,
+				C979EF56223A36FB00DD1335 /* Lock */,
 				C98EA8B2222FC0040092A988 /* GCD */,
 				C98EA8A9222F93B20092A988 /* Operation */,
 				C98EA8A4222F664A0092A988 /* Thread */,
@@ -187,6 +198,7 @@
 				C98EA893222F5EA00092A988 /* ViewController.swift in Sources */,
 				C98EA891222F5EA00092A988 /* AppDelegate.swift in Sources */,
 				C98EA8A3222F612D0092A988 /* ThreadViewCtr.swift in Sources */,
+				C979EF58223A371800DD1335 /* LockViewCtr.swift in Sources */,
 				C98EA8A8222F6B6F0092A988 /* CModel.swift in Sources */,
 				C98EA8B1222FBBB10092A988 /* CancelOperation.swift in Sources */,
 			);
