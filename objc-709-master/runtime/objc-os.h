@@ -735,6 +735,7 @@ tls_get_direct(void **tsdb, tls_key_t k)
 #else
 // not arm
 
+// // pthread_getspecific， pthread_setspecific 对线程的私有空间进行存储操作
 static inline void *tls_get_direct(tls_key_t k) 
 { 
     assert(is_valid_direct_key(k));

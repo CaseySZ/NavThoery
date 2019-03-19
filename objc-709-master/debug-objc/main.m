@@ -37,17 +37,17 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         
-           // TestObject *testObj = [[TestObject alloc] init];
+            //TestObject *testObj = [[TestObject alloc] init];
              __weak NSObject *obj = [[NSObject alloc] init];
             //NSObject *obj = [[NSObject alloc] init];
             //NSMutableArray *arr = [[NSMutableArray alloc] init];
           //  testObj.object = obj;
            // NSObject *tmp = obj;
-          //  [testObj testMethodIn:testObj];
+         //   [testObj testMethodIn:testObj];
            // [testObj testMethod];
         
            // [testObj testMethod:obj];
-           // [NSArray arrayWithObjects:@"1", @"2", nil];
+            [NSArray arrayWithObjects:@"1", @"2", nil];
         
         NSLog(@"Hello, World!");
     }

@@ -113,7 +113,7 @@ static void append_referrer(weak_entry_t *entry, objc_object **new_referrer)
 {
     if (! entry->out_of_line()) {
         // Try to insert inline.
-        for (size_t i = 0; i < WEAK_INLINE_COUNT; i++) {
+        for (size_t i = 0; i < WEAK_INLINE_COUNT; i++) { // 没超过4个，就赋值，然后return，4个已经满了，entry->inline_referrers[i] == nil就不成立，执行下面的，替换referrers
             if (entry->inline_referrers[i] == nil) {
                 entry->inline_referrers[i] = new_referrer;
                 return;
@@ -126,7 +126,7 @@ static void append_referrer(weak_entry_t *entry, objc_object **new_referrer)
         // This constructed table is invalid, but grow_refs_and_insert
         // will fix it and rehash it.
         for (size_t i = 0; i < WEAK_INLINE_COUNT; i++) {
-            new_referrers[i] = entry->inline_referrers[i];
+            new_referrers[i] = entry->inline_referrers[i]; // 将inline_referrers赋值到新的区域
         }
         entry->referrers = new_referrers;
         entry->num_refs = WEAK_INLINE_COUNT;
@@ -427,7 +427,7 @@ weak_register_no_lock(weak_table_t *weak_table, id referent_id,
     // now remember it and where it is being stored
     weak_entry_t *entry;
     if ((entry = weak_entry_for_referent(weak_table, referent))) {
-        append_referrer(entry, referrer);
+        append_referrer(entry, referrer); // 添加到数组中
     } 
     else {
         weak_entry_t new_entry(referent, referrer);
@@ -458,12 +458,31 @@ weak_is_registered_no_lock(weak_table_t *weak_table, id referent_id)
  * @param weak_table 
  * @param referent The object being deallocated. 
  */
+
+/*
+ 1、调用objc_release
+ 2、因为对象的引用计数为0，所以执行dealloc
+ 3、在dealloc中，调用了_objc_rootDealloc函数
+ 4、在_objc_rootDealloc中，调用了object_dispose函数
+ 5、调用objc_destructInstance
+ 6、最后调用objc_clear_deallocating
+ */
+
+/*
+ weak_table_t 可以一张表
+ weak_entry_t* 可以理解为数组， 这个数组中包含的是weak_entry_t* （而weak_entry_t*也可以理解为数组，而这个数组存放了weak相关的指针）
+ 所以 weak_entry_t* 可以直接理解为一个数组的数组 ，即arr[key][count], (其中key是通过对象的地址计算出来的，可以看weak_entry_for_referent)
+ 
+ weak_entry_t 有两种结构，和存储数量有关系， 具体替换查看 append_referrer( 方法
+ 
+ */
+
 void 
 weak_clear_no_lock(weak_table_t *weak_table, id referent_id) 
 {
     objc_object *referent = (objc_object *)referent_id;
 
-    weak_entry_t *entry = weak_entry_for_referent(weak_table, referent);
+    weak_entry_t *entry = weak_entry_for_referent(weak_table, referent); // 通过对象地址，从表中获取相应的weak_entry_t
     if (entry == nil) {
         /// XXX shouldn't happen, but does with mismatched CF/objc
         //printf("XXX no entry for clear deallocating %p\n", referent);
@@ -474,7 +493,7 @@ weak_clear_no_lock(weak_table_t *weak_table, id referent_id)
     weak_referrer_t *referrers;
     size_t count;
     
-    if (entry->out_of_line()) {
+    if (entry->out_of_line()) { // 超出一定数量就用referrers指针存储（少于2个，用inline_referrers数组存储）
         referrers = entry->referrers;
         count = TABLE_SIZE(entry);
     } 
@@ -487,7 +506,7 @@ weak_clear_no_lock(weak_table_t *weak_table, id referent_id)
         objc_object **referrer = referrers[i];
         if (referrer) {
             if (*referrer == referent) {
-                *referrer = nil;
+                *referrer = nil; // 指针置空
             }
             else if (*referrer) {
                 _objc_inform("__weak variable at %p holds %p instead of %p. "
@@ -500,6 +519,6 @@ weak_clear_no_lock(weak_table_t *weak_table, id referent_id)
         }
     }
     
-    weak_entry_remove(weak_table, entry);
+    weak_entry_remove(weak_table, entry); // 从weak_table_t 移除 weak_entry_t 对象
 }
 
