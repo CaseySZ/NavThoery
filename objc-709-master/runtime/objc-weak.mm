@@ -225,7 +225,7 @@ static void weak_entry_insert(weak_table_t *weak_table, weak_entry_t *new_entry)
     weak_entries[index] = *new_entry;
     weak_table->num_entries++;
 
-    if (hash_displacement > weak_table->max_hash_displacement) {
+    if (hash_displacement > weak_table->max_hash_displacement) {// 记录二维数组的最大维度
         weak_table->max_hash_displacement = hash_displacement;
     }
 }
@@ -313,9 +313,9 @@ weak_entry_for_referent(weak_table_t *weak_table, objc_object *referent)
     weak_entry_t *weak_entries = weak_table->weak_entries;
 
     if (!weak_entries) return nil;
-
+    // hash_pointer 对地址进行 hash操作， mask=63，8个1
     size_t begin = hash_pointer(referent) & weak_table->mask;
-    size_t index = begin;
+    size_t index = begin; // 根据地址算出索引
     size_t hash_displacement = 0;
     while (weak_table->weak_entries[index].referent != referent) {
         index = (index+1) & weak_table->mask;
@@ -325,7 +325,7 @@ weak_entry_for_referent(weak_table_t *weak_table, objc_object *referent)
             return nil;
         }
     }
-    
+    // 断点，可以看weak_table_t 和 weak_entry_t的结构
     return &weak_table->weak_entries[index];
 }
 
@@ -402,7 +402,7 @@ weak_register_no_lock(weak_table_t *weak_table, id referent_id,
         deallocating = referent->rootIsDeallocating();
     }
     else {
-        BOOL (*allowsWeakReference)(objc_object *, SEL) = 
+        BOOL (*allowsWeakReference)(objc_object *, SEL) =
             (BOOL(*)(objc_object *, SEL))
             object_getMethodImplementation((id)referent, 
                                            SEL_allowsWeakReference);
@@ -426,13 +426,13 @@ weak_register_no_lock(weak_table_t *weak_table, id referent_id,
 
     // now remember it and where it is being stored
     weak_entry_t *entry;
-    if ((entry = weak_entry_for_referent(weak_table, referent))) {
-        append_referrer(entry, referrer); // 添加到数组中
+    if ((entry = weak_entry_for_referent(weak_table, referent))) { // 弱表中已经存在了这个对象
+        append_referrer(entry, referrer); // 追加到到数组中
     } 
     else {
         weak_entry_t new_entry(referent, referrer);
-        weak_grow_maybe(weak_table);
-        weak_entry_insert(weak_table, &new_entry);
+        weak_grow_maybe(weak_table);// 判断表是否快满了
+        weak_entry_insert(weak_table, &new_entry); // 插入表单
     }
 
     // Do not set *referrer. objc_storeWeak() requires that the 

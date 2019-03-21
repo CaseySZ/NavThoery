@@ -64,7 +64,17 @@ namespace {
 #   error bad config
 #endif
 
-
+/*
+ 1.冒号是位域
+ 
+ 位域
+ 位域是指信息在存储时，并不需要占用一个完整的字节， 而只需占几个或一个二进制位。例如在存放一个开关量时，
+ 只有0和1 两种状态， 用一位二进位即可。为了节省存储空间，并使处理简便，
+ C语言又提供了一种数据结构，称为“位域”或“位段”。
+ 所谓“位域”是把一个字节中的二进位划分为几 个不同的区域， 并说明每个区域的位数。每个域有一个域名，允许在程序中按域名进行操作。
+ 这样就可以把几个不同的对象用一个字节的二进制位域来表示。
+ 
+ */
 union isa_t 
 {
     isa_t() { }
@@ -91,15 +101,15 @@ union isa_t
 #   define ISA_MAGIC_MASK  0x000003f000000001ULL
 #   define ISA_MAGIC_VALUE 0x000001a000000001ULL
     struct {
-        uintptr_t nonpointer        : 1;
-        uintptr_t has_assoc         : 1;
-        uintptr_t has_cxx_dtor      : 1;
-        uintptr_t shiftcls          : 33; // MACH_VM_MAX_ADDRESS 0x1000000000
-        uintptr_t magic             : 6;
-        uintptr_t weakly_referenced : 1;
-        uintptr_t deallocating      : 1;
-        uintptr_t has_sidetable_rc  : 1;
-        uintptr_t extra_rc          : 19;
+        uintptr_t nonpointer        : 1; // 1代表优化后的使用位域存储更多的信息。
+        uintptr_t has_assoc         : 1; // 是否有设置过关联对象
+        uintptr_t has_cxx_dtor      : 1; // 是否有C++析构函数
+        uintptr_t shiftcls          : 33; // MACH_VM_MAX_ADDRESS 0x1000000000  //存储着Class对象的内存地址信息
+        uintptr_t magic             : 6; // 用于在调试时分辨对象是否未完成初始化
+        uintptr_t weakly_referenced : 1; // 是否有被弱引用指向过
+        uintptr_t deallocating      : 1; // 对象是否正在释放
+        uintptr_t has_sidetable_rc  : 1; //// 引用计数器是否过大无法存储在isa中，  如果为1，那么引用计数会存储在一个叫SideTable的类的属性中
+        uintptr_t extra_rc          : 19; // 里面存储的值是引用计数器减1
 #       define RC_ONE   (1ULL<<45)
 #       define RC_HALF  (1ULL<<18)
     };

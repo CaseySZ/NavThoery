@@ -198,7 +198,7 @@ objc_object::initInstanceIsa(Class cls, bool hasCxxDtor)
     assert(!cls->instancesRequireRawIsa());
     assert(hasCxxDtor == cls->hasCxxDtor());
 
-    initIsa(cls, true, hasCxxDtor);
+    initIsa(cls, true, hasCxxDtor); // 初始化isa
 }
 
 inline void 
@@ -226,7 +226,7 @@ objc_object::initIsa(Class cls, bool nonpointer, bool hasCxxDtor)
         // isa.magic is part of ISA_MAGIC_VALUE
         // isa.nonpointer is part of ISA_MAGIC_VALUE
         newisa.has_cxx_dtor = hasCxxDtor;
-        newisa.shiftcls = (uintptr_t)cls >> 3;
+        newisa.shiftcls = (uintptr_t)cls >> 3;  // 可以看cls地址 和 shiftcls的十六进制比较
 #endif
 
         // This write must be performed in a single store in some cases

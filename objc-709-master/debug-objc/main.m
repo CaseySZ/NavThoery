@@ -37,8 +37,14 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         
+        NSLog(@"ddddddd");
             //TestObject *testObj = [[TestObject alloc] init];
-             __weak NSObject *obj = [[NSObject alloc] init];
+//            NSObject *oc = [[NSObject alloc] init];
+//            NSObject *ocT = [[NSObject alloc] init];
+//            __weak NSObject *obj = oc;
+//            __weak NSObject *objT = oc;
+//            __weak NSObject *objTh = ocT;
+//            __weak NSObject *objTf = ocT;
             //NSObject *obj = [[NSObject alloc] init];
             //NSMutableArray *arr = [[NSMutableArray alloc] init];
           //  testObj.object = obj;
@@ -47,7 +53,7 @@ int main(int argc, const char * argv[]) {
            // [testObj testMethod];
         
            // [testObj testMethod:obj];
-            [NSArray arrayWithObjects:@"1", @"2", nil];
+            //[NSArray arrayWithObjects:@"1", @"2", nil];
         
         NSLog(@"Hello, World!");
     }
@@ -145,6 +151,12 @@ int main(int argc, const char * argv[]) {
 
 
 
+/*
+ __weak NSObject *obj = [[NSObject alloc] init]; // 执行objc_initWeak
+ obj = [[NSObject alloc] init]; 执行  objc_storeWeak()
+ 
+ 
+ */
 
 /*
  weak_is_registered_no_lock  weak表注册
@@ -156,3 +168,15 @@ int main(int argc, const char * argv[]) {
  storeWeak
  
  */
+
+
+/* weak 表的清理
+ 1、调用objc_release
+ 2、因为对象的引用计数为0，所以执行dealloc
+ 3、在dealloc中，调用了_objc_rootDealloc函数
+ 4、在_objc_rootDealloc中，调用了object_dispose函数
+ 5、调用objc_destructInstance
+ 6、最后调用objc_clear_deallocating
+ */
+
+
