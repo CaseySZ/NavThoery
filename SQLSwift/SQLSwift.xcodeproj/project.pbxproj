@@ -13,6 +13,11 @@
 		C9B3138E2243929000CC39B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B3138D2243929000CC39B5 /* Assets.xcassets */; };
 		C9B313912243929000CC39B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B3138F2243929000CC39B5 /* LaunchScreen.storyboard */; };
 		C9B31399224393BF00CC39B5 /* SimpleSQLViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B31398224393BF00CC39B5 /* SimpleSQLViewCtr.swift */; };
+		C9B3139F22487CB300CC39B5 /* FDBaseTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3139E22487CB300CC39B5 /* FDBaseTable.swift */; };
+		C9B313A12248C2F300CC39B5 /* DataBasePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B313A02248C2F300CC39B5 /* DataBasePool.swift */; };
+		C9B313A32248D40600CC39B5 /* SQLExecute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B313A22248D40600CC39B5 /* SQLExecute.swift */; };
+		C9B313A52248DB7300CC39B5 /* SQLFrameViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B313A42248DB7300CC39B5 /* SQLFrameViewCtr.swift */; };
+		C9B313A72248DC4B00CC39B5 /* StudentTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B313A62248DC4B00CC39B5 /* StudentTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		C9B313902243929000CC39B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9B313922243929000CC39B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9B31398224393BF00CC39B5 /* SimpleSQLViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSQLViewCtr.swift; sourceTree = "<group>"; };
+		C9B3139E22487CB300CC39B5 /* FDBaseTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDBaseTable.swift; sourceTree = "<group>"; };
+		C9B313A02248C2F300CC39B5 /* DataBasePool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBasePool.swift; sourceTree = "<group>"; };
+		C9B313A22248D40600CC39B5 /* SQLExecute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLExecute.swift; sourceTree = "<group>"; };
+		C9B313A42248DB7300CC39B5 /* SQLFrameViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLFrameViewCtr.swift; sourceTree = "<group>"; };
+		C9B313A62248DC4B00CC39B5 /* StudentTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +69,25 @@
 				C9B313862243929000CC39B5 /* AppDelegate.swift */,
 				C9B313882243929000CC39B5 /* ViewController.swift */,
 				C9B31398224393BF00CC39B5 /* SimpleSQLViewCtr.swift */,
+				C9B313A42248DB7300CC39B5 /* SQLFrameViewCtr.swift */,
+				C9B313A62248DC4B00CC39B5 /* StudentTable.swift */,
+				C9B3139D22487AD200CC39B5 /* Frame */,
 				C9B3138A2243929000CC39B5 /* Main.storyboard */,
 				C9B3138D2243929000CC39B5 /* Assets.xcassets */,
 				C9B3138F2243929000CC39B5 /* LaunchScreen.storyboard */,
 				C9B313922243929000CC39B5 /* Info.plist */,
 			);
 			path = SQLSwift;
+			sourceTree = "<group>";
+		};
+		C9B3139D22487AD200CC39B5 /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3139E22487CB300CC39B5 /* FDBaseTable.swift */,
+				C9B313A02248C2F300CC39B5 /* DataBasePool.swift */,
+				C9B313A22248D40600CC39B5 /* SQLExecute.swift */,
+			);
+			path = Frame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +162,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B313892243929000CC39B5 /* ViewController.swift in Sources */,
+				C9B313A12248C2F300CC39B5 /* DataBasePool.swift in Sources */,
+				C9B313A32248D40600CC39B5 /* SQLExecute.swift in Sources */,
+				C9B313A52248DB7300CC39B5 /* SQLFrameViewCtr.swift in Sources */,
+				C9B313A72248DC4B00CC39B5 /* StudentTable.swift in Sources */,
+				C9B3139F22487CB300CC39B5 /* FDBaseTable.swift in Sources */,
 				C9B313872243929000CC39B5 /* AppDelegate.swift in Sources */,
 				C9B31399224393BF00CC39B5 /* SimpleSQLViewCtr.swift in Sources */,
 			);

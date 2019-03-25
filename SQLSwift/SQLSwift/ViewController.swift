@@ -40,6 +40,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             self.navigationController?.pushViewController(SimpleSQLViewCtr(), animated: true)
         }
+        if indexPath.row == 1 {
+            self.navigationController?.pushViewController(SQLFrameViewCtr(), animated: true)
+        }
         
     }
     
