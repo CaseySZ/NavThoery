@@ -10,6 +10,7 @@ import UIKit
 
 class SQLFrameViewCtr: UIViewController {
 
+    var studentTable:StudentTable?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,12 +20,26 @@ class SQLFrameViewCtr: UIViewController {
         let readItem = UIBarButtonItem.init(title: "read", style: .plain, target: self, action: #selector(readSqlData))
         
         self.navigationItem.rightBarButtonItems = [fileItem, tableItem, insertItem, readItem];
+        
+        do {
+            
+            studentTable = try StudentTable()
+            
+        }catch let error as TableError{
+        
+            print(error.rawValue)
+            
+        }catch  {
+            
+            print(error)
+        }
+        
     }
     
-    let studentTable = StudentTable()
+    
     @objc func sqlCreateDBFileAndOpen()  {
        
-        
+   
         
        
     }
@@ -40,14 +55,37 @@ class SQLFrameViewCtr: UIViewController {
     
     @objc func insertData()  {
         
+        let dict = ["id":"1", "name":"a", "age":"11"]
+        do {
+            
+            try studentTable?.insert(columnInfo: dict)
+            
+        }catch TableError.stepFail {
+            
+            
+        }catch {
         
-        
+            print(error)
+        }
     }
     
     
     @objc func readSqlData() {
         
+        do {
+            
+            if let result = try studentTable?.queryAll() {
         
+                print(result)
+            }
+            
+            
+            
+        }catch {
+            
+            print(error)
+            
+        }
         
         
         

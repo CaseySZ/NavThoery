@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StudentTable: FDBaseTable, FDBaseTableProtocol {
+class StudentTable: FDBaseTable {
     
     func dataBaseName() -> String {
         return "student.db"

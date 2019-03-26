@@ -23,38 +23,35 @@ import SQLite3
 }
 
 
-class FDBaseTable: NSObject {
+class FDBaseTable {
     
     
     var dataBase: DataBase?
-    override init() {
-        super.init()
+    private var _tableName:String = ""
+    init?() throws{
         
-        if self.conforms(to: FDBaseTableProtocol.self) {
+     
+        if let tableProcol = self as? FDBaseTableProtocol {
             
-            if let tableProcol = self as? FDBaseTableProtocol {
-                
-                let dataBaseName = tableProcol.dataBaseName()
-                let tableName = tableProcol.tableName()
-                let columnValue = tableProcol.columnValue()
-                
-                dataBase = DataBasePool.shareInstance.file(dataBaseName)
-                createTable(tableName, columnValue)
+            let dataBaseName = tableProcol.dataBaseName()
+            let columnValue = tableProcol.columnValue()
+            _tableName = tableProcol.tableName()
             
-            }
+            dataBase = DataBasePool.shareInstance.file(dataBaseName)
             
+            try createTable(_tableName, columnValue)
             
-            
+
         }else {
             
-            let exception = NSException.init(name: NSExceptionName.init("FDBaseTableProtocol"), reason: "no conforms", userInfo: nil)
-            exception.raise()
+            throw TableError.noConformsFDBaseTableProtocolFail
+            
         }
         
     }
     
     
-    private func createTable(_ tableName:String, _ columnValue:Dictionary<String, String>)  {
+    private func createTable(_ tableName:String, _ columnValue:Dictionary<String, String>)  throws{
         
         var columnPro = String.init()
         for (key, value) in columnValue {
@@ -70,17 +67,49 @@ class FDBaseTable: NSObject {
         
         let sqlExe =  SQLExecute.init(sqlFile: dataBase?.sqlFile, sqlCommand: sqlStr)
         
-        sqlExe.excuteWriteOperation()
-        
+        return try sqlExe.excuteWriteOperation()
+  
     }
     
     
-    func create(columnInfo:Dictionary<String, String>)  {
+    func insert(columnInfo:Dictionary<String, String>) throws{
+        
+        var columnPro = String.init()
+        var keyPro = String.init()
+        for (key, value) in columnInfo {
+            
+            if keyPro.count > 0 {
+                keyPro.append(",")
+                columnPro.append(",")
+            }
+            
+            keyPro.append(key)
+          //  columnPro.append(String.init(format: "'%@'", value))
+            columnPro.append(String.init(format: "%@", value))
+        }
+        
+        let sqlStr = String.init(format: "insert into %@ (%@) values (%@)", _tableName, keyPro, columnPro)
+        
+        let sqlExe =  SQLExecute.init(sqlFile: dataBase?.sqlFile, sqlCommand: sqlStr)
         
         
-        
+            
+        try sqlExe.excuteWriteOperation()
+            
+       
     }
     
+    
+    func queryAll() throws -> Array<Dictionary<String, Any>>? {
+        
+        let sqlStr = String.init(format: "select *from %@", _tableName)
+        
+        let sqlExe =  SQLExecute.init(sqlFile: dataBase?.sqlFile, sqlCommand: sqlStr)
+        
+        return try sqlExe.excuteReadOperation()
+    
+    
+    }
     
 }
 

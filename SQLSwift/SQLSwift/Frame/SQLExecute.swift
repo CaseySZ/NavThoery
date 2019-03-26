@@ -9,6 +9,16 @@
 import UIKit
 import SQLite3
 
+
+enum TableError: String, Error {
+    
+    case prepareFail
+    case stepFail
+    case noConformsFDBaseTableProtocolFail = "需要实现FDBaseTableProtocol协议"
+    case otherFail
+    
+}
+
 class SQLExecute {
     
     var _sqlFile:SQLFileHandle?
@@ -19,21 +29,18 @@ class SQLExecute {
         _sqlCommand = sqlCommand
     }
     
-    func excuteReadOperation() -> Array<Dictionary<String, Any>>? {
+    func excuteReadOperation() throws ->  Array<Dictionary<String, Any>>?{
         
         
         
         if let sqlHandle = _sqlFile {
             
             var handleStmt: OpaquePointer? = nil
-            let sqlStr = String.init(format: "select *from firstT")
-            
-            let status = sqlite3_prepare_v2(sqlHandle, sqlStr, -1, &handleStmt, nil)
+            let status = sqlite3_prepare_v2(sqlHandle, _sqlCommand, -1, &handleStmt, nil)
             if status != SQLITE_OK {
                 
-                print("sqlError: sqlite_prepare Fail")
                 sqlite3_finalize(handleStmt)
-                return nil
+                throw TableError.prepareFail
             }
             
             var resultArr = Array<Dictionary<String, Any>>()
@@ -53,25 +60,23 @@ class SQLExecute {
     }
     
     
-    func excuteWriteOperation()  {
+    func excuteWriteOperation()  throws{
         
         if let sqlHandle = _sqlFile {
             
             var handleStmt: OpaquePointer? = nil
-            let sqlStr = String.init(format: "select *from firstT")
-            
-            var status = sqlite3_prepare_v2(sqlHandle, sqlStr, -1, &handleStmt, nil)
+          
+            var status = sqlite3_prepare_v2(sqlHandle, _sqlCommand, -1, &handleStmt, nil)
             if status != SQLITE_OK {
                 
-                print("sqlError: sqlite_prepare Fail")
                 sqlite3_finalize(handleStmt)
-                return
+                throw TableError.prepareFail
             }
             
             status = sqlite3_step(handleStmt)
             if status != SQLITE_DONE  {
                 
-                print("sqlError: sqlite3_step Fail")
+                throw TableError.stepFail
             }
             
             sqlite3_finalize(handleStmt)
