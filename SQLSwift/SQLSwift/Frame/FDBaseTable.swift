@@ -9,7 +9,7 @@
 import UIKit
 import SQLite3
 
-@objc protocol FDBaseTableProtocol {
+protocol FDBaseTableProtocol {
     
     func dataBaseName() -> String
     
@@ -17,13 +17,12 @@ import SQLite3
     
     func columnValue() -> Dictionary<String, String>
     
-    //@objc optional func recordClass<T>() -> T
     
     
 }
 
 
-class FDBaseTable {
+class FDBaseTable<T:Codable> {
     
     
     var dataBase: DataBase?
@@ -95,8 +94,14 @@ class FDBaseTable {
         
             
         try sqlExe.excuteWriteOperation()
-            
-       
+        
+    }
+    
+    func insert(_ recode:T) throws {
+        
+        
+        
+        
     }
     
     
@@ -107,8 +112,38 @@ class FDBaseTable {
         let sqlExe =  SQLExecute.init(sqlFile: dataBase?.sqlFile, sqlCommand: sqlStr)
         
         return try sqlExe.excuteReadOperation()
+        
+    }
+    
+    func query() throws -> [T]? {
+        
+        let sqlStr = String.init(format: "select *from %@", _tableName)
+        
+        let sqlExe =  SQLExecute.init(sqlFile: dataBase?.sqlFile, sqlCommand: sqlStr)
+        
+        if let result =  try sqlExe.excuteReadOperation(){
+            
+    
+            let data = try JSONSerialization.data(withJSONObject: result, options: .prettyPrinted)
+            let model =  try JSONDecoder().decode([T].self, from: data)
+            
+            return model
+        
+            
+        }
+        
+        return nil
+    }
     
     
+    func update(_ newValue:Dictionary<String, Any>, _ condition:String, _ conditionKey:String) throws {
+        
+        let sqlStr = String.init(format: "update %@ set name = '' where %@ = '%@' ", _tableName, condition, conditionKey)
+        
+        let sqlExe =  SQLExecute.init(sqlFile: dataBase?.sqlFile, sqlCommand: sqlStr)
+        
+        return try sqlExe.excuteWriteOperation()
+        
     }
     
 }

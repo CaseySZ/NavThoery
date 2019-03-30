@@ -39,7 +39,20 @@ class SQLFrameViewCtr: UIViewController {
     
     @objc func sqlCreateDBFileAndOpen()  {
        
-   
+        do {
+            
+            if let result = try studentTable?.insert(StudentRecord.init()) {
+                
+                print(result)
+            }
+            
+            
+            
+        }catch {
+            
+            print(error)
+            
+        }
         
        
     }
@@ -47,7 +60,20 @@ class SQLFrameViewCtr: UIViewController {
    
     @objc func sqlCreateTable()  {
         
-        
+        do {
+            
+            if let result = try studentTable?.query() {
+                
+                print(result)
+            }
+            
+            
+            
+        }catch {
+            
+            print(error)
+            
+        }
       
         
     }
