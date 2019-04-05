@@ -8,6 +8,7 @@
 
 import UIKit
 
+//https://github.com/stephencelis/SQLite.swift/blob/master/Documentation/Index.md#create-table-options
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {

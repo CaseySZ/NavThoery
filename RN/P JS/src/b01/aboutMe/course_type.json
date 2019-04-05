@@ -1,0 +1,78 @@
+[
+  {
+    "type": 0,
+    "colors": [
+      "#feda02",
+      "#fcbd3a",
+      "#ff9a03"
+    ],
+    "topTitle": "经典百家乐教程",
+    "title": "经典百家乐",
+    "btn": {
+      "txt": "进入游戏",
+      "width": 80,
+      "color": "rgb(238,139,51)"
+    },
+    "img": {
+      "content": "cousrlist_header_img1",
+      "right": 30
+    },
+    "segment": [
+      "规则",
+      "赔率",
+      "牌路"
+    ],
+    "item": {
+      "gameCode" : "B01003",
+      "gameTypeLogo" : "http://b01mobileimage.hubijjl.com/static/B01M/_default/__static/_wms/app_index/3bd2be73c46785bbb2b5e6ac768dd6e0.png",
+      "gameName" : "AG旗舰厅",
+      "gameType" : "BAC"
+    }
+  },
+  {
+    "type": 1,
+    "colors": [
+      "#66b3ff",
+      "#9545e5"
+    ],
+    "title": "捕鱼王教程",
+    "btn": {
+      "txt": "进入游戏",
+      "width": 80,
+      "color": "#9545e5"
+    },
+    "img": {
+      "content": "pyw_header",
+      "right": 0
+    },
+    "segment": ["规则","炮弹","鱼类"],
+    "item": {
+      "gameFlag": 1,
+      "gameId" : "AG_FISH_6",
+      "gameImage" : "http://b01mobileimage.hubijjl.com/static/B01M/_default/__static/_wms/app_index/ddb6b528b679f3e5a5fc63a389d7af64.png",
+      "gameName" : "AG捕鱼王",
+      "gameType" : 6,
+      "platformCode" : "026"
+    }
+  },
+  {
+    "type": 2,
+    "colors": [
+      "#e17139",
+      "#9f43e6"
+    ],
+    "title": "电子游戏教程",
+    "btn": {
+      "txt": "进入游戏大厅",
+      "width": 120,
+      "color": "#9545e5"
+    },
+    "img": {
+      "content": "dzyx_header",
+      "right": 30
+    },
+    "item": {
+      "rn_router": "game"
+    }
+  }
+]

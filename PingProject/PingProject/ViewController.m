@@ -27,6 +27,8 @@
     
      netPing = [[NewPNetPing alloc] init];
      netPing.delegate = self;
+    
+    [self getWANIPAddress];
 }
 
 
@@ -46,6 +48,37 @@
     
     
 }
+
+
+- (void)getWANIPAddress {
+    
+    
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        
+     
+        NSURL *ipURL = [NSURL URLWithString:@"http://ip.taobao.com/service/getIpInfo2.php?ip=myip"];
+        NSData *data = [NSData dataWithContentsOfURL:ipURL];
+        NSDictionary *ipDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSString *ipStr = nil;
+    
+        if (ipDic && [ipDic[@"code"] integerValue] == 0) { //获取成功
+            
+            ipStr = ipDic[@"data"][@"ip"];
+            
+        }
+        NSLog(@"===%@",ipStr ? ipStr : @"");
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            
+        });
+        
+    });
+    
+    
+}
+    
 
 
 

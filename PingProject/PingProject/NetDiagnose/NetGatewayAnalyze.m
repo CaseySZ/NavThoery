@@ -27,47 +27,33 @@
     self = [super init];
     if (self) {
         _serialQueue = dispatch_queue_create("gatewayOperationQueue", DISPATCH_QUEUE_SERIAL);
+        [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     }
     
     return self;
 }
 
 
-/*
- 
- dict[@"login_name"] = [IVNetworkManager sharedInstance].userInfoModel.loginName;
- dict[@"device_id"] = [UIDevice uuidForDevice];
- dict[@"network_type"] = [UIDevice networkType];
- dict[@"detail"] = @"";
-
- */
-
 - (void)startAddressIPByService {
     
     
     dispatch_async(_serialQueue, ^{
-       
         
+        NSURL *ipURL = [NSURL URLWithString:@"http://ip.taobao.com/service/getIpInfo2.php?ip=myip"];
+        NSData *data = [NSData dataWithContentsOfURL:ipURL];
+        NSDictionary *ipDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSString *ipStr = nil;
         
-        AFHTTPSessionManager *manager = [AFHTTPSessionManager new];
+        if (ipDic && [ipDic[@"code"] integerValue] == 0) { //获取成功
+            ipStr = ipDic[@"data"][@"ip"];
+        }
         
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://c01nike.gateway.com/public/app/getClientOutIp"]];
+        NSLog(@"===%@",ipStr ? ipStr : @"");
         
-        request.HTTPMethod = @"POST";
-        
-        NSString *bodyStr = @"\"app_token\"=t20bu1y45bcyd9q0jy14qm4x4etxkrijj6f5jpl1sd8y2av14n43hrx5gkwx5jms&signature=2fda4a2d891a9c1fc0b9bcd7d9da59db";
-        request.HTTPBody = [bodyStr dataUsingEncoding:NSUTF8StringEncoding];
-        request.timeoutInterval = 20;
-        
-        NSURLSessionDataTask *task = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
             
-            NSLog(@"error::%@", error);
-            NSLog(@"%@", responseObject);
             
-        }];
-        
-        
-        [task resume];
+        });
         
     });
     
@@ -160,6 +146,13 @@
         default:
             return @"unkown";
     }
+}
+
+
+- (void)dealloc {
+    
+    [[AFNetworkReachabilityManager sharedManager] stopMonitoring];
+    
 }
 
 @end
