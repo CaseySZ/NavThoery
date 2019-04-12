@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C90B7E5C225D928C004ADB2D /* RefreshFooterDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90B7E5B225D928C004ADB2D /* RefreshFooterDefaultView.swift */; };
+		C92F2F0C225DDBA100A8874D /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C92F2F0B225DDBA100A8874D /* arrow@2x.png */; };
+		C92F2F0E225DF21F00A8874D /* RefreshHeaderBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F2F0D225DF21F00A8874D /* RefreshHeaderBaseView.swift */; };
+		C92F2F10225DFE2F00A8874D /* RefreshHeaderDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F2F0F225DFE2F00A8874D /* RefreshHeaderDefaultView.swift */; };
+		C92F2F4A2260309300A8874D /* AliRefreshHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F2F492260309300A8874D /* AliRefreshHeaderView.swift */; };
+		C92F2F4C2260312D00A8874D /* AliRefreshAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F2F4B2260312D00A8874D /* AliRefreshAnimationView.swift */; };
+		C92F2F4E2260314E00A8874D /* AliRefreshShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F2F4D2260314E00A8874D /* AliRefreshShadowView.swift */; };
+		C92F2F5022606F9200A8874D /* refreshLog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C92F2F4F22606F9200A8874D /* refreshLog@2x.png */; };
+		C92F2F5222606F9800A8874D /* refreshWater@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C92F2F5122606F9700A8874D /* refreshWater@2x.png */; };
 		C9FF3BC8225750D40032BECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF3BC7225750D40032BECD /* AppDelegate.swift */; };
 		C9FF3BCA225750D40032BECD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF3BC9225750D40032BECD /* ViewController.swift */; };
 		C9FF3BCD225750D40032BECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FF3BCB225750D40032BECD /* Main.storyboard */; };
@@ -21,6 +30,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C90B7E5B225D928C004ADB2D /* RefreshFooterDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshFooterDefaultView.swift; sourceTree = "<group>"; };
+		C92F2F0B225DDBA100A8874D /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		C92F2F0D225DF21F00A8874D /* RefreshHeaderBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshHeaderBaseView.swift; sourceTree = "<group>"; };
+		C92F2F0F225DFE2F00A8874D /* RefreshHeaderDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshHeaderDefaultView.swift; sourceTree = "<group>"; };
+		C92F2F492260309300A8874D /* AliRefreshHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliRefreshHeaderView.swift; sourceTree = "<group>"; };
+		C92F2F4B2260312D00A8874D /* AliRefreshAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliRefreshAnimationView.swift; sourceTree = "<group>"; };
+		C92F2F4D2260314E00A8874D /* AliRefreshShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliRefreshShadowView.swift; sourceTree = "<group>"; };
+		C92F2F4F22606F9200A8874D /* refreshLog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refreshLog@2x.png"; sourceTree = "<group>"; };
+		C92F2F5122606F9700A8874D /* refreshWater@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refreshWater@2x.png"; sourceTree = "<group>"; };
 		C9FF3BC4225750D40032BECD /* Refresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Refresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FF3BC7225750D40032BECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9FF3BC9225750D40032BECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +65,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C92F2F482260303700A8874D /* Ali */ = {
+			isa = PBXGroup;
+			children = (
+				C92F2F492260309300A8874D /* AliRefreshHeaderView.swift */,
+				C92F2F4B2260312D00A8874D /* AliRefreshAnimationView.swift */,
+				C92F2F4D2260314E00A8874D /* AliRefreshShadowView.swift */,
+			);
+			path = Ali;
+			sourceTree = "<group>";
+		};
 		C9FF3BBB225750D30032BECD = {
 			isa = PBXGroup;
 			children = (
@@ -69,12 +97,16 @@
 				C9FF3BC7225750D40032BECD /* AppDelegate.swift */,
 				C9FF3BC9225750D40032BECD /* ViewController.swift */,
 				C9FF3BD9225751D30032BECD /* BunisessViewCtr.swift */,
+				C92F2F482260303700A8874D /* Ali */,
 				C9FF3BDD225752810032BECD /* RefreshTool */,
 				C9FF3BDA225751D30032BECD /* BunisessViewCtr.xib */,
 				C9FF3BCB225750D40032BECD /* Main.storyboard */,
 				C9FF3BCE225750D50032BECD /* Assets.xcassets */,
 				C9FF3BD0225750D50032BECD /* LaunchScreen.storyboard */,
+				C92F2F0B225DDBA100A8874D /* arrow@2x.png */,
 				C9FF3BD3225750D50032BECD /* Info.plist */,
+				C92F2F5122606F9700A8874D /* refreshWater@2x.png */,
+				C92F2F4F22606F9200A8874D /* refreshLog@2x.png */,
 			);
 			path = Refresh;
 			sourceTree = "<group>";
@@ -93,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				C9FF3BE2225768E80032BECD /* RefreshFooterBaseView.swift */,
+				C90B7E5B225D928C004ADB2D /* RefreshFooterDefaultView.swift */,
 			);
 			path = FooterView;
 			sourceTree = "<group>";
@@ -100,6 +133,8 @@
 		C9FF3BE1225768B80032BECD /* HeaderView */ = {
 			isa = PBXGroup;
 			children = (
+				C92F2F0D225DF21F00A8874D /* RefreshHeaderBaseView.swift */,
+				C92F2F0F225DFE2F00A8874D /* RefreshHeaderDefaultView.swift */,
 			);
 			path = HeaderView;
 			sourceTree = "<group>";
@@ -173,7 +208,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9FF3BDC225751D30032BECD /* BunisessViewCtr.xib in Resources */,
+				C92F2F5222606F9800A8874D /* refreshWater@2x.png in Resources */,
+				C92F2F0C225DDBA100A8874D /* arrow@2x.png in Resources */,
 				C9FF3BD2225750D50032BECD /* LaunchScreen.storyboard in Resources */,
+				C92F2F5022606F9200A8874D /* refreshLog@2x.png in Resources */,
 				C9FF3BCF225750D50032BECD /* Assets.xcassets in Resources */,
 				C9FF3BCD225750D40032BECD /* Main.storyboard in Resources */,
 			);
@@ -186,13 +224,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92F2F4C2260312D00A8874D /* AliRefreshAnimationView.swift in Sources */,
 				C9FF3BCA225750D40032BECD /* ViewController.swift in Sources */,
+				C92F2F0E225DF21F00A8874D /* RefreshHeaderBaseView.swift in Sources */,
 				C9FF3BE622576C100032BECD /* RefreshFrame.swift in Sources */,
+				C92F2F10225DFE2F00A8874D /* RefreshHeaderDefaultView.swift in Sources */,
 				C9FF3BE822584D410032BECD /* RefreshBaseData.swift in Sources */,
 				C9FF3BDB225751D30032BECD /* BunisessViewCtr.swift in Sources */,
 				C9FF3BE3225768E80032BECD /* RefreshFooterBaseView.swift in Sources */,
 				C9FF3BC8225750D40032BECD /* AppDelegate.swift in Sources */,
+				C92F2F4A2260309300A8874D /* AliRefreshHeaderView.swift in Sources */,
 				C9FF3BDF225766E90032BECD /* ScrollviewRefresh.swift in Sources */,
+				C90B7E5C225D928C004ADB2D /* RefreshFooterDefaultView.swift in Sources */,
+				C92F2F4E2260314E00A8874D /* AliRefreshShadowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

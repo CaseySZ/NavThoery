@@ -11,7 +11,7 @@ import UIKit
 
 
 private var _refreshFooter: Void?
-
+private var _refreshHeader: Void?
 extension UIScrollView {
     
     
@@ -20,21 +20,53 @@ extension UIScrollView {
         
         get {
             
-            
-            
+    
             return objc_getAssociatedObject(self, &_refreshFooter) as? RefreshFooterBaseView
-            
+
             
         }set {
             
-            
+            if let tableview = self as? UITableView {
+                tableview.estimatedRowHeight = 0
+            }
+            if self.refreshFooter != newValue {
+                
+                self.refreshFooter?.removeFromSuperview()
+                if let newView = newValue {
+                    self.insertSubview(newView, at: 0)
+                }
+            }
             objc_setAssociatedObject(self, &_refreshFooter, newValue, .OBJC_ASSOCIATION_RETAIN)
             
         }
     
     }
     
-    
+    var refreshHeader:RefreshHeaderBaseView? {
+        
+        get {
+            
+            
+            return objc_getAssociatedObject(self, &_refreshHeader) as? RefreshHeaderBaseView
+            
+            
+        }set {
+            
+            if let tableview = self as? UITableView {
+                tableview.estimatedRowHeight = 0
+            }
+            if self.refreshHeader != newValue {
+                
+                self.refreshHeader?.removeFromSuperview()
+                if let newView = newValue {
+                    self.insertSubview(newView, at: 0)
+                }
+            }
+            objc_setAssociatedObject(self, &_refreshHeader, newValue, .OBJC_ASSOCIATION_RETAIN)
+            
+        }
+        
+    }
    
     
     

@@ -244,5 +244,26 @@ extension UIScrollView {
 
 
 
+extension String {
+    
+    
+    func getWidthWithFont(_ font:UIFont) -> CGFloat {
+        
+        if self.count <= 0 {
+            return 0
+        }
+        
+        let ocString = self as NSString
+        let maxSize = CGSize.init(width: 400, height: 30)
+        let contentRect = ocString.boundingRect(with: maxSize, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : font], context: nil)
+        
+        return contentRect.width
+        
+    }
+    
+}
+
+
+
 
 
