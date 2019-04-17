@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CDA344511F0A5CF300AEB442 /* EOCAudioStreamNet.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA344501F0A5CF300AEB442 /* EOCAudioStreamNet.m */; };
+		CDD332031F03BC6400586D47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD332021F03BC6400586D47 /* main.m */; };
+		CDD332061F03BC6400586D47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD332051F03BC6400586D47 /* AppDelegate.m */; };
+		CDD332091F03BC6400586D47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD332081F03BC6400586D47 /* ViewController.m */; };
+		CDD3320C1F03BC6400586D47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD3320A1F03BC6400586D47 /* Main.storyboard */; };
+		CDD3320E1F03BC6400586D47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD3320D1F03BC6400586D47 /* Assets.xcassets */; };
+		CDD332111F03BC6400586D47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD3320F1F03BC6400586D47 /* LaunchScreen.storyboard */; };
+		CDD3321B1F03CAC700586D47 /* EOCAudioPlayerViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD332191F03CAC700586D47 /* EOCAudioPlayerViewCtr.m */; };
+		CDD3321C1F03CAC700586D47 /* EOCAudioPlayerViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD3321A1F03CAC700586D47 /* EOCAudioPlayerViewCtr.xib */; };
+		CDD3321E1F03CC2600586D47 /* MP3Sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CDD3321D1F03CC2600586D47 /* MP3Sample.mp3 */; };
+		CDD332241F03D77F00586D47 /* EOCAudioSession.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD332231F03D77F00586D47 /* EOCAudioSession.m */; };
+		CDD332271F03D7B500586D47 /* EOCAudioStreamParse.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD332261F03D7B500586D47 /* EOCAudioStreamParse.m */; };
+		CDD3322A1F03D7DE00586D47 /* EOCAudioStreamPacketBuffersPool.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD332291F03D7DE00586D47 /* EOCAudioStreamPacketBuffersPool.m */; };
+		CDD3322D1F03D80200586D47 /* EOCAudioQueueRead.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD3322C1F03D80200586D47 /* EOCAudioQueueRead.m */; };
+		CDD332301F03D83600586D47 /* EOCAudioStreamPacketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD3322F1F03D83600586D47 /* EOCAudioStreamPacketModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CDA3444F1F0A5CF300AEB442 /* EOCAudioStreamNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCAudioStreamNet.h; sourceTree = "<group>"; };
+		CDA344501F0A5CF300AEB442 /* EOCAudioStreamNet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCAudioStreamNet.m; sourceTree = "<group>"; };
+		CDD331FE1F03BC6400586D47 /* EOCAudioClassOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EOCAudioClassOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDD332021F03BC6400586D47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CDD332041F03BC6400586D47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CDD332051F03BC6400586D47 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CDD332071F03BC6400586D47 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CDD332081F03BC6400586D47 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CDD3320B1F03BC6400586D47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDD3320D1F03BC6400586D47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDD332101F03BC6400586D47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDD332121F03BC6400586D47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDD332181F03CAC700586D47 /* EOCAudioPlayerViewCtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCAudioPlayerViewCtr.h; sourceTree = "<group>"; };
+		CDD332191F03CAC700586D47 /* EOCAudioPlayerViewCtr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCAudioPlayerViewCtr.m; sourceTree = "<group>"; };
+		CDD3321A1F03CAC700586D47 /* EOCAudioPlayerViewCtr.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EOCAudioPlayerViewCtr.xib; sourceTree = "<group>"; };
+		CDD3321D1F03CC2600586D47 /* MP3Sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MP3Sample.mp3; sourceTree = "<group>"; };
+		CDD332221F03D77F00586D47 /* EOCAudioSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCAudioSession.h; sourceTree = "<group>"; };
+		CDD332231F03D77F00586D47 /* EOCAudioSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCAudioSession.m; sourceTree = "<group>"; };
+		CDD332251F03D7B500586D47 /* EOCAudioStreamParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCAudioStreamParse.h; sourceTree = "<group>"; };
+		CDD332261F03D7B500586D47 /* EOCAudioStreamParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCAudioStreamParse.m; sourceTree = "<group>"; };
+		CDD332281F03D7DE00586D47 /* EOCAudioStreamPacketBuffersPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCAudioStreamPacketBuffersPool.h; sourceTree = "<group>"; };
+		CDD332291F03D7DE00586D47 /* EOCAudioStreamPacketBuffersPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCAudioStreamPacketBuffersPool.m; sourceTree = "<group>"; };
+		CDD3322B1F03D80200586D47 /* EOCAudioQueueRead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCAudioQueueRead.h; sourceTree = "<group>"; };
+		CDD3322C1F03D80200586D47 /* EOCAudioQueueRead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCAudioQueueRead.m; sourceTree = "<group>"; };
+		CDD3322E1F03D83600586D47 /* EOCAudioStreamPacketModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCAudioStreamPacketModel.h; sourceTree = "<group>"; };
+		CDD3322F1F03D83600586D47 /* EOCAudioStreamPacketModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCAudioStreamPacketModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDD331FB1F03BC6400586D47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDD331F51F03BC6400586D47 = {
+			isa = PBXGroup;
+			children = (
+				CDD332001F03BC6400586D47 /* EOCAudioClassOne */,
+				CDD331FF1F03BC6400586D47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDD331FF1F03BC6400586D47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDD331FE1F03BC6400586D47 /* EOCAudioClassOne.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDD332001F03BC6400586D47 /* EOCAudioClassOne */ = {
+			isa = PBXGroup;
+			children = (
+				CDD332041F03BC6400586D47 /* AppDelegate.h */,
+				CDD332051F03BC6400586D47 /* AppDelegate.m */,
+				CDD332071F03BC6400586D47 /* ViewController.h */,
+				CDD332081F03BC6400586D47 /* ViewController.m */,
+				CDD332181F03CAC700586D47 /* EOCAudioPlayerViewCtr.h */,
+				CDD332191F03CAC700586D47 /* EOCAudioPlayerViewCtr.m */,
+				CDD3321A1F03CAC700586D47 /* EOCAudioPlayerViewCtr.xib */,
+				CDD332221F03D77F00586D47 /* EOCAudioSession.h */,
+				CDD332231F03D77F00586D47 /* EOCAudioSession.m */,
+				CDD332251F03D7B500586D47 /* EOCAudioStreamParse.h */,
+				CDD332261F03D7B500586D47 /* EOCAudioStreamParse.m */,
+				CDD3322E1F03D83600586D47 /* EOCAudioStreamPacketModel.h */,
+				CDD3322F1F03D83600586D47 /* EOCAudioStreamPacketModel.m */,
+				CDD332281F03D7DE00586D47 /* EOCAudioStreamPacketBuffersPool.h */,
+				CDD332291F03D7DE00586D47 /* EOCAudioStreamPacketBuffersPool.m */,
+				CDD3322B1F03D80200586D47 /* EOCAudioQueueRead.h */,
+				CDD3322C1F03D80200586D47 /* EOCAudioQueueRead.m */,
+				CDA3444F1F0A5CF300AEB442 /* EOCAudioStreamNet.h */,
+				CDA344501F0A5CF300AEB442 /* EOCAudioStreamNet.m */,
+				CDD3320A1F03BC6400586D47 /* Main.storyboard */,
+				CDD3320D1F03BC6400586D47 /* Assets.xcassets */,
+				CDD3320F1F03BC6400586D47 /* LaunchScreen.storyboard */,
+				CDD332121F03BC6400586D47 /* Info.plist */,
+				CDD332011F03BC6400586D47 /* Supporting Files */,
+			);
+			path = EOCAudioClassOne;
+			sourceTree = "<group>";
+		};
+		CDD332011F03BC6400586D47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDD3321D1F03CC2600586D47 /* MP3Sample.mp3 */,
+				CDD332021F03BC6400586D47 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDD331FD1F03BC6400586D47 /* EOCAudioClassOne */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDD332151F03BC6400586D47 /* Build configuration list for PBXNativeTarget "EOCAudioClassOne" */;
+			buildPhases = (
+				CDD331FA1F03BC6400586D47 /* Sources */,
+				CDD331FB1F03BC6400586D47 /* Frameworks */,
+				CDD331FC1F03BC6400586D47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EOCAudioClassOne;
+			productName = EOCAudioClassOne;
+			productReference = CDD331FE1F03BC6400586D47 /* EOCAudioClassOne.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDD331F61F03BC6400586D47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = EOC;
+				TargetAttributes = {
+					CDD331FD1F03BC6400586D47 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = RP9RVLS636;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = CDD331F91F03BC6400586D47 /* Build configuration list for PBXProject "EOCAudioClassOne" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDD331F51F03BC6400586D47;
+			productRefGroup = CDD331FF1F03BC6400586D47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDD331FD1F03BC6400586D47 /* EOCAudioClassOne */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDD331FC1F03BC6400586D47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDD3321C1F03CAC700586D47 /* EOCAudioPlayerViewCtr.xib in Resources */,
+				CDD3321E1F03CC2600586D47 /* MP3Sample.mp3 in Resources */,
+				CDD332111F03BC6400586D47 /* LaunchScreen.storyboard in Resources */,
+				CDD3320E1F03BC6400586D47 /* Assets.xcassets in Resources */,
+				CDD3320C1F03BC6400586D47 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDD331FA1F03BC6400586D47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDD3322D1F03D80200586D47 /* EOCAudioQueueRead.m in Sources */,
+				CDD332271F03D7B500586D47 /* EOCAudioStreamParse.m in Sources */,
+				CDA344511F0A5CF300AEB442 /* EOCAudioStreamNet.m in Sources */,
+				CDD3322A1F03D7DE00586D47 /* EOCAudioStreamPacketBuffersPool.m in Sources */,
+				CDD332241F03D77F00586D47 /* EOCAudioSession.m in Sources */,
+				CDD332301F03D83600586D47 /* EOCAudioStreamPacketModel.m in Sources */,
+				CDD3321B1F03CAC700586D47 /* EOCAudioPlayerViewCtr.m in Sources */,
+				CDD332091F03BC6400586D47 /* ViewController.m in Sources */,
+				CDD332061F03BC6400586D47 /* AppDelegate.m in Sources */,
+				CDD332031F03BC6400586D47 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CDD3320A1F03BC6400586D47 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDD3320B1F03BC6400586D47 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDD3320F1F03BC6400586D47 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDD332101F03BC6400586D47 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDD332131F03BC6400586D47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CDD332141F03BC6400586D47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDD332161F03BC6400586D47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RP9RVLS636;
+				INFOPLIST_FILE = EOCAudioClassOne/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EOC.EOCAudioClassOne;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CDD332171F03BC6400586D47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RP9RVLS636;
+				INFOPLIST_FILE = EOCAudioClassOne/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EOC.EOCAudioClassOne;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDD331F91F03BC6400586D47 /* Build configuration list for PBXProject "EOCAudioClassOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDD332131F03BC6400586D47 /* Debug */,
+				CDD332141F03BC6400586D47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDD332151F03BC6400586D47 /* Build configuration list for PBXNativeTarget "EOCAudioClassOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDD332161F03BC6400586D47 /* Debug */,
+				CDD332171F03BC6400586D47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDD331F61F03BC6400586D47 /* Project object */;
+}
