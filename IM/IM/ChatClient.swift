@@ -23,8 +23,12 @@ class ChatClient: NSObject {
     
     // nc -l 9000
     func connectServer() throws {
-        
-        // 1
+    
+        /* 1 创建套接字
+         SOCK_STREAM  TCP
+         SOCK_DGRAM   UDP
+         套接字 fd 是一个文件描述符
+         */
         fd =  socket(AF_INET, SOCK_STREAM, 0)
        
         if fd == -1 {
@@ -37,7 +41,8 @@ class ChatClient: NSObject {
         var addr = sockaddr_in.init()
         addr.sin_family =  sa_family_t(AF_INET)
         addr.sin_port = in_port_t(CFSwapInt16HostToBig(9233))
-        addr.sin_addr.s_addr = inet_addr("10.71.66.80")
+        addr.sin_addr.s_addr = inet_addr("192.168.1.92")
+        
         let sizeAddr = MemoryLayout.size(ofValue: addr)
         
         var r:Int32 = 0
@@ -46,6 +51,9 @@ class ChatClient: NSObject {
             
             ptr.withMemoryRebound(to: sockaddr.self, capacity: 1, { ptrSockaddr  in
                 
+                /* 2 连接，这里发生三次握手
+                2.1 发送一个信号给服务端，在吗（ACK） 2.2服务端回一个（ACK）我在  2.3 客服端，那我们就开始吧
+               */
                 r = connect(fd, ptrSockaddr, socklen_t(sizeAddr))
                
             })
@@ -58,9 +66,10 @@ class ChatClient: NSObject {
             print("connect success")
         }
 
-        
+        // 3 发送数据
         sendData("One")
         
+        // 4 接收数据
         Thread.detachNewThreadSelector(#selector(threadRecvData), toTarget: self, with: nil)
         
     }
@@ -77,6 +86,9 @@ class ChatClient: NSObject {
             
             Thread.detachNewThread {
                 
+                /*3发送数据
+                 
+                 */
                 let r = send(fd, UnsafeRawPointer(data), data.count, 0)
                // let r = send(fd, data.cString(using: String.Encoding.utf8), data.count, 0)
                 if r < 0 {
@@ -101,8 +113,11 @@ class ChatClient: NSObject {
         
         while true {
             
-            
-            let lenght = recv(fd, &buffer, 16, 0)
+            /*4 接收数据
+             0 阻塞
+             MSG_WAITALL 等待缓存满了才不阻塞
+             */
+            let lenght = recv(fd, &buffer, 16, MSG_WAITALL)
             if lenght <= 0 {
                 print("断开了:\(lenght)")
                 break
@@ -111,7 +126,6 @@ class ChatClient: NSObject {
                 
                 let data = Data(bytes: &buffer, count: lenght)
                // let data = Data(bytes: buffer[0...lenght])
-              
                 if let str =  String.init(data: data, encoding: String.Encoding.utf8){
                     print("来自服务端的数据:\(str)")
                 }

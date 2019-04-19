@@ -33,7 +33,7 @@ class ChatService: NSObject {
         var addr = sockaddr_in.init()
         addr.sin_family =  sa_family_t(AF_INET)
         addr.sin_port = in_port_t(CFSwapInt16HostToBig(9233))
-        addr.sin_addr.s_addr = inet_addr("10.71.66.80")
+        addr.sin_addr.s_addr = inet_addr("192.168.1.92")
         let sizeAddr = MemoryLayout.size(ofValue: addr)
         
         
@@ -48,7 +48,7 @@ class ChatService: NSObject {
             
             ptr.withMemoryRebound(to: sockaddr.self, capacity: 1, { ptrSockaddr  in
                 
-                //2 绑定
+                //2 绑定 进程和端口进行绑定
                 r = bind(serverFd, ptrSockaddr, socklen_t(sizeAddr))
                 
             })

@@ -46,7 +46,27 @@ class ViewController: UIViewController {
         
     }
     
+    let chatUDP = ChatUDP()
+    @IBAction func udpOperation() {
+        
+        
+        do {
+            
+            try  chatUDP.sendDataToServer()
+            
+        }catch {
+            
+        }
+        
+    }
     
-    
+    let httpSocket = HTTPSocket()
+    @IBAction func httpOperation() {
+        
+        
+        httpSocket.startHttp(.POST)
+        
+        
+    }
 }
 

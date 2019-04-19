@@ -8,6 +8,8 @@
 
 import UIKit
 
+let httpIp = "121.41.96.64"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

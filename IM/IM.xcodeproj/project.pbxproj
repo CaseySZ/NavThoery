@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11480AFE22695ED100CF2671 /* ChatUDP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11480AFD22695ED100CF2671 /* ChatUDP.swift */; };
+		11480B00226968DB00CF2671 /* HTTPSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11480AFF226968DB00CF2671 /* HTTPSocket.swift */; };
 		C92F2F7322641E0500A8874D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F2F7222641E0500A8874D /* AppDelegate.swift */; };
 		C92F2F7522641E0500A8874D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F2F7422641E0500A8874D /* ViewController.swift */; };
 		C92F2F7822641E0500A8874D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92F2F7622641E0500A8874D /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11480AFD22695ED100CF2671 /* ChatUDP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUDP.swift; sourceTree = "<group>"; };
+		11480AFF226968DB00CF2671 /* HTTPSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPSocket.swift; sourceTree = "<group>"; };
 		C92F2F6F22641E0500A8874D /* IM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92F2F7222641E0500A8874D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C92F2F7422641E0500A8874D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				C956363F226717D10072D735 /* ClientViewCtr.xib */,
 				C92F2F8422641EEF00A8874D /* ChatClient.swift */,
 				C956363C2266FD750072D735 /* ChatService.swift */,
+				11480AFD22695ED100CF2671 /* ChatUDP.swift */,
+				11480AFF226968DB00CF2671 /* HTTPSocket.swift */,
 				C92F2F7622641E0500A8874D /* Main.storyboard */,
 				C92F2F7922641E0600A8874D /* Assets.xcassets */,
 				C92F2F7B22641E0600A8874D /* LaunchScreen.storyboard */,
@@ -153,6 +159,8 @@
 				C92F2F7522641E0500A8874D /* ViewController.swift in Sources */,
 				C92F2F7322641E0500A8874D /* AppDelegate.swift in Sources */,
 				C9563640226717D10072D735 /* ClientViewCtr.swift in Sources */,
+				11480AFE22695ED100CF2671 /* ChatUDP.swift in Sources */,
+				11480B00226968DB00CF2671 /* HTTPSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
