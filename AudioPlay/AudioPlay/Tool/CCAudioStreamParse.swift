@@ -32,35 +32,29 @@ class CCAudioStreamParse: NSObject {
         super.init()
     }
     
-    
+    var selfReference:UnsafeMutableRawPointer?
     convenience init(_ fileType:AudioFileTypeID, fileSize:UInt32) {
         
         self.init()
         _fileType = fileType
         _fileSize = fileSize
         createAudioSessionStream()
+        selfReference = Unmanaged.passRetained(self).toOpaque()
+        
     }
     
     var _self:CCAudioStreamParse?
+    
     func createAudioSessionStream()  {
         
         _self = self
         AudioFileStreamOpen(&_self, { (client, audioFileStream, propertyID, ioFlag) in
             
             print("文件属性处理")
-            
-            //var dd:UnsafeMutableRawPointer
             let target =  client.assumingMemoryBound(to: CCAudioStreamParse.self).pointee
-            
-          
-                
             target.audioPropertyListenProc(audioFileStream, propertyID, ioFlag)
     
-            
-            
-           
-            
-            
+
             
         }, { (client, numberBytes, numberPackets, inputData, packetDescriptions) in
             
@@ -68,8 +62,6 @@ class CCAudioStreamParse: NSObject {
             
             let target =  client.assumingMemoryBound(to: CCAudioStreamParse.self).pointee
             target.audioFileStreamPacketProc(numberBytes, numberPackets, inputData, packetDescriptions)
-                
-            
             
             
         }, _fileType, &_audioFileStreamID)
@@ -137,7 +129,7 @@ class CCAudioStreamParse: NSObject {
              // 文件属性解析完了
             isReadyProductPacket = true
             _isContinue = false
-           
+            print("文件属性解析完了")
             if _biteRate > 0 && _fileSize > 0 {
                 
                 _duration = CGFloat((_fileSize - _audioDataOffset)*8)/CGFloat(_biteRate)
@@ -147,10 +139,10 @@ class CCAudioStreamParse: NSObject {
         }
     }
     
-    
     func audioFileStreamPacketProc(_ numberBytes:UInt32, _ numberPackerts:UInt32, _ inputData:UnsafeRawPointer, _ packetDescriptions:UnsafeMutablePointer<AudioStreamPacketDescription>) {
         
         if numberBytes == 0 || numberPackerts == 0 {
+            print("空")
             return
         }
         
@@ -159,22 +151,32 @@ class CCAudioStreamParse: NSObject {
         }
         
         var packetArr = Array<AudioStreamPacketModel>()
+        
         let audioData = NSData.init(bytes: inputData, length: Int(numberBytes*numberPackerts))
-        //let audioData = Data.init(bytes: inputData, count: Int(numberBytes*numberPackerts) )
+        
         for index in 0...numberPackerts-1 {
             
             let packetPoint = packetDescriptions.advanced(by: Int(index))
             let packetDesc =  packetPoint.pointee
-        
-            let packetData = audioData.subdata(with: NSRange.init(location: Int(packetDesc.mStartOffset), length: Int(packetDesc.mDataByteSize)))
             
-            let packetModel = AudioStreamPacketModel.init(packetData, packetDesc)
-            packetArr.append(packetModel)
+            if Int(packetDesc.mStartOffset) + Int(packetDesc.mVariableFramesInPacket) < audioData.length {
+                
+                if let packetData = audioData.subdata(with: NSRange.init(location: Int(packetDesc.mStartOffset), length: Int(packetDesc.mDataByteSize))) as NSData? {
+                    
+                    let packetModel = AudioStreamPacketModel.init(packetData, packetDesc)
+                    packetArr.append(packetModel)
+                }
+                
+            }else {
+                
+                print("越界了")
+            }
+            
         }
         
         // 数据解析完了
         self.delegate?.audioStreamParseForPackets(packetArr as NSArray)
-        
+        print("音频数据处理 完")
     }
     
 }

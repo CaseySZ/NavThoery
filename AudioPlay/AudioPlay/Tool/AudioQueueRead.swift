@@ -64,12 +64,14 @@ class AudioQueueRead: NSObject {
             
         }, &_self, nil, nil, 0, &_audioQueue)
         
+        
         if status != noErr {
             print("AudioQueueNewOutput error:\(status)")
             return false
         }
         
         status = AudioQueueAddPropertyListener(_audioQueue!, kAudioQueueProperty_IsRunning, { (client, inAQ, InID) in
+        
             
             if let selfPoint = client {
                 
@@ -87,6 +89,10 @@ class AudioQueueRead: NSObject {
             return false
         }
         
+        if _audioQueue == nil {
+            print("_audioQueue nil")
+            return false
+        }
         status = AudioQueueStart(_audioQueue!, nil)
         
         if status != noErr {
@@ -122,27 +128,47 @@ class AudioQueueRead: NSObject {
     
     
     var _start = false
-    func playerAudioQueue(_ audioData:NSData, _ numPackets:UInt32, packetDescs:UnsafeMutablePointer<AudioStreamPacketDescription>) -> Bool {
+    
+    func playerAudioQueue(_ audioData:NSData, _ numPackets:UInt32, packetDescs:NSArray) -> Bool { // Array<AudioStreamPacketDescription>
+        
+        print("playerAudioQueue::\(packetDescs.count)")
         
         if _reuserBufferQueue.count == 0 {
             self.mutexWait()
         }
-        
-        let queueBufferRef =  _reuserBufferQueue.first!
-        _reuserBufferQueue.remove(at: 0)
+        if packetDescs.count == 0 {
+            return true
+        }
+        let queueBufferRef =  _reuserBufferQueue.remove(at: 0)
         
         
         memcpy(queueBufferRef.pointee.mAudioData, audioData.bytes, audioData.length)
         
         queueBufferRef.pointee.mAudioDataByteSize = UInt32(audioData.length)
         
-        let status = AudioQueueEnqueueBuffer(_audioQueue!, queueBufferRef, numPackets, packetDescs)
+        let packketDescPoint = UnsafeMutablePointer<AudioStreamPacketDescription>.allocate(capacity: Int(numPackets+1))
+        var packetsCount = Int(numPackets);
+        if numPackets > packetDescs.count {
+            packetsCount = packetDescs.count - 1
+        }
+        for index in 0...packetsCount {
+            
+            let point =  packketDescPoint.advanced(by: index)
+            if let desc = packetDescs[index] as? AudioStreamPacketDescription {
+                point.pointee = desc
+            }
+        }
+        
+        print("EnqueueBuffer")
+        let status = AudioQueueEnqueueBuffer(_audioQueue!, queueBufferRef, numPackets, packketDescPoint)
+        ////
+        packketDescPoint.deallocate()
         if status == noErr {
             
             if _reuserBufferQueue.count == 0 {
                 
                 if !_start && !startAudioQueue(){
-                    
+                    print("_start error:\(status)")
                     return false
                 }
                 
@@ -215,6 +241,7 @@ class AudioQueueRead: NSObject {
         
         pthread_mutex_lock(&_mutex_t)
         
+        print("wait")
         pthread_cond_wait(&_cond, &_mutex_t)
         
         pthread_mutex_unlock(&_mutex_t)
@@ -225,6 +252,7 @@ class AudioQueueRead: NSObject {
         
         pthread_mutex_lock(&_mutex_t)
         
+        print("signal")
         pthread_cond_signal(&_cond)
         
         pthread_mutex_unlock(&_mutex_t)

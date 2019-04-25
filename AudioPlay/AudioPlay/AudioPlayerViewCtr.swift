@@ -122,24 +122,16 @@ class AudioPlayerViewCtr: UIViewController, CCAudioStreamParseDelegate {
                         continue
                     }
                     
-                    var packetCount:UInt32 = 0
+            
+                    let (streamData, packetCount, packetDescArr) = ccBufferPool.dequeuePool(_bufferSize)
                     
+                   
                     
-                    var packetDescription = UnsafeMutablePointer<UnsafeMutablePointer<AudioStreamPacketDescription>>.allocate(capacity: 1000)
-                    
-                    let streamData = ccBufferPool.dequeuePool(UInt32(_bufferSize), packetCount: &packetCount, packetDescription: packetDescription)
-                    
-                    if let audioData = streamData as NSData? {
+                    if !ccAudioQueueRead.playerAudioQueue(streamData, packetCount, packetDescs: packetDescArr) {
                         
-                        if !ccAudioQueueRead.playerAudioQueue(audioData, packetCount, packetDescs: packetDescription.pointee) {
-                            
-                            print("playerAudioQueue fail")
-                        }
-                        
-                    }else {
-                        
-                        print("dequeuePoolStream fail")
+                        print("playerAudioQueue fail")
                     }
+                        
                     
                     
                     
@@ -149,8 +141,10 @@ class AudioPlayerViewCtr: UIViewController, CCAudioStreamParseDelegate {
             }
             
         }
-        
-        
+        print("while finish")
+        RunLoop.current.add(Port(), forMode: .default)
+        RunLoop.current.run();
+        print("thread finish")
     }
     
     

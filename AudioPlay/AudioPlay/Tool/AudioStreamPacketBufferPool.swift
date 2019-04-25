@@ -16,30 +16,32 @@ class AudioStreamPacketBufferPool: NSObject {
     
     func enqueuePool(_ packets:Array<AudioStreamPacketModel>)  {
         
+        
         for model in packets {
             
             _packetBufferArr.append(model)
-            _bufferSize += model.data.count
+            _bufferSize += model.data.length
         }
         
     }
     
     
     
-    func dequeuePool(_ dataSize:UInt32, packetCount:UnsafeMutablePointer<UInt32>, packetDescription:UnsafeMutablePointer<UnsafeMutablePointer<AudioStreamPacketDescription>>) -> Data {
+    func dequeuePool(_ dataSize:Int) -> (NSData, UInt32, NSArray) { //  Array<AudioStreamPacketDescription>
         
         if dataSize <= 0 || _packetBufferArr.count == 0 {
-            return Data()
+            print("dequeuePool zero")
+            return (NSData(), 0, NSArray())
         }
+       
+        let audioStreamData = NSMutableData()
         
-        var audioStreamData = Data()
-        
-        var packetSize = Int(dataSize)
+        var packetSize = dataSize
         var targetIndex = 0
         for model in _packetBufferArr {
             
             targetIndex = targetIndex + 1
-            packetSize -= model.data.count
+            packetSize -= model.data.length
             if packetSize < 0 {
                 break
             }
@@ -50,30 +52,39 @@ class AudioStreamPacketBufferPool: NSObject {
             targetIndex = _packetBufferArr.count - 1
         }
         
+        if targetIndex > _packetBufferArr.count {
+            targetIndex = _packetBufferArr.count
+        }
+      
         
+       // var packetDescArr = Array<AudioStreamPacketDescription>.init()
+        let packetDescArr = NSMutableArray.init()
         for index in 0...targetIndex {
             
             let model = _packetBufferArr[index]
             
             var packetDesc = model.packetDesc
-            packetDesc.mStartOffset = Int64(audioStreamData.count)
+            packetDesc.mStartOffset = Int64(audioStreamData.length)
             
-            var point = packetDescription.advanced(by: index)
-
-            let newPacketDesc = UnsafeMutablePointer<AudioStreamPacketDescription>.allocate(capacity: 1)
-            newPacketDesc.pointee = packetDesc
+            if let data = model.data as Data? {
+                
+                audioStreamData.append(data)
+                packetDescArr.add(packetDesc)
+                
+            }else {
+                
+                print("数据问题1")
+            }
+            //audioStreamData.append(model.data.bytes, length: model.data.length) // 这个可能有异常
             
-            point.pointee = newPacketDesc
-           
-            audioStreamData.append(model.data)
         }
         
        
         _packetBufferArr.removeSubrange(Range.init(NSRange.init(location: 0, length: targetIndex))!)
-        _bufferSize -= audioStreamData.count
+        _bufferSize -= audioStreamData.length
         
-        
-        return audioStreamData
+        print("dequeuePool")
+        return (audioStreamData, UInt32(targetIndex), packetDescArr)
     }
     
     

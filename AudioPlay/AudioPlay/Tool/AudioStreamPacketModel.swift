@@ -9,14 +9,14 @@
 import UIKit
 import AVFoundation
 
-class AudioStreamPacketModel {
+class AudioStreamPacketModel: NSObject {
 
-    var data:Data
-    var packetDesc:AudioStreamPacketDescription
+    let data:NSData
+    let packetDesc:AudioStreamPacketDescription
     
-    init(_ data:Data, _ packetDesc:AudioStreamPacketDescription) {
+    init(_ data:NSData, _ packetDesc:AudioStreamPacketDescription) {
         self.data = data
-        self.packetDesc = packetDesc
+        self.packetDesc = AudioStreamPacketDescription.init(mStartOffset: packetDesc.mStartOffset, mVariableFramesInPacket: packetDesc.mVariableFramesInPacket, mDataByteSize: packetDesc.mDataByteSize)
     }
     
 }

@@ -35,7 +35,11 @@ class CCAudioSession: NSObject {
     
     func category(_ category:AVAudioSession.Category) throws {
         
-        try AVAudioSession.sharedInstance().setCategory(category, mode: AVAudioSession.Mode.default, policy: AVAudioSession.RouteSharingPolicy.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
+        if #available(iOS 11.0, *) {
+            try AVAudioSession.sharedInstance().setCategory(category, mode: AVAudioSession.Mode.default, policy: AVAudioSession.RouteSharingPolicy.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
+        } else {
+           
+        }
         
         
     }
