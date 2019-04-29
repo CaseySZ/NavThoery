@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		111088B42105625A008FB6B8 /* FrameViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 111088B32105625A008FB6B8 /* FrameViewCtr.m */; };
+		111088B7210562DD008FB6B8 /* TableHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 111088B6210562DD008FB6B8 /* TableHeadView.m */; };
+		111088B9210562E6008FB6B8 /* TableHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 111088B8210562E6008FB6B8 /* TableHeadView.xib */; };
+		111088BB210563B4008FB6B8 /* FrameViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = 111088BA210563B4008FB6B8 /* FrameViewCtr.xib */; };
+		1144EB7D210196150041ECA5 /* ButtonAndTapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1144EB7C210196150041ECA5 /* ButtonAndTapVC.m */; };
+		1144EB812101B1330041ECA5 /* ScrollerVCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 1144EB802101B1330041ECA5 /* ScrollerVCtr.m */; };
+		1144EB862101B30E0041ECA5 /* 3 in Resources */ = {isa = PBXBuildFile; fileRef = 1144EB832101B30E0041ECA5 /* 3 */; };
+		1144EB872101B30E0041ECA5 /* 1 in Resources */ = {isa = PBXBuildFile; fileRef = 1144EB842101B30E0041ECA5 /* 1 */; };
+		1144EB882101B30E0041ECA5 /* 2 in Resources */ = {isa = PBXBuildFile; fileRef = 1144EB852101B30E0041ECA5 /* 2 */; };
+		1144EB8B2101B74D0041ECA5 /* SYScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1144EB8A2101B74D0041ECA5 /* SYScrollView.m */; };
+		1144EB8F2101BC5D0041ECA5 /* GestureCoexistVCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 1144EB8E2101BC5D0041ECA5 /* GestureCoexistVCtr.m */; };
+		1144EB922101BCDE0041ECA5 /* SYPanGestureOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 1144EB912101BCDE0041ECA5 /* SYPanGestureOne.m */; };
+		1144EB952101BCE90041ECA5 /* SYPanGestureTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1144EB942101BCE90041ECA5 /* SYPanGestureTwo.m */; };
+		1144EB982101DB580041ECA5 /* BusinessBaseViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 1144EB972101DB580041ECA5 /* BusinessBaseViewCtr.m */; };
+		1144EB9A2101DC0E0041ECA5 /* ConflictViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1144EB992101DC0E0041ECA5 /* ConflictViewCtr.xib */; };
+		1144EB9D2101E0740041ECA5 /* SYTableview.m in Sources */ = {isa = PBXBuildFile; fileRef = 1144EB9C2101E0740041ECA5 /* SYTableview.m */; };
+		116C44F120FECAFC000B9CAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C44F020FECAFC000B9CAA /* AppDelegate.m */; };
+		116C44F420FECAFC000B9CAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C44F320FECAFC000B9CAA /* ViewController.m */; };
+		116C44F720FECAFC000B9CAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116C44F520FECAFC000B9CAA /* Main.storyboard */; };
+		116C44F920FECAFD000B9CAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116C44F820FECAFD000B9CAA /* Assets.xcassets */; };
+		116C44FC20FECAFD000B9CAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116C44FA20FECAFD000B9CAA /* LaunchScreen.storyboard */; };
+		116C44FF20FECAFD000B9CAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C44FE20FECAFD000B9CAA /* main.m */; };
+		116C450820FECF7D000B9CAA /* SYBlueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C450720FECF7D000B9CAA /* SYBlueView.m */; };
+		116C450B20FECF87000B9CAA /* SYRedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C450A20FECF87000B9CAA /* SYRedView.m */; };
+		116C450E20FECFAA000B9CAA /* SYGreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C450D20FECFAA000B9CAA /* SYGreenView.m */; };
+		116C451120FED031000B9CAA /* SYEventTheoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C451020FED031000B9CAA /* SYEventTheoryVC.m */; };
+		116C451520FF3460000B9CAA /* GestureViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C451420FF3460000B9CAA /* GestureViewCtr.m */; };
+		116C451820FF34BA000B9CAA /* SYPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C451720FF34BA000B9CAA /* SYPanGestureRecognizer.m */; };
+		116C451B20FF3983000B9CAA /* SYTapGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C451A20FF3983000B9CAA /* SYTapGesture.m */; };
+		116C451F20FF3B7B000B9CAA /* SYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C451E20FF3B7B000B9CAA /* SYButton.m */; };
+		11B905BA20FF856C0086D300 /* UIView+EventTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B905B920FF856C0086D300 /* UIView+EventTest.m */; };
+		11B905BE210066400086D300 /* MultiEventViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B905BD210066400086D300 /* MultiEventViewCtr.m */; };
+		11B905C1210066BD0086D300 /* TestOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B905C0210066BD0086D300 /* TestOneView.m */; };
+		11B905C421006C320086D300 /* TestTwoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B905C321006C320086D300 /* TestTwoView.m */; };
+		11B905C821007DA00086D300 /* ConflictViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B905C721007DA00086D300 /* ConflictViewCtr.m */; };
+		11FAA5A521120C0B0087319A /* UIResponder+Nav.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FAA5A421120C0B0087319A /* UIResponder+Nav.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		111088B22105625A008FB6B8 /* FrameViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameViewCtr.h; sourceTree = "<group>"; };
+		111088B32105625A008FB6B8 /* FrameViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameViewCtr.m; sourceTree = "<group>"; };
+		111088B5210562DD008FB6B8 /* TableHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableHeadView.h; sourceTree = "<group>"; };
+		111088B6210562DD008FB6B8 /* TableHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableHeadView.m; sourceTree = "<group>"; };
+		111088B8210562E6008FB6B8 /* TableHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableHeadView.xib; sourceTree = "<group>"; };
+		111088BA210563B4008FB6B8 /* FrameViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FrameViewCtr.xib; sourceTree = "<group>"; };
+		1144EB7B210196150041ECA5 /* ButtonAndTapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonAndTapVC.h; sourceTree = "<group>"; };
+		1144EB7C210196150041ECA5 /* ButtonAndTapVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonAndTapVC.m; sourceTree = "<group>"; };
+		1144EB7F2101B1330041ECA5 /* ScrollerVCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollerVCtr.h; sourceTree = "<group>"; };
+		1144EB802101B1330041ECA5 /* ScrollerVCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollerVCtr.m; sourceTree = "<group>"; };
+		1144EB832101B30E0041ECA5 /* 3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3; sourceTree = "<group>"; };
+		1144EB842101B30E0041ECA5 /* 1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1; sourceTree = "<group>"; };
+		1144EB852101B30E0041ECA5 /* 2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2; sourceTree = "<group>"; };
+		1144EB892101B74D0041ECA5 /* SYScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYScrollView.h; sourceTree = "<group>"; };
+		1144EB8A2101B74D0041ECA5 /* SYScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYScrollView.m; sourceTree = "<group>"; };
+		1144EB8D2101BC5D0041ECA5 /* GestureCoexistVCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureCoexistVCtr.h; sourceTree = "<group>"; };
+		1144EB8E2101BC5D0041ECA5 /* GestureCoexistVCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureCoexistVCtr.m; sourceTree = "<group>"; };
+		1144EB902101BCDE0041ECA5 /* SYPanGestureOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYPanGestureOne.h; sourceTree = "<group>"; };
+		1144EB912101BCDE0041ECA5 /* SYPanGestureOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYPanGestureOne.m; sourceTree = "<group>"; };
+		1144EB932101BCE90041ECA5 /* SYPanGestureTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYPanGestureTwo.h; sourceTree = "<group>"; };
+		1144EB942101BCE90041ECA5 /* SYPanGestureTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYPanGestureTwo.m; sourceTree = "<group>"; };
+		1144EB962101DB580041ECA5 /* BusinessBaseViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessBaseViewCtr.h; sourceTree = "<group>"; };
+		1144EB972101DB580041ECA5 /* BusinessBaseViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessBaseViewCtr.m; sourceTree = "<group>"; };
+		1144EB992101DC0E0041ECA5 /* ConflictViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConflictViewCtr.xib; sourceTree = "<group>"; };
+		1144EB9B2101E0740041ECA5 /* SYTableview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYTableview.h; sourceTree = "<group>"; };
+		1144EB9C2101E0740041ECA5 /* SYTableview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYTableview.m; sourceTree = "<group>"; };
+		116C44EC20FECAFC000B9CAA /* EventTheory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventTheory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		116C44EF20FECAFC000B9CAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		116C44F020FECAFC000B9CAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		116C44F220FECAFC000B9CAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		116C44F320FECAFC000B9CAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		116C44F620FECAFC000B9CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		116C44F820FECAFD000B9CAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		116C44FB20FECAFD000B9CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		116C44FD20FECAFD000B9CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		116C44FE20FECAFD000B9CAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		116C450620FECF7D000B9CAA /* SYBlueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYBlueView.h; sourceTree = "<group>"; };
+		116C450720FECF7D000B9CAA /* SYBlueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYBlueView.m; sourceTree = "<group>"; };
+		116C450920FECF87000B9CAA /* SYRedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRedView.h; sourceTree = "<group>"; };
+		116C450A20FECF87000B9CAA /* SYRedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYRedView.m; sourceTree = "<group>"; };
+		116C450C20FECFAA000B9CAA /* SYGreenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYGreenView.h; sourceTree = "<group>"; };
+		116C450D20FECFAA000B9CAA /* SYGreenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYGreenView.m; sourceTree = "<group>"; };
+		116C450F20FED031000B9CAA /* SYEventTheoryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYEventTheoryVC.h; sourceTree = "<group>"; };
+		116C451020FED031000B9CAA /* SYEventTheoryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYEventTheoryVC.m; sourceTree = "<group>"; };
+		116C451320FF3460000B9CAA /* GestureViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureViewCtr.h; sourceTree = "<group>"; };
+		116C451420FF3460000B9CAA /* GestureViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureViewCtr.m; sourceTree = "<group>"; };
+		116C451620FF34BA000B9CAA /* SYPanGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYPanGestureRecognizer.h; sourceTree = "<group>"; };
+		116C451720FF34BA000B9CAA /* SYPanGestureRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYPanGestureRecognizer.m; sourceTree = "<group>"; };
+		116C451920FF3983000B9CAA /* SYTapGesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYTapGesture.h; sourceTree = "<group>"; };
+		116C451A20FF3983000B9CAA /* SYTapGesture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYTapGesture.m; sourceTree = "<group>"; };
+		116C451D20FF3B7B000B9CAA /* SYButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYButton.h; sourceTree = "<group>"; };
+		116C451E20FF3B7B000B9CAA /* SYButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYButton.m; sourceTree = "<group>"; };
+		11B905B820FF856C0086D300 /* UIView+EventTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EventTest.h"; sourceTree = "<group>"; };
+		11B905B920FF856C0086D300 /* UIView+EventTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EventTest.m"; sourceTree = "<group>"; };
+		11B905BC210066400086D300 /* MultiEventViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiEventViewCtr.h; sourceTree = "<group>"; };
+		11B905BD210066400086D300 /* MultiEventViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiEventViewCtr.m; sourceTree = "<group>"; };
+		11B905BF210066BD0086D300 /* TestOneView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOneView.h; sourceTree = "<group>"; };
+		11B905C0210066BD0086D300 /* TestOneView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneView.m; sourceTree = "<group>"; };
+		11B905C221006C320086D300 /* TestTwoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTwoView.h; sourceTree = "<group>"; };
+		11B905C321006C320086D300 /* TestTwoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTwoView.m; sourceTree = "<group>"; };
+		11B905C621007DA00086D300 /* ConflictViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConflictViewCtr.h; sourceTree = "<group>"; };
+		11B905C721007DA00086D300 /* ConflictViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConflictViewCtr.m; sourceTree = "<group>"; };
+		11FAA5A221120BDF0087319A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		11FAA5A321120C0B0087319A /* UIResponder+Nav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Nav.h"; sourceTree = "<group>"; };
+		11FAA5A421120C0B0087319A /* UIResponder+Nav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Nav.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		116C44E920FECAFC000B9CAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		111088B121056239008FB6B8 /* 框架解耦案例 */ = {
+			isa = PBXGroup;
+			children = (
+				111088B22105625A008FB6B8 /* FrameViewCtr.h */,
+				111088B32105625A008FB6B8 /* FrameViewCtr.m */,
+				111088BA210563B4008FB6B8 /* FrameViewCtr.xib */,
+				111088B5210562DD008FB6B8 /* TableHeadView.h */,
+				111088B6210562DD008FB6B8 /* TableHeadView.m */,
+				111088B8210562E6008FB6B8 /* TableHeadView.xib */,
+				11FAA5A321120C0B0087319A /* UIResponder+Nav.h */,
+				11FAA5A421120C0B0087319A /* UIResponder+Nav.m */,
+			);
+			path = "框架解耦案例";
+			sourceTree = "<group>";
+		};
+		1144EB7A210195D90041ECA5 /* 手势和Button案例 */ = {
+			isa = PBXGroup;
+			children = (
+				1144EB7B210196150041ECA5 /* ButtonAndTapVC.h */,
+				1144EB7C210196150041ECA5 /* ButtonAndTapVC.m */,
+			);
+			path = "手势和Button案例";
+			sourceTree = "<group>";
+		};
+		1144EB7E2101B1130041ECA5 /* Scrollview案例 */ = {
+			isa = PBXGroup;
+			children = (
+				1144EB7F2101B1330041ECA5 /* ScrollerVCtr.h */,
+				1144EB802101B1330041ECA5 /* ScrollerVCtr.m */,
+				1144EB892101B74D0041ECA5 /* SYScrollView.h */,
+				1144EB8A2101B74D0041ECA5 /* SYScrollView.m */,
+				1144EB822101B2AE0041ECA5 /* picture */,
+			);
+			path = "Scrollview案例";
+			sourceTree = "<group>";
+		};
+		1144EB822101B2AE0041ECA5 /* picture */ = {
+			isa = PBXGroup;
+			children = (
+				1144EB842101B30E0041ECA5 /* 1 */,
+				1144EB852101B30E0041ECA5 /* 2 */,
+				1144EB832101B30E0041ECA5 /* 3 */,
+			);
+			path = picture;
+			sourceTree = "<group>";
+		};
+		1144EB8C2101BC180041ECA5 /* 手势共存案例 */ = {
+			isa = PBXGroup;
+			children = (
+				1144EB8D2101BC5D0041ECA5 /* GestureCoexistVCtr.h */,
+				1144EB8E2101BC5D0041ECA5 /* GestureCoexistVCtr.m */,
+				1144EB902101BCDE0041ECA5 /* SYPanGestureOne.h */,
+				1144EB912101BCDE0041ECA5 /* SYPanGestureOne.m */,
+				1144EB932101BCE90041ECA5 /* SYPanGestureTwo.h */,
+				1144EB942101BCE90041ECA5 /* SYPanGestureTwo.m */,
+			);
+			path = "手势共存案例";
+			sourceTree = "<group>";
+		};
+		116C44E320FECAFB000B9CAA = {
+			isa = PBXGroup;
+			children = (
+				11FAA5A221120BDF0087319A /* PrefixHeader.pch */,
+				116C44EE20FECAFC000B9CAA /* EventTheory */,
+				116C44ED20FECAFC000B9CAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		116C44ED20FECAFC000B9CAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				116C44EC20FECAFC000B9CAA /* EventTheory.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		116C44EE20FECAFC000B9CAA /* EventTheory */ = {
+			isa = PBXGroup;
+			children = (
+				116C44EF20FECAFC000B9CAA /* AppDelegate.h */,
+				116C44F020FECAFC000B9CAA /* AppDelegate.m */,
+				116C44F220FECAFC000B9CAA /* ViewController.h */,
+				116C44F320FECAFC000B9CAA /* ViewController.m */,
+				11B905BB210066040086D300 /* 事件多方响应原理分析 */,
+				116C450520FECF28000B9CAA /* 事件原理View */,
+				116C451220FF3441000B9CAA /* 手势原理 */,
+				116C451C20FF3B66000B9CAA /* Button事件原理分析 */,
+				1144EB7A210195D90041ECA5 /* 手势和Button案例 */,
+				1144EB7E2101B1130041ECA5 /* Scrollview案例 */,
+				11B905C521007C5C0086D300 /* 手势冲突案例 */,
+				1144EB8C2101BC180041ECA5 /* 手势共存案例 */,
+				111088B121056239008FB6B8 /* 框架解耦案例 */,
+				116C44F520FECAFC000B9CAA /* Main.storyboard */,
+				116C44F820FECAFD000B9CAA /* Assets.xcassets */,
+				116C44FA20FECAFD000B9CAA /* LaunchScreen.storyboard */,
+				116C44FD20FECAFD000B9CAA /* Info.plist */,
+				116C44FE20FECAFD000B9CAA /* main.m */,
+			);
+			path = EventTheory;
+			sourceTree = "<group>";
+		};
+		116C450520FECF28000B9CAA /* 事件原理View */ = {
+			isa = PBXGroup;
+			children = (
+				116C450F20FED031000B9CAA /* SYEventTheoryVC.h */,
+				116C451020FED031000B9CAA /* SYEventTheoryVC.m */,
+				116C450920FECF87000B9CAA /* SYRedView.h */,
+				116C450A20FECF87000B9CAA /* SYRedView.m */,
+				116C450C20FECFAA000B9CAA /* SYGreenView.h */,
+				116C450D20FECFAA000B9CAA /* SYGreenView.m */,
+				116C450620FECF7D000B9CAA /* SYBlueView.h */,
+				116C450720FECF7D000B9CAA /* SYBlueView.m */,
+				11B905B820FF856C0086D300 /* UIView+EventTest.h */,
+				11B905B920FF856C0086D300 /* UIView+EventTest.m */,
+			);
+			path = "事件原理View";
+			sourceTree = "<group>";
+		};
+		116C451220FF3441000B9CAA /* 手势原理 */ = {
+			isa = PBXGroup;
+			children = (
+				116C451320FF3460000B9CAA /* GestureViewCtr.h */,
+				116C451420FF3460000B9CAA /* GestureViewCtr.m */,
+				116C451620FF34BA000B9CAA /* SYPanGestureRecognizer.h */,
+				116C451720FF34BA000B9CAA /* SYPanGestureRecognizer.m */,
+				116C451920FF3983000B9CAA /* SYTapGesture.h */,
+				116C451A20FF3983000B9CAA /* SYTapGesture.m */,
+			);
+			path = "手势原理";
+			sourceTree = "<group>";
+		};
+		116C451C20FF3B66000B9CAA /* Button事件原理分析 */ = {
+			isa = PBXGroup;
+			children = (
+				116C451D20FF3B7B000B9CAA /* SYButton.h */,
+				116C451E20FF3B7B000B9CAA /* SYButton.m */,
+			);
+			path = "Button事件原理分析";
+			sourceTree = "<group>";
+		};
+		11B905BB210066040086D300 /* 事件多方响应原理分析 */ = {
+			isa = PBXGroup;
+			children = (
+				11B905BC210066400086D300 /* MultiEventViewCtr.h */,
+				11B905BD210066400086D300 /* MultiEventViewCtr.m */,
+				11B905BF210066BD0086D300 /* TestOneView.h */,
+				11B905C0210066BD0086D300 /* TestOneView.m */,
+				11B905C221006C320086D300 /* TestTwoView.h */,
+				11B905C321006C320086D300 /* TestTwoView.m */,
+			);
+			path = "事件多方响应原理分析";
+			sourceTree = "<group>";
+		};
+		11B905C521007C5C0086D300 /* 手势冲突案例 */ = {
+			isa = PBXGroup;
+			children = (
+				1144EB962101DB580041ECA5 /* BusinessBaseViewCtr.h */,
+				1144EB972101DB580041ECA5 /* BusinessBaseViewCtr.m */,
+				11B905C621007DA00086D300 /* ConflictViewCtr.h */,
+				11B905C721007DA00086D300 /* ConflictViewCtr.m */,
+				1144EB992101DC0E0041ECA5 /* ConflictViewCtr.xib */,
+				1144EB9B2101E0740041ECA5 /* SYTableview.h */,
+				1144EB9C2101E0740041ECA5 /* SYTableview.m */,
+			);
+			path = "手势冲突案例";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		116C44EB20FECAFC000B9CAA /* EventTheory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 116C450220FECAFD000B9CAA /* Build configuration list for PBXNativeTarget "EventTheory" */;
+			buildPhases = (
+				116C44E820FECAFC000B9CAA /* Sources */,
+				116C44E920FECAFC000B9CAA /* Frameworks */,
+				116C44EA20FECAFC000B9CAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EventTheory;
+			productName = EventTheory;
+			productReference = 116C44EC20FECAFC000B9CAA /* EventTheory.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		116C44E420FECAFB000B9CAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = sy;
+				TargetAttributes = {
+					116C44EB20FECAFC000B9CAA = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 116C44E720FECAFB000B9CAA /* Build configuration list for PBXProject "EventTheory" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 116C44E320FECAFB000B9CAA;
+			productRefGroup = 116C44ED20FECAFC000B9CAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				116C44EB20FECAFC000B9CAA /* EventTheory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		116C44EA20FECAFC000B9CAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1144EB882101B30E0041ECA5 /* 2 in Resources */,
+				116C44FC20FECAFD000B9CAA /* LaunchScreen.storyboard in Resources */,
+				116C44F920FECAFD000B9CAA /* Assets.xcassets in Resources */,
+				116C44F720FECAFC000B9CAA /* Main.storyboard in Resources */,
+				1144EB862101B30E0041ECA5 /* 3 in Resources */,
+				1144EB872101B30E0041ECA5 /* 1 in Resources */,
+				1144EB9A2101DC0E0041ECA5 /* ConflictViewCtr.xib in Resources */,
+				111088BB210563B4008FB6B8 /* FrameViewCtr.xib in Resources */,
+				111088B9210562E6008FB6B8 /* TableHeadView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		116C44E820FECAFC000B9CAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				116C451F20FF3B7B000B9CAA /* SYButton.m in Sources */,
+				11B905BE210066400086D300 /* MultiEventViewCtr.m in Sources */,
+				1144EB812101B1330041ECA5 /* ScrollerVCtr.m in Sources */,
+				11B905C821007DA00086D300 /* ConflictViewCtr.m in Sources */,
+				116C450B20FECF87000B9CAA /* SYRedView.m in Sources */,
+				111088B7210562DD008FB6B8 /* TableHeadView.m in Sources */,
+				11B905C421006C320086D300 /* TestTwoView.m in Sources */,
+				1144EB8F2101BC5D0041ECA5 /* GestureCoexistVCtr.m in Sources */,
+				1144EB9D2101E0740041ECA5 /* SYTableview.m in Sources */,
+				1144EB982101DB580041ECA5 /* BusinessBaseViewCtr.m in Sources */,
+				116C44F420FECAFC000B9CAA /* ViewController.m in Sources */,
+				111088B42105625A008FB6B8 /* FrameViewCtr.m in Sources */,
+				1144EB952101BCE90041ECA5 /* SYPanGestureTwo.m in Sources */,
+				11B905BA20FF856C0086D300 /* UIView+EventTest.m in Sources */,
+				116C44FF20FECAFD000B9CAA /* main.m in Sources */,
+				1144EB8B2101B74D0041ECA5 /* SYScrollView.m in Sources */,
+				11FAA5A521120C0B0087319A /* UIResponder+Nav.m in Sources */,
+				116C451820FF34BA000B9CAA /* SYPanGestureRecognizer.m in Sources */,
+				11B905C1210066BD0086D300 /* TestOneView.m in Sources */,
+				1144EB922101BCDE0041ECA5 /* SYPanGestureOne.m in Sources */,
+				116C451120FED031000B9CAA /* SYEventTheoryVC.m in Sources */,
+				116C451B20FF3983000B9CAA /* SYTapGesture.m in Sources */,
+				116C450820FECF7D000B9CAA /* SYBlueView.m in Sources */,
+				116C450E20FECFAA000B9CAA /* SYGreenView.m in Sources */,
+				1144EB7D210196150041ECA5 /* ButtonAndTapVC.m in Sources */,
+				116C451520FF3460000B9CAA /* GestureViewCtr.m in Sources */,
+				116C44F120FECAFC000B9CAA /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		116C44F520FECAFC000B9CAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				116C44F620FECAFC000B9CAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		116C44FA20FECAFD000B9CAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				116C44FB20FECAFD000B9CAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		116C450020FECAFD000B9CAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		116C450120FECAFD000B9CAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		116C450320FECAFD000B9CAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/eoc/Desktop/EventTheory/PrefixHeader.pch;
+				INFOPLIST_FILE = EventTheory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com..EventTheory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		116C450420FECAFD000B9CAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/eoc/Desktop/EventTheory/PrefixHeader.pch;
+				INFOPLIST_FILE = EventTheory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com..EventTheory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		116C44E720FECAFB000B9CAA /* Build configuration list for PBXProject "EventTheory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				116C450020FECAFD000B9CAA /* Debug */,
+				116C450120FECAFD000B9CAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		116C450220FECAFD000B9CAA /* Build configuration list for PBXNativeTarget "EventTheory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				116C450320FECAFD000B9CAA /* Debug */,
+				116C450420FECAFD000B9CAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 116C44E420FECAFB000B9CAA /* Project object */;
+}
