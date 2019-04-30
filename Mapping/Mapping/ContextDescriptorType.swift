@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+// 以 _ClassContextDescriptor 类型访问数据
 func relativePointer<T, U>(base: UnsafePointer<T>, offset: U) -> UnsafePointer<_ClassContextDescriptor> where U : FixedWidthInteger {
     return UnsafeRawPointer(base).advanced(by: Int(integer: offset)).assumingMemoryBound(to: _ClassContextDescriptor.self)
 }
@@ -27,7 +27,19 @@ extension Int {
 }
 
 
-
+/*
+ 以 _StructContextDescriptor 类型访问内存数据, 得到属性数量 numberOfFields, 属性偏移矢量 fieldOffsetVector, 通过这两个参数可以获取每个属性的偏移值
+ 内部结构来源于 Swift 源码中
+ 
+ https://github.com/apple/swift/blob/master/include/swift/ABI/Metadata.h#L3416
+ 
+ */
+/*
+ 文章：
+ https://blog.csdn.net/weixin_33758863/article/details/88060638
+ 
+ */
+//
 struct _StructContextDescriptor: _ContextDescriptorProtocol {
     var flags: Int32
     var parent: Int32

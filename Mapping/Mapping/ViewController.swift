@@ -8,6 +8,17 @@
 
 import UIKit
 
+/*
+ 
+ Metadata 官方文档
+ 
+ https://github.com/apple/swift/blob/master/docs/ABI/TypeMetadata.rst
+ 
+ 
+ */
+
+// https://www.jianshu.com/p/ea64c84172fb  ⚠️
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -19,6 +30,20 @@ class ViewController: UIViewController {
 
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        
+      //  SwiftPoint().unsafeMutablePointer()
+      //  SwiftPoint().reboundType()
+      //  SwiftPoint().bufferPointer()
+       // SwiftPoint().rawPointer()
+       // SwiftPoint().memoryAccess()
+       // SwiftPoint().unmanage()
+        
+       // SwiftPoint().applyStruct()
+       // SwiftPoint().applyClass()
+        SwiftPoint().autoOCPoint()
+       // memoryLayout()
+        return
         
         var dict = [String:Any]()
         dict["id"] = "1234"
