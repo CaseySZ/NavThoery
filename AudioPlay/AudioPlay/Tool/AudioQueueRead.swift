@@ -48,21 +48,29 @@ class AudioQueueRead: NSObject {
         }
     }
     
-    var _self:AudioQueueRead?
     func createQueue(_ basicDescription:AudioStreamBasicDescription?, _ bufferSize:UInt32) -> Bool {
         
-        _self = self
+       
         _basicDescription = basicDescription!
+        
+        let selfPoint =  Unmanaged.passUnretained(self as AnyObject).toOpaque()
         
         var status =  AudioQueueNewOutput(&_basicDescription!, { (client, inAQ, inBuffer) in
             
-            if let selfPoint = client {
+            if let selfPoint = UnsafeRawPointer.init(client) {
                 
-                let target =  selfPoint.assumingMemoryBound(to: AudioQueueRead.self).pointee
+                let target = Unmanaged<AudioQueueRead>.fromOpaque(selfPoint).takeUnretainedValue()
                 target.audioQueueOutputCallback(inBuffer)
             }
             
-        }, &_self, nil, nil, 0, &_audioQueue)
+            
+//            if let selfPoint = client {
+//
+//                let target =  selfPoint.assumingMemoryBound(to: AudioQueueRead.self).pointee
+//                target.audioQueueOutputCallback(inBuffer)
+//            }
+            
+        }, selfPoint, nil, nil, 0, &_audioQueue)
         
         
         if status != noErr {
@@ -72,15 +80,20 @@ class AudioQueueRead: NSObject {
         
         status = AudioQueueAddPropertyListener(_audioQueue!, kAudioQueueProperty_IsRunning, { (client, inAQ, InID) in
         
-            
-            if let selfPoint = client {
+            if let selfPoint = UnsafeRawPointer.init(client) {
                 
-                let target =  selfPoint.assumingMemoryBound(to: AudioQueueRead.self).pointee
+                let target = Unmanaged<AudioQueueRead>.fromOpaque(selfPoint).takeUnretainedValue()
                 target.handleAudioPropertyStatus(inID: InID)
             }
+            
+//            if let selfPoint = client {
+//
+//                let target =  selfPoint.assumingMemoryBound(to: AudioQueueRead.self).pointee
+//                target.handleAudioPropertyStatus(inID: InID)
+//            }
         
             
-        }, &_self)
+        }, selfPoint)
         
         
         if status != noErr {

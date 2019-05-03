@@ -20,6 +20,8 @@
 		C92F325F22648D6000A8874D /* AudioStreamPacketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F325E22648D6000A8874D /* AudioStreamPacketModel.swift */; };
 		C92F3261226564E200A8874D /* AudioStreamPacketBufferPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F3260226564E200A8874D /* AudioStreamPacketBufferPool.swift */; };
 		C92F326322656F9400A8874D /* AudioQueueRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F326222656F9400A8874D /* AudioQueueRead.swift */; };
+		C9A97D38227C276F0073F0B8 /* AudioStreamNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A97D37227C276F0073F0B8 /* AudioStreamNet.swift */; };
+		C9A97D3A227C2CDA0073F0B8 /* AudioNetPlayerViewCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A97D39227C2CDA0073F0B8 /* AudioNetPlayerViewCtr.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		C92F325E22648D6000A8874D /* AudioStreamPacketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamPacketModel.swift; sourceTree = "<group>"; };
 		C92F3260226564E200A8874D /* AudioStreamPacketBufferPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamPacketBufferPool.swift; sourceTree = "<group>"; };
 		C92F326222656F9400A8874D /* AudioQueueRead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioQueueRead.swift; sourceTree = "<group>"; };
+		C9A97D37227C276F0073F0B8 /* AudioStreamNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamNet.swift; sourceTree = "<group>"; };
+		C9A97D39227C2CDA0073F0B8 /* AudioNetPlayerViewCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudioNetPlayerViewCtr.swift; path = Assets.xcassets/AudioNetPlayerViewCtr.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				C92F32412264719300A8874D /* AppDelegate.swift */,
 				C92F32432264719300A8874D /* ViewController.swift */,
 				C92F3253226471FF00A8874D /* AudioPlayerViewCtr.swift */,
+				C9A97D39227C2CDA0073F0B8 /* AudioNetPlayerViewCtr.swift */,
+				C9A97D37227C276F0073F0B8 /* AudioStreamNet.swift */,
 				C92F32592264749900A8874D /* Tool */,
 				C92F3254226471FF00A8874D /* AudioPlayerViewCtr.xib */,
 				C92F32452264719300A8874D /* Main.storyboard */,
@@ -175,7 +181,9 @@
 				C92F325F22648D6000A8874D /* AudioStreamPacketModel.swift in Sources */,
 				C92F3255226471FF00A8874D /* AudioPlayerViewCtr.swift in Sources */,
 				C92F32422264719300A8874D /* AppDelegate.swift in Sources */,
+				C9A97D3A227C2CDA0073F0B8 /* AudioNetPlayerViewCtr.swift in Sources */,
 				C92F3261226564E200A8874D /* AudioStreamPacketBufferPool.swift in Sources */,
+				C9A97D38227C276F0073F0B8 /* AudioStreamNet.swift in Sources */,
 				C92F325B226474BE00A8874D /* CCAudioSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+let MusicURL =  "http://www.comdesignlab.com/travel/wp-content/uploads/1024/Children_of_Youyang.mp3"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

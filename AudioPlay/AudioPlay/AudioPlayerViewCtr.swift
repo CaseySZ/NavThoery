@@ -92,6 +92,8 @@ class AudioPlayerViewCtr: UIViewController, CCAudioStreamParseDelegate {
                         print("finish EOF")
                     }
                     data = fileData as NSData?
+                } else {
+                    print("文件出错了")
                 }
                 
             }

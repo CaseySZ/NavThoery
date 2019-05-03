@@ -25,7 +25,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
+        let dd =  ViewController.self
         
+        
+    
     }
 
     

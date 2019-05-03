@@ -43,15 +43,22 @@ class CCAudioStreamParse: NSObject {
         
     }
     
-    var _self:CCAudioStreamParse?
+  
     
     func createAudioSessionStream()  {
         
-        _self = self
-        AudioFileStreamOpen(&_self, { (client, audioFileStream, propertyID, ioFlag) in
+        
+        
+        
+        let selfPoint =  Unmanaged.passUnretained(self as AnyObject).toOpaque()
+        
+        AudioFileStreamOpen(selfPoint, { (client, audioFileStream, propertyID, ioFlag) in
             
             print("文件属性处理")
-            let target =  client.assumingMemoryBound(to: CCAudioStreamParse.self).pointee
+            //let target =  client.assumingMemoryBound(to: CCAudioStreamParse.self).pointee
+            let target = Unmanaged<CCAudioStreamParse>.fromOpaque(client).takeUnretainedValue()
+            
+            
             target.audioPropertyListenProc(audioFileStream, propertyID, ioFlag)
     
 
@@ -60,9 +67,10 @@ class CCAudioStreamParse: NSObject {
             
             print("音频数据处理")
             
-            let target =  client.assumingMemoryBound(to: CCAudioStreamParse.self).pointee
+           // let target =  client.assumingMemoryBound(to: CCAudioStreamParse.self).pointee
+            let target = Unmanaged<CCAudioStreamParse>.fromOpaque(client).takeUnretainedValue()
             target.audioFileStreamPacketProc(numberBytes, numberPackets, inputData, packetDescriptions)
-            
+        
             
         }, _fileType, &_audioFileStreamID)
         
@@ -149,28 +157,21 @@ class CCAudioStreamParse: NSObject {
         if !_isContinue {
             _isContinue = true
         }
-        
+       
         var packetArr = Array<AudioStreamPacketModel>()
         
-        let audioData = NSData.init(bytes: inputData, length: Int(numberBytes*numberPackerts))
+        let audioData = NSData.init(bytes: inputData, length: Int(numberBytes))
         
         for index in 0...numberPackerts-1 {
             
             let packetPoint = packetDescriptions.advanced(by: Int(index))
             let packetDesc =  packetPoint.pointee
             
-            if Int(packetDesc.mStartOffset) + Int(packetDesc.mVariableFramesInPacket) < audioData.length {
-                
-                if let packetData = audioData.subdata(with: NSRange.init(location: Int(packetDesc.mStartOffset), length: Int(packetDesc.mDataByteSize))) as NSData? {
-                    
-                    let packetModel = AudioStreamPacketModel.init(packetData, packetDesc)
-                    packetArr.append(packetModel)
-                }
-                
-            }else {
-                
-                print("越界了")
-            }
+            let startOffset = Int(packetDesc.mStartOffset)
+            let dataSize = Int(packetDesc.mDataByteSize)
+            let data = audioData.subdata(with: NSRange.init(location: startOffset, length: dataSize)) as NSData
+            let packetModel = AudioStreamPacketModel.init(data, packetDesc)
+            packetArr.append(packetModel)
             
         }
         

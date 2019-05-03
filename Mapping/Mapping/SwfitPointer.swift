@@ -280,7 +280,8 @@ class SwiftPoint {
     
     func applyClass()  {
         
-    
+        
+        
         let personClass = InPersonInfoC()
         
         // 获得头部指针

@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C928F7502223ED67004A1D91 /* SysSafeIDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C928F74F2223ED67004A1D91 /* SysSafeIDModel.m */; };
+		C928F7532223FE07004A1D91 /* SystemAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = C928F7522223FE07004A1D91 /* SystemAuthView.m */; };
+		C928F7552223FEFE004A1D91 /* TextAndlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C928F7542223FEFE004A1D91 /* TextAndlogo@2x.png */; };
+		C928F7582224CFEB004A1D91 /* LockLogButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C928F7572224CFEB004A1D91 /* LockLogButton.m */; };
+		C928F75B2224D5A7004A1D91 /* icon_face-ID@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C928F7592224D5A7004A1D91 /* icon_face-ID@2x.png */; };
+		C928F75C2224D5A7004A1D91 /* icon_finger-print@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C928F75A2224D5A7004A1D91 /* icon_finger-print@2x.png */; };
+		C928F75F2225070A004A1D91 /* UnlockSafeLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = C928F75E2225070A004A1D91 /* UnlockSafeLoginView.m */; };
+		C928F7632225338E004A1D91 /* UIAlertSafeLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = C928F7612225338E004A1D91 /* UIAlertSafeLogController.m */; };
+		C928F76822253D5E004A1D91 /* SafeLockPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = C928F76722253D5E004A1D91 /* SafeLockPlugIn.m */; };
+		C928F76B22253F9F004A1D91 /* GestureSettingViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C928F76A22253F9F004A1D91 /* GestureSettingViewCtr.m */; };
+		C9F7A3CF2223D36C007E09C0 /* safeLockIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F7A3CE2223D36C007E09C0 /* safeLockIcon@2x.png */; };
+		C9FD0E55220425210067DA90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD0E54220425210067DA90 /* AppDelegate.m */; };
+		C9FD0E58220425210067DA90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD0E57220425210067DA90 /* ViewController.m */; };
+		C9FD0E5B220425210067DA90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FD0E59220425210067DA90 /* Main.storyboard */; };
+		C9FD0E5D220425210067DA90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FD0E5C220425210067DA90 /* Assets.xcassets */; };
+		C9FD0E60220425210067DA90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FD0E5E220425210067DA90 /* LaunchScreen.storyboard */; };
+		C9FD0E63220425210067DA90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD0E62220425210067DA90 /* main.m */; };
+		C9FD0E6C22042D890067DA90 /* TestViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD0E6A22042D890067DA90 /* TestViewCtr.m */; };
+		C9FD0E6D22042D890067DA90 /* TestViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9FD0E6B22042D890067DA90 /* TestViewCtr.xib */; };
+		C9FD0E702204364A0067DA90 /* GestureLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD0E6F2204364A0067DA90 /* GestureLockView.m */; };
+		C9FD0E782204366E0067DA90 /* gesture_indicator_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FD0E722204366E0067DA90 /* gesture_indicator_normal@2x.png */; };
+		C9FD0E792204366E0067DA90 /* gesture_indicator_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FD0E732204366E0067DA90 /* gesture_indicator_selected@2x.png */; };
+		C9FD0E7A2204366E0067DA90 /* gesture_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FD0E742204366E0067DA90 /* gesture_normal@2x.png */; };
+		C9FD0E7C2204366E0067DA90 /* gesture_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FD0E762204366E0067DA90 /* gesture_selected@2x.png */; };
+		C9FD0E7F2204433B0067DA90 /* YWGesturesUnlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD0E7D2204433B0067DA90 /* YWGesturesUnlockView.m */; };
+		C9FD0E84220545160067DA90 /* GestureLockMiniView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD0E83220545160067DA90 /* GestureLockMiniView.m */; };
+		C9FD0E87220548E00067DA90 /* FingerprintVerifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FD0E85220548E00067DA90 /* FingerprintVerifyModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C928F74E2223ED67004A1D91 /* SysSafeIDModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SysSafeIDModel.h; sourceTree = "<group>"; };
+		C928F74F2223ED67004A1D91 /* SysSafeIDModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SysSafeIDModel.m; sourceTree = "<group>"; };
+		C928F7512223FE07004A1D91 /* SystemAuthView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemAuthView.h; sourceTree = "<group>"; };
+		C928F7522223FE07004A1D91 /* SystemAuthView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemAuthView.m; sourceTree = "<group>"; };
+		C928F7542223FEFE004A1D91 /* TextAndlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TextAndlogo@2x.png"; sourceTree = "<group>"; };
+		C928F7562224CFEB004A1D91 /* LockLogButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockLogButton.h; sourceTree = "<group>"; };
+		C928F7572224CFEB004A1D91 /* LockLogButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockLogButton.m; sourceTree = "<group>"; };
+		C928F7592224D5A7004A1D91 /* icon_face-ID@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_face-ID@2x.png"; sourceTree = "<group>"; };
+		C928F75A2224D5A7004A1D91 /* icon_finger-print@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_finger-print@2x.png"; sourceTree = "<group>"; };
+		C928F75D2225070A004A1D91 /* UnlockSafeLoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnlockSafeLoginView.h; sourceTree = "<group>"; };
+		C928F75E2225070A004A1D91 /* UnlockSafeLoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnlockSafeLoginView.m; sourceTree = "<group>"; };
+		C928F7612225338E004A1D91 /* UIAlertSafeLogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertSafeLogController.m; sourceTree = "<group>"; };
+		C928F7622225338E004A1D91 /* UIAlertSafeLogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertSafeLogController.h; sourceTree = "<group>"; };
+		C928F76622253D5E004A1D91 /* SafeLockPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeLockPlugIn.h; sourceTree = "<group>"; };
+		C928F76722253D5E004A1D91 /* SafeLockPlugIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeLockPlugIn.m; sourceTree = "<group>"; };
+		C928F76922253F9F004A1D91 /* GestureSettingViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureSettingViewCtr.h; sourceTree = "<group>"; };
+		C928F76A22253F9F004A1D91 /* GestureSettingViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureSettingViewCtr.m; sourceTree = "<group>"; };
+		C9F7A3CE2223D36C007E09C0 /* safeLockIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "safeLockIcon@2x.png"; sourceTree = "<group>"; };
+		C9FD0E50220425210067DA90 /* SafeGesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeGesture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9FD0E53220425210067DA90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C9FD0E54220425210067DA90 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C9FD0E56220425210067DA90 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C9FD0E57220425210067DA90 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C9FD0E5A220425210067DA90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9FD0E5C220425210067DA90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9FD0E5F220425210067DA90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9FD0E61220425210067DA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9FD0E62220425210067DA90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9FD0E6922042D890067DA90 /* TestViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewCtr.h; sourceTree = "<group>"; };
+		C9FD0E6A22042D890067DA90 /* TestViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewCtr.m; sourceTree = "<group>"; };
+		C9FD0E6B22042D890067DA90 /* TestViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewCtr.xib; sourceTree = "<group>"; };
+		C9FD0E6E2204364A0067DA90 /* GestureLockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureLockView.h; sourceTree = "<group>"; };
+		C9FD0E6F2204364A0067DA90 /* GestureLockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureLockView.m; sourceTree = "<group>"; };
+		C9FD0E722204366E0067DA90 /* gesture_indicator_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gesture_indicator_normal@2x.png"; sourceTree = "<group>"; };
+		C9FD0E732204366E0067DA90 /* gesture_indicator_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gesture_indicator_selected@2x.png"; sourceTree = "<group>"; };
+		C9FD0E742204366E0067DA90 /* gesture_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gesture_normal@2x.png"; sourceTree = "<group>"; };
+		C9FD0E762204366E0067DA90 /* gesture_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gesture_selected@2x.png"; sourceTree = "<group>"; };
+		C9FD0E7D2204433B0067DA90 /* YWGesturesUnlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWGesturesUnlockView.m; sourceTree = "<group>"; };
+		C9FD0E7E2204433B0067DA90 /* YWGesturesUnlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWGesturesUnlockView.h; sourceTree = "<group>"; };
+		C9FD0E82220545160067DA90 /* GestureLockMiniView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureLockMiniView.h; sourceTree = "<group>"; };
+		C9FD0E83220545160067DA90 /* GestureLockMiniView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureLockMiniView.m; sourceTree = "<group>"; };
+		C9FD0E85220548E00067DA90 /* FingerprintVerifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerprintVerifyModel.m; sourceTree = "<group>"; };
+		C9FD0E86220548E00067DA90 /* FingerprintVerifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerprintVerifyModel.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9FD0E4D220425210067DA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C928F74C2223ECD2004A1D91 /* GestureSafeView */ = {
+			isa = PBXGroup;
+			children = (
+				C9FD0E6E2204364A0067DA90 /* GestureLockView.h */,
+				C9FD0E6F2204364A0067DA90 /* GestureLockView.m */,
+				C9FD0E82220545160067DA90 /* GestureLockMiniView.h */,
+				C9FD0E83220545160067DA90 /* GestureLockMiniView.m */,
+			);
+			path = GestureSafeView;
+			sourceTree = "<group>";
+		};
+		C928F74D2223ED05004A1D91 /* SysSafeIDView */ = {
+			isa = PBXGroup;
+			children = (
+				C928F7512223FE07004A1D91 /* SystemAuthView.h */,
+				C928F7522223FE07004A1D91 /* SystemAuthView.m */,
+				C928F7562224CFEB004A1D91 /* LockLogButton.h */,
+				C928F7572224CFEB004A1D91 /* LockLogButton.m */,
+			);
+			path = SysSafeIDView;
+			sourceTree = "<group>";
+		};
+		C928F76422253C5B004A1D91 /* SettingLockFct */ = {
+			isa = PBXGroup;
+			children = (
+				C928F7622225338E004A1D91 /* UIAlertSafeLogController.h */,
+				C928F7612225338E004A1D91 /* UIAlertSafeLogController.m */,
+				C928F76922253F9F004A1D91 /* GestureSettingViewCtr.h */,
+				C928F76A22253F9F004A1D91 /* GestureSettingViewCtr.m */,
+			);
+			path = SettingLockFct;
+			sourceTree = "<group>";
+		};
+		C928F76522253D1D004A1D91 /* SafeLockPlugIn */ = {
+			isa = PBXGroup;
+			children = (
+				C928F76622253D5E004A1D91 /* SafeLockPlugIn.h */,
+				C928F76722253D5E004A1D91 /* SafeLockPlugIn.m */,
+				C928F74E2223ED67004A1D91 /* SysSafeIDModel.h */,
+				C928F74F2223ED67004A1D91 /* SysSafeIDModel.m */,
+				C928F77222262E8B004A1D91 /* UnlockFct */,
+				C928F76422253C5B004A1D91 /* SettingLockFct */,
+				C928F74C2223ECD2004A1D91 /* GestureSafeView */,
+				C928F74D2223ED05004A1D91 /* SysSafeIDView */,
+			);
+			path = SafeLockPlugIn;
+			sourceTree = "<group>";
+		};
+		C928F77222262E8B004A1D91 /* UnlockFct */ = {
+			isa = PBXGroup;
+			children = (
+				C928F75D2225070A004A1D91 /* UnlockSafeLoginView.h */,
+				C928F75E2225070A004A1D91 /* UnlockSafeLoginView.m */,
+			);
+			path = UnlockFct;
+			sourceTree = "<group>";
+		};
+		C9FD0E47220425210067DA90 = {
+			isa = PBXGroup;
+			children = (
+				C9FD0E52220425210067DA90 /* SafeGesture */,
+				C9FD0E51220425210067DA90 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9FD0E51220425210067DA90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9FD0E50220425210067DA90 /* SafeGesture.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9FD0E52220425210067DA90 /* SafeGesture */ = {
+			isa = PBXGroup;
+			children = (
+				C9FD0E53220425210067DA90 /* AppDelegate.h */,
+				C9FD0E54220425210067DA90 /* AppDelegate.m */,
+				C9FD0E56220425210067DA90 /* ViewController.h */,
+				C9FD0E57220425210067DA90 /* ViewController.m */,
+				C9FD0E6922042D890067DA90 /* TestViewCtr.h */,
+				C9FD0E6A22042D890067DA90 /* TestViewCtr.m */,
+				C9FD0E6B22042D890067DA90 /* TestViewCtr.xib */,
+				C928F76522253D1D004A1D91 /* SafeLockPlugIn */,
+				C9FD0E59220425210067DA90 /* Main.storyboard */,
+				C9FD0E5C220425210067DA90 /* Assets.xcassets */,
+				C9FD0E5E220425210067DA90 /* LaunchScreen.storyboard */,
+				C9FD0E86220548E00067DA90 /* FingerprintVerifyModel.h */,
+				C9FD0E85220548E00067DA90 /* FingerprintVerifyModel.m */,
+				C9FD0E7E2204433B0067DA90 /* YWGesturesUnlockView.h */,
+				C9FD0E7D2204433B0067DA90 /* YWGesturesUnlockView.m */,
+				C9FD0E61220425210067DA90 /* Info.plist */,
+				C9FD0E722204366E0067DA90 /* gesture_indicator_normal@2x.png */,
+				C9FD0E732204366E0067DA90 /* gesture_indicator_selected@2x.png */,
+				C9FD0E742204366E0067DA90 /* gesture_normal@2x.png */,
+				C9FD0E762204366E0067DA90 /* gesture_selected@2x.png */,
+				C9F7A3CE2223D36C007E09C0 /* safeLockIcon@2x.png */,
+				C928F7542223FEFE004A1D91 /* TextAndlogo@2x.png */,
+				C928F7592224D5A7004A1D91 /* icon_face-ID@2x.png */,
+				C928F75A2224D5A7004A1D91 /* icon_finger-print@2x.png */,
+				C9FD0E62220425210067DA90 /* main.m */,
+			);
+			path = SafeGesture;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9FD0E4F220425210067DA90 /* SafeGesture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9FD0E66220425210067DA90 /* Build configuration list for PBXNativeTarget "SafeGesture" */;
+			buildPhases = (
+				C9FD0E4C220425210067DA90 /* Sources */,
+				C9FD0E4D220425210067DA90 /* Frameworks */,
+				C9FD0E4E220425210067DA90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SafeGesture;
+			productName = SafeGesture;
+			productReference = C9FD0E50220425210067DA90 /* SafeGesture.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9FD0E48220425210067DA90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = n;
+				TargetAttributes = {
+					C9FD0E4F220425210067DA90 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = C9FD0E4B220425210067DA90 /* Build configuration list for PBXProject "SafeGesture" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9FD0E47220425210067DA90;
+			productRefGroup = C9FD0E51220425210067DA90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9FD0E4F220425210067DA90 /* SafeGesture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9FD0E4E220425210067DA90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9FD0E6D22042D890067DA90 /* TestViewCtr.xib in Resources */,
+				C9FD0E7A2204366E0067DA90 /* gesture_normal@2x.png in Resources */,
+				C9FD0E60220425210067DA90 /* LaunchScreen.storyboard in Resources */,
+				C9FD0E782204366E0067DA90 /* gesture_indicator_normal@2x.png in Resources */,
+				C9FD0E792204366E0067DA90 /* gesture_indicator_selected@2x.png in Resources */,
+				C928F75C2224D5A7004A1D91 /* icon_finger-print@2x.png in Resources */,
+				C9F7A3CF2223D36C007E09C0 /* safeLockIcon@2x.png in Resources */,
+				C928F7552223FEFE004A1D91 /* TextAndlogo@2x.png in Resources */,
+				C9FD0E5D220425210067DA90 /* Assets.xcassets in Resources */,
+				C9FD0E5B220425210067DA90 /* Main.storyboard in Resources */,
+				C928F75B2224D5A7004A1D91 /* icon_face-ID@2x.png in Resources */,
+				C9FD0E7C2204366E0067DA90 /* gesture_selected@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9FD0E4C220425210067DA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9FD0E7F2204433B0067DA90 /* YWGesturesUnlockView.m in Sources */,
+				C9FD0E87220548E00067DA90 /* FingerprintVerifyModel.m in Sources */,
+				C9FD0E702204364A0067DA90 /* GestureLockView.m in Sources */,
+				C9FD0E6C22042D890067DA90 /* TestViewCtr.m in Sources */,
+				C928F7632225338E004A1D91 /* UIAlertSafeLogController.m in Sources */,
+				C928F7582224CFEB004A1D91 /* LockLogButton.m in Sources */,
+				C9FD0E58220425210067DA90 /* ViewController.m in Sources */,
+				C928F7532223FE07004A1D91 /* SystemAuthView.m in Sources */,
+				C9FD0E63220425210067DA90 /* main.m in Sources */,
+				C928F7502223ED67004A1D91 /* SysSafeIDModel.m in Sources */,
+				C928F75F2225070A004A1D91 /* UnlockSafeLoginView.m in Sources */,
+				C9FD0E84220545160067DA90 /* GestureLockMiniView.m in Sources */,
+				C928F76822253D5E004A1D91 /* SafeLockPlugIn.m in Sources */,
+				C928F76B22253F9F004A1D91 /* GestureSettingViewCtr.m in Sources */,
+				C9FD0E55220425210067DA90 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C9FD0E59220425210067DA90 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9FD0E5A220425210067DA90 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9FD0E5E220425210067DA90 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9FD0E5F220425210067DA90 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9FD0E64220425210067DA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C9FD0E65220425210067DA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9FD0E67220425210067DA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MLVU52662A;
+				INFOPLIST_FILE = SafeGesture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.safaGesture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9FD0E68220425210067DA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MLVU52662A;
+				INFOPLIST_FILE = SafeGesture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.safaGesture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9FD0E4B220425210067DA90 /* Build configuration list for PBXProject "SafeGesture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9FD0E64220425210067DA90 /* Debug */,
+				C9FD0E65220425210067DA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9FD0E66220425210067DA90 /* Build configuration list for PBXNativeTarget "SafeGesture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9FD0E67220425210067DA90 /* Debug */,
+				C9FD0E68220425210067DA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9FD0E48220425210067DA90 /* Project object */;
+}
