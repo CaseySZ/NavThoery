@@ -14,6 +14,9 @@
 #import "ChangeViewCtr.h"
 #import "TDChangeViewCtr.h"
 #import "TDDemoViewCtr.h"
+#import "AnimationViewCtr.h"
+#import "AnimationGroupViewCtr.h"
+#import "TransitionViewCtr.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource> {
     
@@ -28,7 +31,7 @@
     [super viewDidLoad];
     
     self.navigationController.navigationBar.translucent = NO;
-    _titleArr = @[@"Base", @"寄宿图", @"Demo", @"Geometry", @"transform", @"3D", @"3DDome"];
+    _titleArr = @[@"Base", @"寄宿图", @"Demo", @"Geometry", @"transform", @"3D", @"3DDome", @"Animation", @"Group", @"Transition"];
 }
 
 
@@ -84,9 +87,21 @@
         
         [self.navigationController pushViewController:[TDDemoViewCtr new] animated:YES];
         
+    }else if (indexPath.row == 7) {
+        
+        [self.navigationController pushViewController:[AnimationViewCtr new] animated:YES];
+        
+    }else if (indexPath.row == 8) {
+        
+        [self.navigationController pushViewController:[AnimationGroupViewCtr new] animated:YES];
+        
+    }else if (indexPath.row == 9) {
+        
+        [self.navigationController pushViewController:[TransitionViewCtr new] animated:YES];
+        
     }else {
         
-       
+     
         
     }
 }

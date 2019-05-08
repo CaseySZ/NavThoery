@@ -38,6 +38,13 @@
 		C9A97DA022817FA20073F0B8 /* TDDemoViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A97D9E22817FA20073F0B8 /* TDDemoViewCtr.xib */; };
 		C9A97DA5228189CF0073F0B8 /* SepcLayerViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A97DA3228189CF0073F0B8 /* SepcLayerViewCtr.m */; };
 		C9A97DA6228189CF0073F0B8 /* SepcLayerViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A97DA4228189CF0073F0B8 /* SepcLayerViewCtr.xib */; };
+		C9A97DAB22829A970073F0B8 /* AnimationViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A97DA922829A970073F0B8 /* AnimationViewCtr.m */; };
+		C9A97DAC22829A970073F0B8 /* AnimationViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A97DAA22829A970073F0B8 /* AnimationViewCtr.xib */; };
+		C9A97DAE2282C7420073F0B8 /* feiji.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9A97DAD2282C7420073F0B8 /* feiji.jpg */; };
+		C9A97DB32282D0FC0073F0B8 /* AnimationGroupViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A97DB12282D0FC0073F0B8 /* AnimationGroupViewCtr.m */; };
+		C9A97DB42282D0FC0073F0B8 /* AnimationGroupViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A97DB22282D0FC0073F0B8 /* AnimationGroupViewCtr.xib */; };
+		C9A97DB92282D7320073F0B8 /* TransitionViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A97DB72282D7320073F0B8 /* TransitionViewCtr.m */; };
+		C9A97DBA2282D7320073F0B8 /* TransitionViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A97DB82282D7320073F0B8 /* TransitionViewCtr.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +93,16 @@
 		C9A97DA2228189CF0073F0B8 /* SepcLayerViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SepcLayerViewCtr.h; sourceTree = "<group>"; };
 		C9A97DA3228189CF0073F0B8 /* SepcLayerViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SepcLayerViewCtr.m; sourceTree = "<group>"; };
 		C9A97DA4228189CF0073F0B8 /* SepcLayerViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SepcLayerViewCtr.xib; sourceTree = "<group>"; };
+		C9A97DA822829A970073F0B8 /* AnimationViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationViewCtr.h; sourceTree = "<group>"; };
+		C9A97DA922829A970073F0B8 /* AnimationViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationViewCtr.m; sourceTree = "<group>"; };
+		C9A97DAA22829A970073F0B8 /* AnimationViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationViewCtr.xib; sourceTree = "<group>"; };
+		C9A97DAD2282C7420073F0B8 /* feiji.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = feiji.jpg; sourceTree = "<group>"; };
+		C9A97DB02282D0FC0073F0B8 /* AnimationGroupViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationGroupViewCtr.h; sourceTree = "<group>"; };
+		C9A97DB12282D0FC0073F0B8 /* AnimationGroupViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationGroupViewCtr.m; sourceTree = "<group>"; };
+		C9A97DB22282D0FC0073F0B8 /* AnimationGroupViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationGroupViewCtr.xib; sourceTree = "<group>"; };
+		C9A97DB62282D7320073F0B8 /* TransitionViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionViewCtr.h; sourceTree = "<group>"; };
+		C9A97DB72282D7320073F0B8 /* TransitionViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionViewCtr.m; sourceTree = "<group>"; };
+		C9A97DB82282D7320073F0B8 /* TransitionViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransitionViewCtr.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +142,9 @@
 				C9A97D5D227FC77B0073F0B8 /* BaseInfoViewCtr.h */,
 				C9A97D5E227FC77B0073F0B8 /* BaseInfoViewCtr.m */,
 				C9A97D60227FC78C0073F0B8 /* BaseInfoViewCtr.xib */,
+				C9A97DB52282D7100073F0B8 /* 过度动画 */,
+				C9A97DAF2282D0CE0073F0B8 /* 动画组 */,
+				C9A97DA722829A710073F0B8 /* 显式动画 */,
 				C9A97DA1228189A80073F0B8 /* 专有图层 */,
 				C9A97D8F22813B420073F0B8 /* 3D变换 */,
 				C9A97D87228129210073F0B8 /* 二维变换 */,
@@ -143,6 +163,7 @@
 				C9A97D852281251C0073F0B8 /* number.png */,
 				C9A97D8D2281303C0073F0B8 /* math2.jpg */,
 				C9A97D9A22813BE80073F0B8 /* math3.png */,
+				C9A97DAD2282C7420073F0B8 /* feiji.jpg */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -214,6 +235,36 @@
 			path = "专有图层";
 			sourceTree = "<group>";
 		};
+		C9A97DA722829A710073F0B8 /* 显式动画 */ = {
+			isa = PBXGroup;
+			children = (
+				C9A97DA822829A970073F0B8 /* AnimationViewCtr.h */,
+				C9A97DA922829A970073F0B8 /* AnimationViewCtr.m */,
+				C9A97DAA22829A970073F0B8 /* AnimationViewCtr.xib */,
+			);
+			path = "显式动画";
+			sourceTree = "<group>";
+		};
+		C9A97DAF2282D0CE0073F0B8 /* 动画组 */ = {
+			isa = PBXGroup;
+			children = (
+				C9A97DB02282D0FC0073F0B8 /* AnimationGroupViewCtr.h */,
+				C9A97DB12282D0FC0073F0B8 /* AnimationGroupViewCtr.m */,
+				C9A97DB22282D0FC0073F0B8 /* AnimationGroupViewCtr.xib */,
+			);
+			path = "动画组";
+			sourceTree = "<group>";
+		};
+		C9A97DB52282D7100073F0B8 /* 过度动画 */ = {
+			isa = PBXGroup;
+			children = (
+				C9A97DB62282D7320073F0B8 /* TransitionViewCtr.h */,
+				C9A97DB72282D7320073F0B8 /* TransitionViewCtr.m */,
+				C9A97DB82282D7320073F0B8 /* TransitionViewCtr.xib */,
+			);
+			path = "过度动画";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -282,11 +333,15 @@
 				C9A97D742280197B0073F0B8 /* 2@2x.png in Resources */,
 				C9A97D4F227FC3650073F0B8 /* Main.storyboard in Resources */,
 				C9A97D61227FC78C0073F0B8 /* BaseInfoViewCtr.xib in Resources */,
+				C9A97DBA2282D7320073F0B8 /* TransitionViewCtr.xib in Resources */,
+				C9A97DAE2282C7420073F0B8 /* feiji.jpg in Resources */,
 				C9A97DA6228189CF0073F0B8 /* SepcLayerViewCtr.xib in Resources */,
+				C9A97DAC22829A970073F0B8 /* AnimationViewCtr.xib in Resources */,
 				C9A97D6A227FFEB50073F0B8 /* 1@2x.png in Resources */,
 				C9A97D9B22813BE80073F0B8 /* math3.png in Resources */,
 				C9A97DA022817FA20073F0B8 /* TDDemoViewCtr.xib in Resources */,
 				C9A97D762280206A0073F0B8 /* 3@2x.png in Resources */,
+				C9A97DB42282D0FC0073F0B8 /* AnimationGroupViewCtr.xib in Resources */,
 				C9A97D72228017890073F0B8 /* DemoContentsViewCtr.xib in Resources */,
 				C9A97D78228027DE0073F0B8 /* 4@2x.png in Resources */,
 			);
@@ -302,14 +357,17 @@
 				C9A97D8B228129390073F0B8 /* ChangeViewCtr.m in Sources */,
 				C9A97D4C227FC3650073F0B8 /* ViewController.m in Sources */,
 				C9A97D71228017890073F0B8 /* DemoContentsViewCtr.m in Sources */,
+				C9A97DAB22829A970073F0B8 /* AnimationViewCtr.m in Sources */,
 				C9A97D9F22817FA20073F0B8 /* TDDemoViewCtr.m in Sources */,
 				C9A97D57227FC3660073F0B8 /* main.m in Sources */,
 				C9A97D68227FF9B00073F0B8 /* ContentView.m in Sources */,
+				C9A97DB32282D0FC0073F0B8 /* AnimationGroupViewCtr.m in Sources */,
 				C9A97D8322811CF90073F0B8 /* VisualViewCtr.m in Sources */,
 				C9A97D7D22802A1F0073F0B8 /* GeometryViewCtr.m in Sources */,
 				C9A97D49227FC3650073F0B8 /* AppDelegate.m in Sources */,
 				C9A97D5F227FC77B0073F0B8 /* BaseInfoViewCtr.m in Sources */,
 				C9A97DA5228189CF0073F0B8 /* SepcLayerViewCtr.m in Sources */,
+				C9A97DB92282D7320073F0B8 /* TransitionViewCtr.m in Sources */,
 				C9A97D65227FDBD40073F0B8 /* ContentViewCtr.m in Sources */,
 				C9A97D9822813BC00073F0B8 /* TDChangeViewCtr.m in Sources */,
 			);
