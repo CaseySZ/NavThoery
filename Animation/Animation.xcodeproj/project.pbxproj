@@ -45,6 +45,13 @@
 		C9A97DB42282D0FC0073F0B8 /* AnimationGroupViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A97DB22282D0FC0073F0B8 /* AnimationGroupViewCtr.xib */; };
 		C9A97DB92282D7320073F0B8 /* TransitionViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A97DB72282D7320073F0B8 /* TransitionViewCtr.m */; };
 		C9A97DBA2282D7320073F0B8 /* TransitionViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A97DB82282D7320073F0B8 /* TransitionViewCtr.xib */; };
+		C9A97DBF2283C6520073F0B8 /* CancelViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A97DBD2283C6520073F0B8 /* CancelViewCtr.m */; };
+		C9A97DC02283C6520073F0B8 /* CancelViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A97DBE2283C6520073F0B8 /* CancelViewCtr.xib */; };
+		C9A97DC52283FE800073F0B8 /* TimingViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A97DC32283FE800073F0B8 /* TimingViewCtr.m */; };
+		C9A97DC62283FE800073F0B8 /* TimingViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A97DC42283FE800073F0B8 /* TimingViewCtr.xib */; };
+		C9A97DCA228419470073F0B8 /* HandleAnimationViewCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A97DC8228419470073F0B8 /* HandleAnimationViewCtr.m */; };
+		C9A97DCB228419470073F0B8 /* HandleAnimationViewCtr.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A97DC9228419470073F0B8 /* HandleAnimationViewCtr.xib */; };
+		C9A97DCF22841DA40073F0B8 /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A97DCE22841DA40073F0B8 /* door.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +110,16 @@
 		C9A97DB62282D7320073F0B8 /* TransitionViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionViewCtr.h; sourceTree = "<group>"; };
 		C9A97DB72282D7320073F0B8 /* TransitionViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionViewCtr.m; sourceTree = "<group>"; };
 		C9A97DB82282D7320073F0B8 /* TransitionViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransitionViewCtr.xib; sourceTree = "<group>"; };
+		C9A97DBC2283C6520073F0B8 /* CancelViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CancelViewCtr.h; sourceTree = "<group>"; };
+		C9A97DBD2283C6520073F0B8 /* CancelViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CancelViewCtr.m; sourceTree = "<group>"; };
+		C9A97DBE2283C6520073F0B8 /* CancelViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CancelViewCtr.xib; sourceTree = "<group>"; };
+		C9A97DC22283FE800073F0B8 /* TimingViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimingViewCtr.h; sourceTree = "<group>"; };
+		C9A97DC32283FE800073F0B8 /* TimingViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimingViewCtr.m; sourceTree = "<group>"; };
+		C9A97DC42283FE800073F0B8 /* TimingViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimingViewCtr.xib; sourceTree = "<group>"; };
+		C9A97DC7228419470073F0B8 /* HandleAnimationViewCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandleAnimationViewCtr.h; sourceTree = "<group>"; };
+		C9A97DC8228419470073F0B8 /* HandleAnimationViewCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandleAnimationViewCtr.m; sourceTree = "<group>"; };
+		C9A97DC9228419470073F0B8 /* HandleAnimationViewCtr.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HandleAnimationViewCtr.xib; sourceTree = "<group>"; };
+		C9A97DCE22841DA40073F0B8 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = door.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +159,9 @@
 				C9A97D5D227FC77B0073F0B8 /* BaseInfoViewCtr.h */,
 				C9A97D5E227FC77B0073F0B8 /* BaseInfoViewCtr.m */,
 				C9A97D60227FC78C0073F0B8 /* BaseInfoViewCtr.xib */,
+				C9A97DD0228427AA0073F0B8 /* 动画与现实效果处理 */,
+				C9A97DC12283FE620073F0B8 /* 图层时间 */,
+				C9A97DBB2283C6320073F0B8 /* 取消动画 */,
 				C9A97DB52282D7100073F0B8 /* 过度动画 */,
 				C9A97DAF2282D0CE0073F0B8 /* 动画组 */,
 				C9A97DA722829A710073F0B8 /* 显式动画 */,
@@ -156,6 +176,7 @@
 				C9A97D52227FC3650073F0B8 /* LaunchScreen.storyboard */,
 				C9A97D55227FC3650073F0B8 /* Info.plist */,
 				C9A97D56227FC3660073F0B8 /* main.m */,
+				C9A97DCE22841DA40073F0B8 /* door.png */,
 				C9A97D69227FFEB50073F0B8 /* 1@2x.png */,
 				C9A97D732280197B0073F0B8 /* 2@2x.png */,
 				C9A97D752280206A0073F0B8 /* 3@2x.png */,
@@ -265,6 +286,36 @@
 			path = "过度动画";
 			sourceTree = "<group>";
 		};
+		C9A97DBB2283C6320073F0B8 /* 取消动画 */ = {
+			isa = PBXGroup;
+			children = (
+				C9A97DBC2283C6520073F0B8 /* CancelViewCtr.h */,
+				C9A97DBD2283C6520073F0B8 /* CancelViewCtr.m */,
+				C9A97DBE2283C6520073F0B8 /* CancelViewCtr.xib */,
+			);
+			path = "取消动画";
+			sourceTree = "<group>";
+		};
+		C9A97DC12283FE620073F0B8 /* 图层时间 */ = {
+			isa = PBXGroup;
+			children = (
+				C9A97DC22283FE800073F0B8 /* TimingViewCtr.h */,
+				C9A97DC32283FE800073F0B8 /* TimingViewCtr.m */,
+				C9A97DC42283FE800073F0B8 /* TimingViewCtr.xib */,
+				C9A97DC7228419470073F0B8 /* HandleAnimationViewCtr.h */,
+				C9A97DC8228419470073F0B8 /* HandleAnimationViewCtr.m */,
+				C9A97DC9228419470073F0B8 /* HandleAnimationViewCtr.xib */,
+			);
+			path = "图层时间";
+			sourceTree = "<group>";
+		};
+		C9A97DD0228427AA0073F0B8 /* 动画与现实效果处理 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "动画与现实效果处理";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -333,11 +384,15 @@
 				C9A97D742280197B0073F0B8 /* 2@2x.png in Resources */,
 				C9A97D4F227FC3650073F0B8 /* Main.storyboard in Resources */,
 				C9A97D61227FC78C0073F0B8 /* BaseInfoViewCtr.xib in Resources */,
+				C9A97DCF22841DA40073F0B8 /* door.png in Resources */,
+				C9A97DCB228419470073F0B8 /* HandleAnimationViewCtr.xib in Resources */,
 				C9A97DBA2282D7320073F0B8 /* TransitionViewCtr.xib in Resources */,
 				C9A97DAE2282C7420073F0B8 /* feiji.jpg in Resources */,
 				C9A97DA6228189CF0073F0B8 /* SepcLayerViewCtr.xib in Resources */,
+				C9A97DC62283FE800073F0B8 /* TimingViewCtr.xib in Resources */,
 				C9A97DAC22829A970073F0B8 /* AnimationViewCtr.xib in Resources */,
 				C9A97D6A227FFEB50073F0B8 /* 1@2x.png in Resources */,
+				C9A97DC02283C6520073F0B8 /* CancelViewCtr.xib in Resources */,
 				C9A97D9B22813BE80073F0B8 /* math3.png in Resources */,
 				C9A97DA022817FA20073F0B8 /* TDDemoViewCtr.xib in Resources */,
 				C9A97D762280206A0073F0B8 /* 3@2x.png in Resources */,
@@ -362,6 +417,7 @@
 				C9A97D57227FC3660073F0B8 /* main.m in Sources */,
 				C9A97D68227FF9B00073F0B8 /* ContentView.m in Sources */,
 				C9A97DB32282D0FC0073F0B8 /* AnimationGroupViewCtr.m in Sources */,
+				C9A97DBF2283C6520073F0B8 /* CancelViewCtr.m in Sources */,
 				C9A97D8322811CF90073F0B8 /* VisualViewCtr.m in Sources */,
 				C9A97D7D22802A1F0073F0B8 /* GeometryViewCtr.m in Sources */,
 				C9A97D49227FC3650073F0B8 /* AppDelegate.m in Sources */,
@@ -369,6 +425,8 @@
 				C9A97DA5228189CF0073F0B8 /* SepcLayerViewCtr.m in Sources */,
 				C9A97DB92282D7320073F0B8 /* TransitionViewCtr.m in Sources */,
 				C9A97D65227FDBD40073F0B8 /* ContentViewCtr.m in Sources */,
+				C9A97DCA228419470073F0B8 /* HandleAnimationViewCtr.m in Sources */,
+				C9A97DC52283FE800073F0B8 /* TimingViewCtr.m in Sources */,
 				C9A97D9822813BC00073F0B8 /* TDChangeViewCtr.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

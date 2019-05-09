@@ -17,6 +17,9 @@
 #import "AnimationViewCtr.h"
 #import "AnimationGroupViewCtr.h"
 #import "TransitionViewCtr.h"
+#import "CancelViewCtr.h"
+#import "TimingViewCtr.h"
+#import "HandleAnimationViewCtr.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource> {
     
@@ -31,7 +34,9 @@
     [super viewDidLoad];
     
     self.navigationController.navigationBar.translucent = NO;
-    _titleArr = @[@"Base", @"寄宿图", @"Demo", @"Geometry", @"transform", @"3D", @"3DDome", @"Animation", @"Group", @"Transition"];
+    _titleArr = @[@"Base", @"寄宿图", @"Demo", @"Geometry", @"transform", @"3D", @"3DDome", @"Animation", @"Group", @"Transition", @"Cancel", @"Timing", @"手动动画"];
+    
+    [CAMediaTimingFunction functionWithControlPoints:1 :1 :1 :1];
 }
 
 
@@ -99,9 +104,21 @@
         
         [self.navigationController pushViewController:[TransitionViewCtr new] animated:YES];
         
+    }else if (indexPath.row == 10) {
+        
+        [self.navigationController pushViewController:[CancelViewCtr new] animated:YES];
+        
+    }else if (indexPath.row == 11) {
+        
+        [self.navigationController pushViewController:[TimingViewCtr new] animated:YES];
+        
+    }else if (indexPath.row == 12) {
+        
+        [self.navigationController pushViewController:[HandleAnimationViewCtr new] animated:YES];
+        
     }else {
         
-     
+        
         
     }
 }
